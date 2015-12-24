@@ -4,27 +4,27 @@ class Logger {
     }
 
     debug(message) {
-        if (this.level >= Logger.DEBUG)
+        if (this.level <= Logger.DEBUG)
             this._log(`DEBUG: ${message}`);
     }
 
     info(message) {
-        if (this.level >= Logger.DEBUG)
+        if (this.level <= Logger.INFO)
             this._log(`INFO: ${message}`);
     }
 
     warn(message) {
-        if (this.level >= Logger.WARN)
+        if (this.level <= Logger.WARN)
             this._log(`WARN: ${message}`);
     }
 
     error(message) {
-        if (this.level >= Logger.ERROR)
+        if (this.level <= Logger.ERROR)
             this._log(`ERROR: ${message}`);
     }
 
     fatal(message) {
-        if (this.level >= Logger.FATAL)
+        if (this.level <= Logger.FATAL)
             this._log(`FATAL: ${message}`);
     }
 

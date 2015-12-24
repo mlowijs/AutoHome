@@ -24,6 +24,11 @@ class BinderManager {
             for (let binding of bindings) {
                 let binder = this.binders.find(b => b.getType() === binding.type);
 
+                if (binder === undefined) {
+                    this.logger.warn(`Binder with type '${binding.type}' was not found, ignoring binding for '${thing.id}'.`);
+                    continue;
+                }
+
                 binder.hookupBinding(thing, binding);
             }
         }
