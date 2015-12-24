@@ -9,7 +9,7 @@ class Binder {
         return null;
     }
 
-    send(thing, binding) {
+    receive(thing, binding) {
         throw new Error("Not implemented.");
     }
 
