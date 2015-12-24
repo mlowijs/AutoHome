@@ -4,15 +4,13 @@ let http = require("http");
 class HttpBinder extends Binder {
     constructor(logger) {
         super(logger);
-
-        this.bindings = [];
     }
 
     getType() {
         return "http";
     }
 
-    send(thing, binding) {
+    receive(thing, binding) {
         this.logger.debug(`Calling HTTP GET '${binding.url}' for thing '${thing.id}'`);
 
         http.get(binding.url, (resp) => {
@@ -20,17 +18,19 @@ class HttpBinder extends Binder {
 
             resp.on("data", (data) => buffer += data);
             resp.on("end", () => {
-                if (binding.transform !== undefined)
+                if (binding.transform !== undefined) {
+                    this.logger.debug(`Executing transformation function for '${thing.id}'`);
                     thing.value = binding.transform(buffer);
-                else
+                } else {
                     thing.value = buffer;
+                }
             });
         });
     }
 
     hookupBinding(thing, binding) {
         if (binding.direction === "in") {
-            setInterval(() => this.send(thing, binding), binding.interval * 1000);
+            setInterval(() => this.receive(thing, binding), binding.interval * 1000);
         }
 
         this.bindings.push({

@@ -1,24 +1,28 @@
+let EventEmitter = require("events");
 let fs = require("fs");
+let Thing = require("./Thing");
 
-class ThingManager {
+class ThingManager extends EventEmitter {
     constructor(logger) {
+        super();
+
         this.logger = logger;
         this.things = [];
 
         for (let f of fs.readdirSync("./things")) {
             let thing = require(`./things/${f}`);
+            thing.__proto__ = new Thing(f.replace(/\.[^/.]+$/, ""));
 
-            thing.id = f.replace(/\.[^/.]+$/, "");
-            Object.defineProperty(thing, 'value', {
-                get: () => { return thing._value; },
-                set: (value) => {
-                    thing._value = value;
-                    this.logger.debug(`Set value for thing '${thing.id}' to: ${value}`);
-                }
+            thing.on("valueSet", (thing) => {
+               this.logger.debug(`Value for '${thing.id}' was set to: ${thing.value}`);
             });
 
             this.things.push(thing);
         }
+    }
+
+    getThing(thingId) {
+        return this.things.find(t => t.id == thingId);
     }
 }
 

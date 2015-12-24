@@ -1,6 +1,8 @@
 class Binder {
     constructor(logger) {
         this.logger = logger;
+
+        this.bindings = [];
     }
 
     getType() {
