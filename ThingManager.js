@@ -14,7 +14,7 @@ class ThingManager extends EventEmitter {
             thing.__proto__ = new Thing(f.replace(/\.[^/.]+$/, ""));
 
             thing.on("valueSet", (thing) => {
-               this.logger.debug(`Value for '${thing.id}' was set to '${thing.value}'.`);
+               this.logger.debug(`Value for '${thing.id}' was set to '${thing.value}' (${typeof thing.value}).`);
             });
 
             this.things.push(thing);

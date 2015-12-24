@@ -5,16 +5,20 @@ class Thing extends EventEmitter {
         super();
 
         this.id = id;
-        this.value = null;
+        this._value = null;
+
+        Object.defineProperty(this, 'value', {
+            get: function() { return this._value; }
+        });
     }
 
     setValue(value) {
         if (value === "true" || value === "false") {
-            this.value = value === "true";
+            this._value = value === "true";
         } else if (!Number.isNaN(Number(value).valueOf())) {
-            this.value = Number(value).valueOf();
+            this._value = Number(value).valueOf();
         } else {
-            this.value = value;
+            this._value = value;
         }
 
         this.emit("valueSet", this);

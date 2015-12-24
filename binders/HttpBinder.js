@@ -20,9 +20,9 @@ class HttpBinder extends Binder {
             resp.on("end", () => {
                 if (binding.transform !== undefined) {
                     this.logger.debug(`Executing transformation function for '${thing.id}'`);
-                    thing.value = binding.transform(buffer);
+                    thing.setValue(binding.transform(buffer));
                 } else {
-                    thing.value = buffer;
+                    thing.setValue(buffer);
                 }
             });
         });
