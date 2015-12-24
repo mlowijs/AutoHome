@@ -1,6 +1,6 @@
 class Binder {
     getType() {
-        return Binder.TYPE;
+        return null;
     }
 
     send(thing, binding) {
@@ -11,7 +11,5 @@ class Binder {
         throw new Error("Not implemented.");
     }
 }
-
-Binder.TYPE = null;
 
 module.exports = Binder;

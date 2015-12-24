@@ -9,7 +9,7 @@ class HttpBinder extends Binder {
     }
 
     getType() {
-        return HttpBinder.TYPE;
+        return "http";
     }
 
     send(thing, binding) {
@@ -37,7 +37,5 @@ class HttpBinder extends Binder {
         });
     }
 }
-
-HttpBinder.TYPE = "http";
 
 module.exports = HttpBinder;

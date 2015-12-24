@@ -1,18 +1,19 @@
 var fs = require("fs");
 
 class BinderManager {
-    constructor(thingManager, logger) {
+    constructor(logger, thingManager) {
         this.logger = logger;
         this.thingManager = thingManager;
         this.binders = [];
 
         fs.readdirSync("./binders").forEach(f => {
             let Binder = require(`./binders/${f}`);
+            let binder = new Binder();
 
-            if (Binder.TYPE === null)
+            if (binder.getType() === null)
                 return;
 
-            this.binders.push(new Binder());
+            this.binders.push(binder);
         });
     }
 
