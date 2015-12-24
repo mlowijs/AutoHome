@@ -2,8 +2,8 @@ let Binder = require("./Binder");
 let http = require("http");
 
 class HttpBinder extends Binder {
-    constructor() {
-        super();
+    constructor(logger) {
+        super(logger);
 
         this.bindings = [];
     }
@@ -13,6 +13,8 @@ class HttpBinder extends Binder {
     }
 
     send(thing, binding) {
+        this.logger.debug(`Calling HTTP GET '${binding.url}' for thing '${thing.id}'`);
+
         http.get(binding.url, (resp) => {
             let buffer = "";
 

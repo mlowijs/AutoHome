@@ -1,4 +1,8 @@
 class Binder {
+    constructor(logger) {
+        this.logger = logger;
+    }
+
     getType() {
         return null;
     }

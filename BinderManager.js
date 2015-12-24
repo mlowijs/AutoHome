@@ -8,7 +8,7 @@ class BinderManager {
 
         fs.readdirSync("./binders").forEach(f => {
             let Binder = require(`./binders/${f}`);
-            let binder = new Binder();
+            let binder = new Binder(this.logger);
 
             if (binder.getType() === null)
                 return;
