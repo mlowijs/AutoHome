@@ -31,12 +31,11 @@ class HttpBinder extends Binder {
     hookupBinding(thing, binding) {
         if (binding.direction === "in") {
             setInterval(() => this.receive(thing, binding), binding.interval * 1000);
+        } else {
+            return;
         }
 
-        this.bindings.push({
-            thing: thing,
-            binding: binding
-        });
+        super.hookupBinding(thing, binding);
     }
 }
 

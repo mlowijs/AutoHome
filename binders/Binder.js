@@ -14,7 +14,10 @@ class Binder {
     }
 
     hookupBinding(thing, binding) {
-        throw new Error("Not implemented.");
+        this.bindings.push({
+            thing: thing,
+            binding: binding
+        });
     }
 }
 
