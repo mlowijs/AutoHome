@@ -1,10 +1,15 @@
+//
 // AutoHome
-let BinderManager = require("./BinderManager");
-let ThingManager = require("./ThingManager");
-let Logger = require("./Logger");
+//
+let config = require("./config/main.json");
 
+let Logger = require("./Logger");
 let logger = new Logger(Logger.DEBUG);
+
+let ThingManager = require("./ThingManager");
 let thingManager = new ThingManager(logger);
+
+let BinderManager = require("./BinderManager");
 let binderManager = new BinderManager(logger, thingManager);
 
 binderManager.hookupBindings();
@@ -12,13 +17,15 @@ binderManager.hookupBindings();
 //
 // Express
 //
-var express = require("express");
-var expressApp = express();
+var express = require("express")();
 
 // Web app routes
+express.get("/", (req, res) => {
+   res.status(200).send("Under construction.");
+});
 
 // API routes
-expressApp.put("/api/:thingId/:value", (req, res) => {
+express.put("/api/:thingId/:value", (req, res) => {
     let thingId = req.params.thingId;
     let value = req.params.value;
 
@@ -33,6 +40,6 @@ expressApp.put("/api/:thingId/:value", (req, res) => {
     res.status(200).end();
 });
 
-expressApp.listen(3000, () => {
-    console.log("Express is listening");
+express.listen(config.server.port, () => {
+    logger.info(`AutoHome webserver is online at port ${config.server.port}.`);
 });

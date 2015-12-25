@@ -19,9 +19,10 @@ class BinderManager {
 
     hookupBindings() {
         for (let thing of this.thingManager.things) {
-            let bindings = thing.bindings;
+            if (thing.bindings === undefined)
+                continue;
 
-            for (let binding of bindings) {
+            for (let binding of thing.bindings) {
                 let binder = this.binders.find(b => b.getType() === binding.type);
 
                 if (binder === undefined) {
