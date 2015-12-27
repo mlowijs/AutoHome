@@ -3,13 +3,13 @@
 //
 let config = require("./config/main.json");
 
-let Logger = require("./Logger");
+let Logger = require("./src/Logger");
 let logger = new Logger(Logger.DEBUG);
 
-let ThingManager = require("./ThingManager");
+let ThingManager = require("./src/ThingManager");
 let thingManager = new ThingManager(logger);
 
-let BinderManager = require("./BinderManager");
+let BinderManager = require("./src/BinderManager");
 let binderManager = new BinderManager(logger, thingManager);
 
 binderManager.hookupBindings();
@@ -17,7 +17,7 @@ binderManager.hookupBindings();
 //
 // Express
 //
-var express = require("express")();
+let express = require("express")();
 
 // Web app routes
 express.get("/", (req, res) => {
@@ -37,7 +37,7 @@ express.put("/api/:thingId/:value", (req, res) => {
     }
 
     thing.setValue(value);
-    res.status(200).end();
+    res.status(204).end();
 });
 
 express.listen(config.server.port, () => {

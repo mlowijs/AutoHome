@@ -23,14 +23,8 @@ class BluetoothBinder extends Binder {
         });
     }
 
-    hookupBinding(thing, binding) {
-        if (binding.direction === "in") {
-            binding._interval = setInterval(() => this.receive(thing, binding), binding.intervalAbsent * 1000);
-        } else {
-            return;
-        }
-
-        super.hookupBinding(thing, binding);
+    bind(thing, binding) {
+        binding._interval = setInterval(() => this.receive(thing, binding), binding.intervalAbsent * 1000);
     }
 }
 

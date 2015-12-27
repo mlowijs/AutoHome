@@ -6,8 +6,8 @@ class BinderManager {
         this.thingManager = thingManager;
         this.binders = [];
 
-        fs.readdirSync("./binders").forEach(f => {
-            let Binder = require(`./binders/${f}`);
+        fs.readdirSync("binders").forEach(f => {
+            let Binder = require(`../binders/${f}`);
             let binder = new Binder(this.logger);
 
             if (binder.getType() === null)
@@ -22,16 +22,16 @@ class BinderManager {
             if (thing.bindings === undefined)
                 continue;
 
-            for (let binding of thing.bindings) {
+            thing.bindings.forEach((binding, i) => {
                 let binder = this.binders.find(b => b.getType() === binding.type);
 
                 if (binder === undefined) {
-                    this.logger.warn(`Binder with type '${binding.type}' was not found, ignoring binding for '${thing.id}'.`);
-                    continue;
+                    this.logger.error(`Binder for type '${binding.type}' was not found, ignoring binding #${i} on '${thing.id}'.`);
+                    return;
                 }
 
                 binder.hookupBinding(thing, binding);
-            }
+            });
         }
     }
 }

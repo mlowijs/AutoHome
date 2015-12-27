@@ -7,17 +7,21 @@ class ThingManager extends EventEmitter {
         super();
 
         this.logger = logger;
-        this.things = [];
+        this._things = [];
 
-        for (let f of fs.readdirSync("./things")) {
-            let thing = require(`./things/${f}`);
+        Object.defineProperty(this, 'things', {
+            get: function() { return this._things; }
+        });
+
+        for (let f of fs.readdirSync("things")) {
+            let thing = require(`../things/${f}`);
             thing.__proto__ = new Thing(f.replace(/\.[^/.]+$/, ""));
 
             thing.on("valueSet", (thing) => {
                this.logger.debug(`Value for '${thing.id}' was set to '${thing.value}' (${typeof thing.value}).`);
             });
 
-            this.things.push(thing);
+            this._things.push(thing);
         }
     }
 

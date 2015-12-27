@@ -10,6 +10,16 @@ class HttpBinder extends Binder {
         return "http";
     }
 
+    validateBinding(binding) {
+        if (binding.url === undefined || binding.url === "")
+            return "url";
+
+        if (binding.interval === undefined || binding.interval <= 0)
+            return "interval";
+
+        return true;
+    }
+
     receive(thing, binding) {
         this.logger.debug(`Calling HTTP GET '${binding.url}' for thing '${thing.id}'`);
 
@@ -28,14 +38,8 @@ class HttpBinder extends Binder {
         });
     }
 
-    hookupBinding(thing, binding) {
-        if (binding.direction === "in") {
-            setInterval(() => this.receive(thing, binding), binding.interval * 1000);
-        } else {
-            return;
-        }
-
-        super.hookupBinding(thing, binding);
+    bind(thing, binding) {
+        setInterval(() => this.receive(thing, binding), binding.interval * 1000);
     }
 }
 
