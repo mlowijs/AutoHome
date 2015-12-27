@@ -1,8 +1,9 @@
+let config = require("../config/main.json");
 let moment = require("moment");
 
 class Logger {
-    constructor(level) {
-        this.level = level;
+    constructor() {
+        this.level = config.log.level;
     }
 
     debug(message, tag) {
@@ -44,5 +45,7 @@ Logger.INFO = 1;
 Logger.WARN = 2;
 Logger.ERROR = 3;
 Logger.FATAL = 4;
+
+Logger._export = true;
 
 module.exports = Logger;

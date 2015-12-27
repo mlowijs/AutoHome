@@ -3,18 +3,11 @@
 //
 let config = require("./config/main.json");
 
+let BinderManager = require("./src/BinderManager");
 let DependencyResolver = require("./DependencyResolver");
 let dr = new DependencyResolver(["src"]);
 
-let Logger = require("./src/Logger");
-let logger = new Logger(config.log.level);
-
-let ThingManager = require("./src/ThingManager");
-let thingManager = new ThingManager(logger);
-
-let BinderManager = require("./src/BinderManager");
-let binderManager = new BinderManager(logger, thingManager);
-
+let binderManager = dr.getType(BinderManager);
 binderManager.hookupBindings();
 
 //
