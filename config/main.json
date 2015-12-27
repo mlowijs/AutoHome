@@ -1,4 +1,12 @@
 {
+  "api": {
+    "enabled": true
+  },
+
+  "log": {
+    "level": 0
+  },
+
   "server": {
     "port": 3000
   }

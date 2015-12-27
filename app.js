@@ -4,7 +4,7 @@
 let config = require("./config/main.json");
 
 let Logger = require("./src/Logger");
-let logger = new Logger(Logger.DEBUG);
+let logger = new Logger(config.log.level);
 
 let ThingManager = require("./src/ThingManager");
 let thingManager = new ThingManager(logger);
@@ -25,21 +25,23 @@ express.get("/", (req, res) => {
 });
 
 // API routes
-express.put("/api/:thingId/:value", (req, res) => {
-    let thingId = req.params.thingId;
-    let value = req.params.value;
+if (config.api.enabled) {
+    express.put("/api/:thingId/:value", (req, res) => {
+        let thingId = req.params.thingId;
+        let value = req.params.value;
 
-    let thing = thingManager.getThing(thingId);
+        let thing = thingManager.getThing(thingId);
 
-    if (thing === undefined) {
-        res.status(404).end();
-        return;
-    }
+        if (thing === undefined) {
+            res.status(404).end();
+            return;
+        }
 
-    thing.setValue(value);
-    res.status(204).end();
-});
+        thing.setValue(value);
+        res.status(204).end();
+    });
+}
 
 express.listen(config.server.port, () => {
-    logger.info(`AutoHome webserver is online at port ${config.server.port}.`);
+    logger.info(`AutoHome webserver is listening on port ${config.server.port}.`, "express.listen");
 });

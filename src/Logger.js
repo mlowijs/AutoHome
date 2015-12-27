@@ -1,35 +1,41 @@
+let moment = require("moment");
+
 class Logger {
     constructor(level) {
         this.level = level;
     }
 
-    debug(message) {
+    debug(message, tag) {
         if (this.level <= Logger.DEBUG)
-            this._log(`DEBUG: ${message}`);
+            this._log("DEBUG", message, tag);
     }
 
-    info(message) {
+    info(message, tag) {
         if (this.level <= Logger.INFO)
-            this._log(`INFO: ${message}`);
+            this._log("INFO", message, tag);
     }
 
-    warn(message) {
+    warn(message, tag) {
         if (this.level <= Logger.WARN)
-            this._log(`WARN: ${message}`);
+            this._log("WARN", message, tag);
     }
 
-    error(message) {
+    error(message, tag) {
         if (this.level <= Logger.ERROR)
-            this._log(`ERROR: ${message}`);
+            this._log("ERROR", message, tag);
     }
 
-    fatal(message) {
+    fatal(message, tag) {
         if (this.level <= Logger.FATAL)
-            this._log(`FATAL: ${message}`);
+            this._log("FATAL", message, tag);
     }
 
-    _log(message) {
-        console.log(message);
+    _log(level, message, tag) {
+        tag = tag || "";
+        let now = moment().format("YYYY-MM-DD HH:mm:ss");
+
+        let logMessage = `${now} - ${level} [${tag}] ${message}`;
+        console.log(logMessage);
     }
 }
 

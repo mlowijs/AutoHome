@@ -1,12 +1,11 @@
 {
   "name": "AutoHome",
   "version": "0.0.1",
-
   "bin": {
     "autohome": "./app.js"
   },
-
   "dependencies": {
-    "express": "^4.13.3"
+    "express": "^4.13.3",
+    "moment": "^2.10.6"
   }
 }

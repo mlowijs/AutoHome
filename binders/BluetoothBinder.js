@@ -13,7 +13,7 @@ class BluetoothBinder extends Binder {
     receive(thing, binding) {
         clearInterval(binding._interval);
 
-        this.logger.debug(`Executing l2ping to get presence for '${thing.id}'`);
+        this.logger.debug(`Executing l2ping to get presence for '${thing.id}'`, "BluetoothBinder.receive");
 
         childProcess.exec(`l2ping -c 1 ${binding.mac}`, { "stdio": "ignore" }, (error) => {
             thing.setValue(error === null);

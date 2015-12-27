@@ -21,7 +21,7 @@ class HttpBinder extends Binder {
     }
 
     receive(thing, binding) {
-        this.logger.debug(`Calling HTTP GET '${binding.url}' for thing '${thing.id}'`);
+        this.logger.debug(`Calling HTTP GET '${binding.url}' for thing '${thing.id}'`, "HttpBinder.receive");
 
         http.get(binding.url, (resp) => {
             let buffer = "";
@@ -29,12 +29,14 @@ class HttpBinder extends Binder {
             resp.on("data", (data) => buffer += data);
             resp.on("end", () => {
                 if (binding.transform !== undefined) {
-                    this.logger.debug(`Executing transformation function for '${thing.id}'`);
+                    this.logger.debug(`Executing transformation function for '${thing.id}'`, "HttpBinder.receive");
                     thing.setValue(binding.transform(buffer));
                 } else {
                     thing.setValue(buffer);
                 }
             });
+        }).on("error", (error) => {
+            this.logger.error(`Error occurred during HTTP GET request: ${error.message}`, "HttpBinder.receive");
         });
     }
 

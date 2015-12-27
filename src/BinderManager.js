@@ -6,7 +6,7 @@ class BinderManager {
         this.thingManager = thingManager;
         this.binders = [];
 
-        fs.readdirSync("binders").forEach(f => {
+        fs.readdirSync("./binders").forEach(f => {
             let Binder = require(`../binders/${f}`);
             let binder = new Binder(this.logger);
 
@@ -26,7 +26,7 @@ class BinderManager {
                 let binder = this.binders.find(b => b.getType() === binding.type);
 
                 if (binder === undefined) {
-                    this.logger.error(`Binder for type '${binding.type}' was not found, ignoring binding #${i} on '${thing.id}'.`);
+                    this.logger.error(`Binder for type '${binding.type}' was not found, ignoring binding #${i} on '${thing.id}'.`, "BinderManager.hookupBindings");
                     return;
                 }
 

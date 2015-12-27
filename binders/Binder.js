@@ -20,7 +20,7 @@ class Binder {
     hookupBinding(thing, binding) {
         let validationResult = this.validateBinding(binding);
         if (validationResult !== true) {
-            this.logger.error(`'${binding.type}' binding on '${thing.id}' cannot be used, missing or invalid property '${validationResult}'.`);
+            this.logger.error(`'${binding.type}' binding on '${thing.id}' cannot be used, missing or invalid property '${validationResult}'.`, "Binder.hookupBinding");
             return;
         }
 
