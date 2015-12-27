@@ -1,5 +1,6 @@
 let EventEmitter = require("events");
 let fs = require("fs");
+let path = require("path");
 let Thing = require("./Thing");
 
 class ThingManager extends EventEmitter {
@@ -13,9 +14,9 @@ class ThingManager extends EventEmitter {
             get: function() { return this._things; }
         });
 
-        for (let f of fs.readdirSync("things")) {
-            let thing = require(`../things/${f}`);
-            Object.setPrototypeOf(thing, new Thing(f.replace(/\.[^/.]+$/, "")));
+        for (let file of fs.readdirSync("things")) {
+            let thing = require(`../things/${file}`);
+            Object.setPrototypeOf(thing, new Thing(path.parse(file).name));
 
             thing.on("valueSet", (thing) => {
                this.logger.debug(`Value for '${thing.id}' was set to '${thing.value}' (${typeof thing.value}).`, "ThingManager.ctor.thing.valueSet");

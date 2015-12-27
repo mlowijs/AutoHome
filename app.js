@@ -3,6 +3,9 @@
 //
 let config = require("./config/main.json");
 
+let DependencyResolver = require("./DependencyResolver");
+let dr = new DependencyResolver(["src"]);
+
 let Logger = require("./src/Logger");
 let logger = new Logger(config.log.level);
 
