@@ -4,11 +4,17 @@
 let config = require("./config/main.json");
 
 let BinderManager = require("./src/BinderManager");
-let DependencyResolver = require("./DependencyResolver");
+let DependencyResolver = require("./src/DependencyResolver");
+let Logger = require("./src/Logger");
+let ThingManager = require("./src/ThingManager");
+
 let dr = new DependencyResolver(["src", "binders"]);
+let logger = dr.get(Logger);
 
 let binderManager = dr.get(BinderManager);
 binderManager.hookupBindings();
+
+let thingManager = dr.get(ThingManager);
 
 //
 // Express
@@ -26,7 +32,7 @@ if (config.api.enabled) {
         let thingId = req.params.thingId;
         let value = req.params.value;
 
-        let thing = thingManager.getThing(thingId);
+        let thing = thingManager.getThingById(thingId);
 
         if (thing === undefined) {
             res.status(404).end();
