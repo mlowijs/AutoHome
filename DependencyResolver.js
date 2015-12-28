@@ -2,9 +2,14 @@ let fs = require("fs");
 let path = require("path");
 
 class DependencyResolver {
-    constructor(paths) {
-        this.types = [];
+    constructor(paths, callback) {
+        this.exports = [];
 
+        this.loadExports(paths);
+        this.injectDependencies();
+    }
+
+    loadExports(paths) {
         for (let p of paths) {
             for (let file of fs.readdirSync(p)) {
                 let type = require(`./${p}/${file}`);
@@ -12,38 +17,44 @@ class DependencyResolver {
                 if (!type._export)
                     continue;
 
-                this.types.push({
+                this.exports.push({
                     name: path.parse(file).name,
                     type: type,
                     instance: new type()
                 });
             }
         }
+    }
 
-        // Inject dependencies
-        for (let dep of this.types) {
-            for (let prop in dep.instance) {
-                if (typeof dep.instance[prop] === "function") {
-                    let part = this.types.find(t => t.name === dep.instance[prop].name);
+    injectDependencies() {
+        for (let exp of this.exports) {
+            for (let propName in exp.instance) {
+                let prop = exp.instance[propName];
 
-                    if (part === undefined)
-                        continue;
+                if (prop === null || typeof prop !== "object" || !prop.import || prop.type === undefined)
+                    continue;
 
-                    dep.instance[prop] = part.instance;
+                let instance = null;
 
-                    console.log(`Set '${prop}' on ${dep.name}`);
+                if (Array.isArray(prop.type) && typeof prop.type[0] === "function") {
+                    let parts = this.exports.filter(t => t.instance instanceof prop.type[0]);
+                    instance = parts.map(p => p.instance);
+                } else {
+                    let part = this.exports.find(t => t.instance instanceof prop.type);
+                    instance = part !== undefined ? part.instance : null;
                 }
+
+                exp.instance[propName] = instance;
+
+                console.log(`Set '${propName}' on ${exp.name}`);
             }
         }
     }
 
-    getType(type) {
-        let foundType = this.types.find(t => t.type == type);
+    get(type) {
+        let exp = this.exports.find(t => t.type === type);
 
-        if (foundType !== undefined)
-            return foundType.instance;
-
-        return null;
+        return exp !== undefined ? exp.instance : null;
     }
 }
 

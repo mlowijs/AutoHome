@@ -8,12 +8,12 @@ class ThingManager extends EventEmitter {
     constructor() {
         super();
 
-        this.logger = Logger;
-        this._things = null;
-    }
-
-    _loadThings() {
+        this.logger = { import: true, type: Logger };
         this._things = [];
+
+        Object.defineProperty(this, 'things', {
+            get: function() { return this._things; }
+        });
 
         for (let file of fs.readdirSync("things")) {
             let thing = require(`../things/${file}`);
@@ -27,12 +27,7 @@ class ThingManager extends EventEmitter {
         }
     }
 
-    getThings() {
-        if (this._things === null)
-            this._loadThings();
-    }
-
-    getThing(thingId) {
+    getThingById(thingId) {
         return this.things.find(t => t.id == thingId);
     }
 }

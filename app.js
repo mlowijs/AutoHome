@@ -5,9 +5,9 @@ let config = require("./config/main.json");
 
 let BinderManager = require("./src/BinderManager");
 let DependencyResolver = require("./DependencyResolver");
-let dr = new DependencyResolver(["src"]);
+let dr = new DependencyResolver(["src", "binders"]);
 
-let binderManager = dr.getType(BinderManager);
+let binderManager = dr.get(BinderManager);
 binderManager.hookupBindings();
 
 //

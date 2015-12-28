@@ -1,34 +1,19 @@
+let Binder = require("../binders/Binder");
 let fs = require("fs");
 let Logger = require("./Logger");
 let ThingManager = require("./ThingManager");
 
 class BinderManager {
     constructor() {
-        this.logger = Logger;
-        this.thingManager = ThingManager;
-        this._binders = null;
-    }
+        this.logger = { import: true, type: Logger };
+        this.thingManager = { import: true, type: ThingManager };
 
-    _loadBinders() {
-        this._binders = [];
-
-        fs.readdirSync("./binders").forEach(f => {
-            let Binder = require(`../binders/${f}`);
-            let binder = new Binder(this.logger);
-
-            if (binder.getType() === null)
-                return;
-
-            this._binders.push(binder);
-        });
+        this._binders = { import: true, type: [ Binder ]};
     }
 
     hookupBindings() {
-        if (this._binders === null)
-            this._loadBinders();
-
-        for (let thing of this.thingManager.getThings()) {
-            if (thing.bindings === undefined)
+        for (let thing of this.thingManager.things) {
+            if (thing.bindings === undefined || thing.bindings.length === 0)
                 continue;
 
             thing.bindings.forEach((binding, i) => {

@@ -1,6 +1,8 @@
+let Logger = require("../src/Logger");
+
 class Binder {
-    constructor(logger) {
-        this.logger = logger;
+    constructor() {
+        this.logger = { import: true, type: Logger };
 
         this.bindings = [];
     }

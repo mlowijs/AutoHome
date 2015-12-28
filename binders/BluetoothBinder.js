@@ -2,8 +2,8 @@ let Binder = require("./Binder");
 let childProcess = require("child_process");
 
 class BluetoothBinder extends Binder {
-    constructor(logger) {
-        super(logger);
+    constructor() {
+        super();
     }
 
     getType() {
@@ -27,5 +27,7 @@ class BluetoothBinder extends Binder {
         binding._interval = setInterval(() => this.receive(thing, binding), binding.intervalAbsent * 1000);
     }
 }
+
+BluetoothBinder._export = true;
 
 module.exports = BluetoothBinder;
