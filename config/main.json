@@ -1,8 +1,4 @@
 {
-  "api": {
-    "enabled": true
-  },
-
   "log": {
     "level": 0
   },

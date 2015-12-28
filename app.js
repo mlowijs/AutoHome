@@ -40,19 +40,17 @@ app.get("/", (req, res) => {
 });
 
 // API routes
-if (config.api.enabled) {
-    app.put("/api/:thingId/:value", (req, res) => {
-        let thing = thingManager.getThingById(req.params.thingId);
+app.put("/api/:thingId/:value", (req, res) => {
+    let thing = thingManager.getThingById(req.params.thingId);
 
-        if (thing === undefined) {
-            res.status(404).end();
-            return;
-        }
+    if (thing === undefined) {
+        res.status(404).end();
+        return;
+    }
 
-        thing.setValue(req.params.value);
-        res.status(204).end();
-    });
-}
+    thing.setValue(req.params.value);
+    res.status(204).end();
+});
 
 app.listen(config.server.port, () => {
     logger.info(`AutoHome webserver is listening on port ${config.server.port}.`, "express.listen");
