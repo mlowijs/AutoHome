@@ -28,7 +28,7 @@ class ThingManager extends EventEmitter {
     }
 
     getThingById(thingId) {
-        return this.things.find(t => t.id == thingId);
+        return this.things.find(t => t.id == thingId) || null;
     }
 }
 

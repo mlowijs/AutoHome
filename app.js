@@ -43,7 +43,7 @@ app.get("/", (req, res) => {
 app.put("/api/:thingId/:value", (req, res) => {
     let thing = thingManager.getThingById(req.params.thingId);
 
-    if (thing === undefined) {
+    if (thing === null) {
         res.status(404).end();
         return;
     }
