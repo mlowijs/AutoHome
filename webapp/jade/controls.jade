@@ -1,20 +1,39 @@
-mixin switch(label, thingId)
-    .row
-        .col-xs-6= label
-        .col-xs-6
-            .btn-group
-                button(data-thing=thingId, data-value="true").btn.btn-default On
-                button(data-thing=thingId, data-value="false").btn.btn-default Off
+//- Buttons control.
+    Creates a grouping of buttons that set a value on a thing.
+    Parameters:
+        label: The label on the left hand side of the screen.
+        thingId: ID of the thing to set the value on.
+        buttons (optional): object of button labels and button values. If not specified,
+            two on/off buttons will be displayed.
+mixin buttons(label, thingId, buttons)
+    .row.control
+        .col-xs-8= label
+        .col-xs-4
+            .btn-group(data-thing=thingId)
+                if buttons !== undefined
+                    each value, label in buttons
+                        button(data-value=value.toString()).btn.btn-default= label
+                else
+                    button(data-value="true").btn.btn-default
+                        span.iec_power &#x23FD;
+                    button(data-value="false").btn.btn-default
+                        span.iec_power &#x2B58;
 
-mixin select(label, thingId, states)
-    .row
-        .col-xs-6= label
-        .col-xs-6
+mixin select(label, thingId, dropdownLabel, states)
+    .row.control
+        .col-xs-8= label
+        .col-xs-4
             .dropdown
                 button(data-toggle="dropdown").btn.btn-default.dropdown-toggle
-                    |States
+                    = dropdownLabel
                     span.caret
                 ul.dropdown-menu
-                    each value, name in states
+                    each value, label in states
                         li
-                            a(href="#", data-thing=thingId, data-value=value.toString())= name
+                            a(href="#", data-thing=thingId, data-value=value.toString())= label
+
+mixin label(label, thingId)
+    .row.control
+        .col-xs-8= label
+        .col-xs-4
+            .run(data-thing=thingId)

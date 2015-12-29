@@ -2,16 +2,26 @@ $(function() {
    var socket = io();
 
     socket.on("valueSet", function(thingId, value) {
-        var control = $("*[data-thing='" + thingId + "'][data-value='" + value + "']");
+        var controls = $("*[data-thing='" + thingId + "']");
 
-        control.addClass("active").siblings().removeClass("active");
+        controls.each(function() {
+            var control = $(this);
+
+            if (control.hasClass("btn-group")) {
+                var button = control.find(".btn[data-value='" + value + "']").first();
+                button.addClass("active").siblings().removeClass("active");
+            } else if (control.hasClass("run")) {
+                control.text(value);
+            }
+        });
     });
 
     $(".btn:not(.dropdown-toggle)").on("click", function() {
         var button = $(this);
+        var buttonGroup = button.closest(".btn-group");
 
-        socket.emit("valueSet", button.data("thing"), button.data("value"));
-    })
+        socket.emit("valueSet", buttonGroup.data("thing"), button.data("value"));
+    });
 
     $(".dropdown-menu a").on("click", function() {
         var link = $(this);
