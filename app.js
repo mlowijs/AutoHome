@@ -20,7 +20,11 @@ let thingManager = dr.get(ThingManager);
 // Express
 //
 let express = require("express");
+let http = require("http");
+
 let app = express();
+let server = http.Server(app);
+let io = require("socket.io")(server);
 
 // Setup view engine
 app.set("view engine", "jade");
@@ -52,6 +56,17 @@ app.put("/api/:thingId/:value", (req, res) => {
     res.status(204).end();
 });
 
-app.listen(config.server.port, () => {
+server.listen(config.server.port, () => {
     logger.info(`AutoHome webserver is listening on port ${config.server.port}.`, "express.listen");
+});
+
+//
+// Socket.IO
+//
+io.on("connection", socket => {
+   logger.debug("Socket.IO connection established.", "socketio.connection");
+
+    thingManager.on("valueSet", thing => {
+        socket.emit("valueSet", thing.id, thing.value);
+    })
 });

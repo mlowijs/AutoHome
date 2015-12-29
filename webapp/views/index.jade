@@ -1,4 +1,10 @@
 extends ./layout
 
 block content
-    h1= message
+    //- Index scripts
+    script(src="js/index.js")
+
+    .row
+        .col-lg-12
+            span thing1 value:
+            span(id="thing1") unknown

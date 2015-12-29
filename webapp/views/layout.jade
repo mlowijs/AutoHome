@@ -7,9 +7,16 @@ html
 
         title AutoHome
 
-        link(href="css/bootstrap.min.css", rel="stylesheet")
-    body
-        block content
+        //- jQuery
+        script(src="/js/jquery.min.js")
 
-        script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js")
-        script(src="js/bootstrap.min.js")
+        //- Bootstrap
+        link(href="/css/bootstrap.min.css", rel="stylesheet")
+
+        //- Socket.IO
+        script(src="/socket.io/socket.io.js")
+    body
+        .container-fluid
+            block content
+
+        script(src="/js/bootstrap.min.js")

@@ -21,6 +21,8 @@ class ThingManager extends EventEmitter {
 
             thing.on("valueSet", (thing) => {
                 this.logger.debug(`Value for '${thing.id}' was set to '${thing.value}' (${typeof thing.value}).`, "ThingManager.ctor.thing.valueSet");
+
+                this.emit("valueSet", thing);
             });
 
             this._things.push(thing);
