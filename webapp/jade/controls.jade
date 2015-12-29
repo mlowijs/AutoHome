@@ -1,0 +1,20 @@
+mixin switch(label, thingId)
+    .row
+        .col-xs-6= label
+        .col-xs-6
+            .btn-group
+                button(data-thing=thingId, data-value="true").btn.btn-default On
+                button(data-thing=thingId, data-value="false").btn.btn-default Off
+
+mixin select(label, thingId, states)
+    .row
+        .col-xs-6= label
+        .col-xs-6
+            .dropdown
+                button(data-toggle="dropdown").btn.btn-default.dropdown-toggle
+                    |States
+                    span.caret
+                ul.dropdown-menu
+                    each value, name in states
+                        li
+                            a(href="#", data-thing=thingId, data-value=value.toString())= name

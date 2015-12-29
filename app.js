@@ -64,9 +64,16 @@ server.listen(config.server.port, () => {
 // Socket.IO
 //
 io.on("connection", socket => {
-   logger.debug("Socket.IO connection established.", "socketio.connection");
-
     thingManager.on("valueSet", thing => {
         socket.emit("valueSet", thing.id, thing.value);
-    })
+    });
+
+    socket.on("valueSet", (thingId, value) => {
+        logger.debug(`Received valueSet event for '${thingId}' with value '${value}'`, "socketio.socket.valueSet");
+
+        let thing = thingManager.getThingById(thingId);
+
+        if (thing !== null)
+            thing.setValue(value);
+    });
 });

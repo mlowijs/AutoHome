@@ -4,7 +4,5 @@ block content
     //- Index scripts
     script(src="js/index.js")
 
-    .row
-        .col-lg-12
-            span thing1 value:
-            span(id="thing1") unknown
+    +switch("Thing numero uno", "thing1")
+    +select("Thing #dos", "thing1", { "State 1": true, "State 2": false })
