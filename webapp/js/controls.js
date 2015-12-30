@@ -2,7 +2,7 @@ $(function() {
    var socket = io();
 
     socket.on("valueSet", function(thingId, value) {
-        var controls = $("*[data-thing='" + thingId + "']");
+        var controls = $("[data-thing='" + thingId + "']");
 
         controls.each(function() {
             var control = $(this);

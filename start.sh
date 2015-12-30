@@ -1,3 +1,3 @@
 #!/bin/bash
 
-node --use_strict app.js
+node --use_strict ./app.js

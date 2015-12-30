@@ -3,31 +3,23 @@ html
     head
         meta(charset="utf-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
-        meta(name="viewport", content="width=device-width, initial-scale=1")
+        meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
 
         title AutoHome
 
-        //- jQuery
-        script(src="/js/jquery.min.js")
-
-        //- Fonts
         link(href="/css/font-awesome.min.css", rel="stylesheet")
         link(href="/css/iec-power.min.css", rel="stylesheet")
 
-        //- Bootstrap styles
         link(href="/css/bootstrap.min.css", rel="stylesheet")
-
-        //- AutoHome styles
         link(href="/css/autohome.min.css", rel="stylesheet")
 
-        //- Socket.IO
+        script(src="/js/jquery.min.js")
         script(src="/socket.io/socket.io.js")
+        script(src="js/controls.js")
 
-        //- Load controls mixins
         include ../jade/controls
     body
         .container-fluid
             block content
 
-        // - Bootstrap scripts
         script(src="/js/bootstrap.min.js")

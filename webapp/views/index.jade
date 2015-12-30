@@ -1,9 +1,6 @@
 extends ./layout
 
 block content
-    //- Index scripts
-    script(src="js/index.js")
-
     +buttons("Thing 1", "thing1")
     +select("Thing 2", "thing1", "For Thing 1", { "On": true, "Off": false })
     +label("Thing 3", "thing1")

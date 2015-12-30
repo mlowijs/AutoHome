@@ -20,7 +20,7 @@ class ThingManager extends EventEmitter {
             Object.setPrototypeOf(thing, new Thing(path.parse(file).name));
 
             thing.on("valueSet", (thing) => {
-                this.logger.debug(`Value for '${thing.id}' was set to '${thing.value}' (${typeof thing.value}).`, "ThingManager.ctor.thing.valueSet");
+                this.logger.info(`Value for '${thing.id}' was set to '${thing.value}' (${typeof thing.value}).`, "ThingManager.ctor.thing.valueSet");
 
                 this.emit("valueSet", thing);
             });

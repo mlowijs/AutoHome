@@ -26,7 +26,7 @@ let app = express();
 let server = http.Server(app);
 let io = require("socket.io")(server);
 
-// Setup view engine
+// Jade view engine
 app.set("view engine", "jade");
 app.set("views", `${__dirname}/webapp/views`);
 
@@ -36,11 +36,13 @@ app.use("/fonts", express.static(`${__dirname}/webapp/fonts`));
 app.use("/images", express.static(`${__dirname}/webapp/images`));
 app.use("/js", express.static(`${__dirname}/webapp/js`));
 
+
 // Web app routes
-app.get("/", (req, res) => {
-    res.render("index", {
-        message: "Bye world!"
-    });
+app.get("/:page?", (req, res) => {
+    logger.debug(`Webserver: ${req.method} ${req.path}`, "app.get.page");
+
+    let page = req.params.page || "index";
+    res.render(page);
 });
 
 // API routes
@@ -57,7 +59,7 @@ app.put("/api/:thingId/:value", (req, res) => {
 });
 
 server.listen(config.server.port, () => {
-    logger.info(`AutoHome webserver is listening on port ${config.server.port}.`, "express.listen");
+    logger.info(`AutoHome webserver is listening on port ${config.server.port}.`, "app.server.listen");
 });
 
 //
