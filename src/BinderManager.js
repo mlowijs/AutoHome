@@ -12,7 +12,9 @@ class BinderManager {
     }
 
     hookupBindings() {
-        for (let thing of this.thingManager.things) {
+        for (let thingId in this.thingManager.things) {
+            let thing = this.thingManager.things[thingId];
+
             if (thing.bindings === undefined || thing.bindings.length === 0)
                 continue;
 
@@ -20,11 +22,11 @@ class BinderManager {
                 let binder = this._binders.find(b => b.getType() === binding.type);
 
                 if (binder === undefined) {
-                    this.logger.error(`Binder for type '${binding.type}' was not found, ignoring binding #${i} on '${thing.id}'.`, "BinderManager.hookupBindings");
+                    this.logger.error(`Binder for type '${binding.type}' was not found, ignoring binding #${i} on '${thingId}'.`, "BinderManager.hookupBindings");
                     return;
                 }
 
-                binder.hookupBinding(thing, binding);
+                binder._hookupBinding(thing, binding);
             });
         }
     }

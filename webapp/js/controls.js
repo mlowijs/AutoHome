@@ -20,12 +20,12 @@ $(function() {
         var button = $(this);
         var buttonGroup = button.closest(".btn-group");
 
-        socket.emit("valueSet", buttonGroup.data("thing"), button.data("value"));
+        socket.emit("setValue", buttonGroup.data("thing"), button.data("value"));
     });
 
     $(".dropdown-menu a").on("click", function() {
         var link = $(this);
 
-        socket.emit("valueSet", link.data("thing"), link.data("value"));
+        socket.emit("setValue", link.data("thing"), link.data("value"));
     })
 });

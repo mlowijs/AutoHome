@@ -9,28 +9,27 @@ class ThingManager extends EventEmitter {
         super();
 
         this.logger = { import: true, type: Logger };
-        this._things = [];
+        this._things = {};
 
         Object.defineProperty(this, 'things', {
-            get: function() { return this._things; }
+            get() { return this._things; }
         });
 
         for (let file of fs.readdirSync("things")) {
             let thing = require(`../things/${file}`);
             Object.setPrototypeOf(thing, new Thing(path.parse(file).name));
 
-            thing.on("valueSet", (thing) => {
+            thing.on("valueSet", (thing, oldValue) => {
                 this.logger.info(`Value for '${thing.id}' was set to '${thing.value}' (${typeof thing.value}).`, "ThingManager.ctor.thing.valueSet");
+
+                if (thing.valueSet !== undefined)
+                    thing.valueSet(oldValue, this.things);
 
                 this.emit("valueSet", thing);
             });
 
-            this._things.push(thing);
+            this._things[thing.id] = thing;
         }
-    }
-
-    getThingById(thingId) {
-        return this.things.find(t => t.id == thingId) || null;
     }
 }
 
