@@ -1,12 +1,11 @@
 {
   "name": "AutoHome",
   "version": "0.0.1",
-
   "bin": {
     "autohome": "./start.sh"
   },
-
   "dependencies": {
+    "cron": "^1.1.0",
     "express": "^4.13.3",
     "jade": "^1.11.0",
     "moment": "^2.10.6",

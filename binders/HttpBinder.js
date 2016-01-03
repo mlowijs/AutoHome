@@ -44,7 +44,7 @@ class HttpBinder extends Binder {
         setInterval(() => this.doGet(thing, binding), binding.interval * 1000);
 
         if (binding.initialize === true)
-            this.receive(thing, binding);
+            this.doGet(thing, binding);
     }
 }
 
