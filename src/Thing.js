@@ -9,7 +9,7 @@ class Thing extends EventEmitter {
         this._value = null;
 
         Object.defineProperty(this, "id", {
-            get() { return this._id }
+            get() { return this._id; }
         });
 
         Object.defineProperty(this, "value", {

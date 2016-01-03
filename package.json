@@ -1,5 +1,5 @@
 {
-  "name": "AutoHome",
+  "name": "autohome",
   "version": "0.0.1",
   "bin": {
     "autohome": "./start.sh"

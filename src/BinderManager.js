@@ -1,14 +1,28 @@
-let Binder = require("../binders/Binder");
-let fs = require("fs");
-let Logger = require("./Logger");
-let ThingManager = require("./ThingManager");
-
 class BinderManager {
-    constructor() {
-        this.logger = { import: true, type: Logger };
-        this.thingManager = { import: true, type: ThingManager };
+    constructor(logger, thingManager) {
+        this.logger = logger;
+        this.thingManager = thingManager;
 
-        this._binders = { import: true, type: [ Binder ]};
+        this._binders = [];
+    }
+
+    getBinder(type) {
+        let binder = this._binders.find(b => b.getType() === binding.type);
+
+        if (binder !== undefined)
+            return binder;
+
+        try {
+            let Binder = require(`autohome-binder-${type}`);
+
+            binder = new Binder();
+            this._binders.push(binder);
+
+            return binder;
+        } catch (err) {
+            this.logger.error(`Binder for type '${type}' was not found, try running 'npm install autohome-binder-${type}'.`, "BinderManager.getBinder");
+            return null;
+        }
     }
 
     hookupBindings() {
@@ -19,19 +33,15 @@ class BinderManager {
                 continue;
 
             thing.bindings.forEach((binding, i) => {
-                let binder = this._binders.find(b => b.getType() === binding.type);
+                let binder = this.getBinder(binding.type);
 
-                if (binder === undefined) {
-                    this.logger.error(`Binder for type '${binding.type}' was not found, ignoring binding #${i} on '${thingId}'.`, "BinderManager.hookupBindings");
+                if (binder === null)
                     return;
-                }
 
                 binder._hookupBinding(thing, binding);
             });
         }
     }
 }
-
-BinderManager._export = true;
 
 module.exports = BinderManager;

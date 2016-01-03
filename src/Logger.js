@@ -46,6 +46,4 @@ Logger.WARN = 2;
 Logger.ERROR = 3;
 Logger.FATAL = 4;
 
-Logger._export = true;
-
 module.exports = Logger;

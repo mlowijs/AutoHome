@@ -7,13 +7,13 @@ module.exports = {
         //    intervalPresent: 120,
         //    intervalAbsent: 5
         //},
-        {
-            type: "schedule",
-            schedule: "*/5 * * * * *",
-            elapsed() {
-                console.log("elapsed!");
-            }
-        }
+        //{
+        //    type: "schedule",
+        //    schedule: "*/5 * * * * *",
+        //    elapsed() {
+        //        console.log("elapsed!");
+        //    }
+        //}
     ],
 
     valueSet(oldValue, things) {

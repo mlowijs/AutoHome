@@ -1,14 +1,13 @@
 let EventEmitter = require("events");
 let fs = require("fs");
-let Logger = require("./Logger");
 let path = require("path");
 let Thing = require("./Thing");
 
 class ThingManager extends EventEmitter {
-    constructor() {
+    constructor(logger) {
         super();
 
-        this.logger = { import: true, type: Logger };
+        this.logger = logger;
         this._things = {};
 
         Object.defineProperty(this, 'things', {
@@ -32,7 +31,5 @@ class ThingManager extends EventEmitter {
         }
     }
 }
-
-ThingManager._export = true;
 
 module.exports = ThingManager;
