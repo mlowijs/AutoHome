@@ -2,7 +2,7 @@ module.exports = {
     name: "Test dingetje 2",
     bindings: [
         {
-            type: "htp",
+            type: "http",
             initialize: true,
             interval: 300,
             transform(data) { return JSON.parse(data).main.temp; },

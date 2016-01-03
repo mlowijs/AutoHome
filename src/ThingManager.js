@@ -29,6 +29,8 @@ class ThingManager extends EventEmitter {
 
             this._things[thing.id] = thing;
         }
+
+        this.logger.debug(`Loaded ${Object.keys(this.things).length} things.`, "ThingManager.ctor");
     }
 }
 
