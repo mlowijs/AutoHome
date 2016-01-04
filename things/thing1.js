@@ -15,8 +15,4 @@ module.exports = {
         //    }
         //}
     ],
-
-    valueSet(oldValue, things) {
-        things["thing2"].value = this.value;
-    }
 };

@@ -1,6 +1,9 @@
 $(function() {
    var socket = io();
 
+    //
+    // Receive valueSet events
+    //
     socket.on("valueSet", function(thingId, value) {
         var controls = $("[data-thing='" + thingId + "']");
 
@@ -10,22 +13,29 @@ $(function() {
             if (control.hasClass("btn-group")) {
                 var button = control.find(".btn[data-value='" + value + "']").first();
                 button.addClass("active").siblings().removeClass("active");
-            } else if (control.hasClass("run")) {
+            } else if (control.hasClass("text")) {
                 control.text(value);
             }
         });
     });
 
+    //
+    // Send setValue events
+    //
+    function emitSetValue(thingId, value) {
+        socket.emit("setValue", thingId, value);
+    }
+
     $(".btn:not(.dropdown-toggle)").on("click", function() {
         var button = $(this);
         var buttonGroup = button.closest(".btn-group");
 
-        socket.emit("setValue", buttonGroup.data("thing"), button.data("value"));
+        emitSetValue(buttonGroup.data("thing"), button.data("value"));
     });
 
     $(".dropdown-menu a").on("click", function() {
         var link = $(this);
 
-        socket.emit("setValue", link.data("thing"), link.data("value"));
+        emitSetValue(link.data("thing"), link.data("value"));
     })
 });
