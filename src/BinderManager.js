@@ -1,7 +1,8 @@
+let ThingManager = require("./ThingManager");
+
 class BinderManager {
-    constructor(logger, thingManager) {
-        this.logger = logger;
-        this.thingManager = thingManager;
+    constructor(logger) {
+        this._logger = logger;
 
         this._binders = [];
     }
@@ -15,19 +16,19 @@ class BinderManager {
         try {
             let Binder = require(`autohome-binder-${type}`);
 
-            binder = new Binder(this.logger);
+            binder = new Binder(this._logger);
             this._binders.push(binder);
 
             return binder;
         } catch (err) {
-            this.logger.error(`Binder for type '${type}' on '${thing.id} was not found, ignoring binding. Try running 'npm install autohome-binder-${type}'.`, "BinderManager.getBinder");
+            this._logger.error(`Binder for type '${type}' on '${thing.id} was not found, ignoring binding. Try running 'npm install autohome-binder-${type}'.`, "BinderManager.getBinder");
             return null;
         }
     }
 
     hookupBindings() {
-        for (let thingId in this.thingManager.things) {
-            let thing = this.thingManager.things[thingId];
+        for (let thingId in ThingManager.things) {
+            let thing = ThingManager.things[thingId];
 
             if (thing.bindings === undefined || thing.bindings.length === 0)
                 continue;

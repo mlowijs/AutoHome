@@ -2,13 +2,13 @@ let Logger = require("../src/Logger");
 
 class Binder {
     constructor(logger) {
-        this.logger = logger;
+        this._logger = logger;
 
-        this.bindings = [];
+        this._bindings = [];
     }
 
     getType() {
-        return null;
+        throw new Error("Not implemented.");
     }
 
     validateBinding(binding) {
@@ -22,14 +22,14 @@ class Binder {
     _hookupBinding(thing, binding) {
         let validationResult = this.validateBinding(binding);
         if (validationResult !== true) {
-            this.logger.error(`'${binding.type}' binding on '${thing.id}' cannot be used, missing or invalid property '${validationResult}'.`, "Binder._hookupBinding");
+            this._logger.error(`'${binding.type}' binding on '${thing.id}' cannot be activated: missing or invalid property '${validationResult}'.`, "Binder._hookupBinding");
             return;
         }
 
         if (this.bind(thing, binding) === false)
             return;
 
-        this.bindings.push({
+        this._bindings.push({
             thing: thing,
             binding: binding
         });

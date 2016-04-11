@@ -9,7 +9,7 @@ let ThingManager = require("./src/ThingManager");
 
 let logger = new Logger();
 let thingManager = new ThingManager(logger);
-let binderManager = new BinderManager(logger, thingManager);
+let binderManager = new BinderManager(logger);
 binderManager.hookupBindings();
 
 //
@@ -17,10 +17,17 @@ binderManager.hookupBindings();
 //
 let express = require("express");
 let http = require("http");
+let minify = require("express-minify");
 
 let app = express();
 let server = http.Server(app);
 let io = require("socket.io")(server);
+
+// Setup auto LESS compile/minify
+express.static.mime.define({
+    "text/less": ["less"]
+});
+app.use(minify());
 
 // Jade view engine
 app.set("view engine", "jade");
@@ -47,9 +54,9 @@ app.get("/:page?", (req, res) => {
 
 // API routes
 app.put("/api/:thingId/:value", (req, res) => {
-    let thing = thingManager[req.params.thingId];
+    let thing = ThingManager.things[req.params.thingId];
 
-    if (thing === null) {
+    if (!thing) {
         res.status(404).end();
         return;
     }
@@ -73,9 +80,9 @@ io.on("connection", (socket) => {
     socket.on("setValue", (thingId, value) => {
         logger.debug(`Received setValue event for '${thingId}' with value '${value}'`, "socketio.socket.setValue");
 
-        let thing = thingManager.things[thingId];
+        let thing = ThingManager.things[thingId];
 
-        if (thing !== null)
+        if (thing)
             thing.value = value;
     });
 });

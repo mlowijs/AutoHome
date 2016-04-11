@@ -32,6 +32,9 @@ class Thing extends EventEmitter {
                     this._value = value;
 
                 this.emit("valueSet", this, oldValue);
+                
+                if (value !== oldValue)
+                    this.emit("valueChanged", this, oldValue);
             }
         });
     }

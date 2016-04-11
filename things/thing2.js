@@ -1,3 +1,5 @@
+let ThingManager = require("../src/ThingManager");
+
 module.exports = {
     name: "Test dingetje 2",
     bindings: [
