@@ -1,0 +1,19 @@
+{
+  "binderFolders": [
+    "../autohome-binders"
+  ],
+  "log": {
+    "level": 0
+  },
+  "server": {
+    "port": 3000
+  },
+
+  "binders": {
+    "mqtt": {
+      "brokers": {
+        "testBroker1": "mqtt://localhost"
+      }
+    }
+  }
+}

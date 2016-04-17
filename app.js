@@ -1,16 +1,22 @@
 //
 // AutoHome
 //
-let config = require("./config/main.json");
+let config = require("./config.json");
 
 let BinderManager = require("./src/BinderManager");
 let Logger = require("./src/Logger");
 let ThingManager = require("./src/ThingManager");
 
 let logger = new Logger();
+
 let thingManager = new ThingManager(logger);
+
 let binderManager = new BinderManager(logger);
-binderManager.hookupBindings();
+binderManager.loadBinders();
+
+
+
+
 
 //
 // Express

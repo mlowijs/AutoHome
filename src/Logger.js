@@ -1,4 +1,4 @@
-let config = require("../config/main.json");
+let config = require("../config.json");
 let moment = require("moment");
 
 class Logger {

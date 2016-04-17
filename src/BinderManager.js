@@ -1,29 +1,38 @@
+let config = require("../config.json");
+let glob = require("glob");
+let path = require("path");
 let ThingManager = require("./ThingManager");
 
 class BinderManager {
     constructor(logger) {
         this._logger = logger;
 
-        this._binders = [];
+        this._binders = {};
     }
 
-    getBinder(type, thing) {
-        let binder = this._binders.find(b => b.getType() === binding.type);
+    loadBinders() {
+        let binderFolders = config.binderFolders;
+        binderFolders.push("node_modules");
 
-        if (binder !== undefined)
-            return binder;
+        binderFolders.forEach(bf => {
+           glob("**/autohome-binder.json", { cwd: bf, realpath: true }, (err, files) => {
+               if (files.length === 0)
+                   return;
 
-        try {
-            let Binder = require(`autohome-binder-${type}`);
+               files.forEach(f => this._loadBinder(f));
+           });
+        });
+    }
 
-            binder = new Binder(this._logger);
-            this._binders.push(binder);
+    _loadBinder(jsonPath) {
+        let dir = path.dirname(jsonPath);
 
-            return binder;
-        } catch (err) {
-            this._logger.error(`Binder for type '${type}' on '${thing.id} was not found, ignoring binding. Try running 'npm install autohome-binder-${type}'.`, "BinderManager.getBinder");
-            return null;
-        }
+        let Binder = require(dir);
+        let binder = new Binder(this._logger, config.binders);
+
+        this._binders[binder.getType()] = binder;
+
+        this._logger.debug(`Loaded '${binder.getType()}' binder.`, "BinderManager._loadBinder");
     }
 
     hookupBindings() {
@@ -34,14 +43,33 @@ class BinderManager {
                 continue;
 
             for (let binding of thing.bindings) {
-                let binder = this.getBinder(binding.type, thing);
+                let binder = this._binders[binding.type];
 
-                if (binder === null)
+                if (binder === null) {
+                    this._logger.warn(`No binder found for type '${binding.type}', binding was not hooked up.`);
                     continue;
+                }
 
-                binder._hookupBinding(thing, binding);
+                this._hookupBinding(binder, thing, binding);
             }
         }
+    }
+
+    _hookupBinding(binder, thing, binding) {
+        let validationResult = binder.validateBinding(binding);
+        
+        if (validationResult !== true) {
+            this._logger.error(`'${binding.type}' binding on '${thing.id}' cannot be activated: missing or invalid property '${validationResult}'.`, "Binder._hookupBinding");
+            return;
+        }
+
+        if (binder.bind(thing, binding) === false)
+            return;
+
+        binder._bindings.push({
+            thing: thing,
+            binding: binding
+        });
     }
 }
 
