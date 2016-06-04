@@ -1,5 +1,5 @@
-let EventEmitter = require("events");
-let moment = require("moment");
+const EventEmitter = require("events");
+const moment = require("moment");
 
 class Thing extends EventEmitter {
     constructor(id) {

@@ -1,6 +1,8 @@
 {
   "binderFolders": [
-    "../autohome-binders"
+    "../autohome-binder-bt",
+    "../autohome-binder-http",
+    "../autohome-binder-mqtt"
   ],
   "log": {
     "level": 0

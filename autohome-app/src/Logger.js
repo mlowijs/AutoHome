@@ -1,8 +1,10 @@
-let config = require("../config.json");
-let moment = require("moment");
+const config = require("../config.json");
+const moment = require("moment");
 
 class Logger {
-    constructor() {
+    constructor(context) {
+        this._context = context;
+        
         this.level = config.log.level;
     }
 
@@ -32,10 +34,9 @@ class Logger {
     }
 
     _log(level, message, tag) {
-        tag = tag || "";
         let now = moment().format("YYYY-MM-DD HH:mm:ss");
 
-        let logMessage = `${now} - ${level}\t\t[${tag}] ${message}`;
+        let logMessage = `${now} - ${level}\t\t[${this._context}] ${message}`;
         console.log(logMessage);
     }
 }

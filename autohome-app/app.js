@@ -4,19 +4,22 @@
 let config = require("./config.json");
 
 let BinderManager = require("./src/BinderManager");
-let Logger = require("./src/Logger");
+let BindingManager = require("./src/BindingManager");
+let LoggerFactory = require("./src/LoggerFactory");
 let ThingManager = require("./src/ThingManager");
 
-let logger = new Logger();
+let loggerFactory = new LoggerFactory();
+let logger = loggerFactory.getLogger("app");
 
-let thingManager = new ThingManager(logger);
+let thingManager = new ThingManager(loggerFactory);
+let binderManager = new BinderManager(loggerFactory);
+let bindingManager = new BindingManager(loggerFactory);
 
-let binderManager = new BinderManager(logger);
-binderManager.loadBinders();
-
-
-
-
+thingManager.loadThings(() => {
+    binderManager.loadBinders((binder) => {
+                
+    })
+});
 
 //
 // Express
@@ -52,15 +55,26 @@ app.get("/favicon.ico", (req, res) => {
 });
 
 app.get("/:page?", (req, res) => {
-    logger.debug(`HTTP ${req.method} ${req.path}`, "app.get.page");
+    logger.debug(`HTTP GET ${req.path}`, "app.get.page");
 
     let page = req.params.page || "index";
     res.render(page);
 });
 
 // API routes
+app.get("/api/:thingId", (req, res) => {
+    let thing = thingManager.things[req.params.thingId];
+
+    if (!thing) {
+        res.status(404).end();
+        return;
+    }
+
+    res.status(200).send(thing.value);
+});
+
 app.put("/api/:thingId/:value", (req, res) => {
-    let thing = ThingManager.things[req.params.thingId];
+    let thing = thingManager.things[req.params.thingId];
 
     if (!thing) {
         res.status(404).end();
@@ -86,7 +100,7 @@ io.on("connection", (socket) => {
     socket.on("setValue", (thingId, value) => {
         logger.debug(`Received setValue event for '${thingId}' with value '${value}'`, "socketio.socket.setValue");
 
-        let thing = ThingManager.things[thingId];
+        let thing = thingManager.things[thingId];
 
         if (thing)
             thing.value = value;

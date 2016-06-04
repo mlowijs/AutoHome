@@ -14,5 +14,15 @@ module.exports = {
         //        console.log("elapsed!");
         //    }
         //}
+        {
+            type: "mqtt",
+            broker: "testBroker1",
+            subscribe: "test/+"
+        },
+        // {
+        //     type: "mqtt",
+        //     broker: "testBroker1",
+        //     publish: "test/thingpub"
+        // }
     ],
 };
