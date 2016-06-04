@@ -1,51 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8ab0e5ea-456c-4593-9d4a-5ed8f53e6d3a" name="Default" comment="Made alot of changes again">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/autohome-app/src/BinderManager.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/autohome-app/src/BindingManager.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/autohome-app/src/LoggerFactory.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/autohome-app/src/ThingManager.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/BinderManager.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ThingManager.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/autohome-app/app.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/config.json" afterPath="$PROJECT_DIR$/autohome-app/config.json" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/autohome-app/package.json" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Logger.js" afterPath="$PROJECT_DIR$/autohome-app/src/Logger.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Thing.js" afterPath="$PROJECT_DIR$/autohome-app/src/Thing.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/start.sh" afterPath="$PROJECT_DIR$/autohome-app/start.sh" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/things/thing1.js" afterPath="$PROJECT_DIR$/autohome-app/things/thing1.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/things/thing2.js" afterPath="$PROJECT_DIR$/autohome-app/things/thing2.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/webapp/css/autohome.less" afterPath="$PROJECT_DIR$/autohome-app/webapp/css/autohome.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/webapp/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/autohome-app/webapp/css/bootstrap.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/webapp/css/font-awesome.min.css" afterPath="$PROJECT_DIR$/autohome-app/webapp/css/font-awesome.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/webapp/css/iec-power.min.css" afterPath="$PROJECT_DIR$/autohome-app/webapp/css/iec-power.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/webapp/fonts/FontAwesome.otf" afterPath="$PROJECT_DIR$/autohome-app/webapp/fonts/FontAwesome.otf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/webapp/fonts/Unicode_IEC_symbol.eot" afterPath="$PROJECT_DIR$/autohome-app/webapp/fonts/Unicode_IEC_symbol.eot" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/webapp/fonts/Unicode_IEC_symbol.svg" afterPath="$PROJECT_DIR$/autohome-app/webapp/fonts/Unicode_IEC_symbol.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/webapp/fonts/Unicode_IEC_symbol.ttf" afterPath="$PROJECT_DIR$/autohome-app/webapp/fonts/Unicode_IEC_symbol.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/webapp/fonts/Unicode_IEC_symbol.woff" afterPath="$PROJECT_DIR$/autohome-app/webapp/fonts/Unicode_IEC_symbol.woff" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/webapp/fonts/Unicode_IEC_symbol.woff2" afterPath="$PROJECT_DIR$/autohome-app/webapp/fonts/Unicode_IEC_symbol.woff2" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/webapp/fonts/fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/autohome-app/webapp/fonts/fontawesome-webfont.eot" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/webapp/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/autohome-app/webapp/fonts/fontawesome-webfont.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/webapp/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/autohome-app/webapp/fonts/fontawesome-webfont.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/webapp/fonts/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/autohome-app/webapp/fonts/fontawesome-webfont.woff" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/webapp/fonts/fontawesome-webfont.woff2" afterPath="$PROJECT_DIR$/autohome-app/webapp/fonts/fontawesome-webfont.woff2" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/webapp/fonts/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/autohome-app/webapp/fonts/glyphicons-halflings-regular.eot" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/webapp/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/autohome-app/webapp/fonts/glyphicons-halflings-regular.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/webapp/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/autohome-app/webapp/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/webapp/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/autohome-app/webapp/fonts/glyphicons-halflings-regular.woff" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/webapp/fonts/glyphicons-halflings-regular.woff2" afterPath="$PROJECT_DIR$/autohome-app/webapp/fonts/glyphicons-halflings-regular.woff2" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/webapp/images/favicon.png" afterPath="$PROJECT_DIR$/autohome-app/webapp/images/favicon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/webapp/images/light.png" afterPath="$PROJECT_DIR$/autohome-app/webapp/images/light.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/webapp/jade/controls.jade" afterPath="$PROJECT_DIR$/autohome-app/webapp/jade/controls.jade" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/webapp/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/autohome-app/webapp/js/bootstrap.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/webapp/js/controls.js" afterPath="$PROJECT_DIR$/autohome-app/webapp/js/controls.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/webapp/js/jquery.min.js" afterPath="$PROJECT_DIR$/autohome-app/webapp/js/jquery.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/webapp/views/index.jade" afterPath="$PROJECT_DIR$/autohome-app/webapp/views/index.jade" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/webapp/views/layout.jade" afterPath="$PROJECT_DIR$/autohome-app/webapp/views/layout.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/autohome_node_modules.xml" afterPath="$PROJECT_DIR$/.idea/libraries/autohome_node_modules.xml" />
+    <list default="true" id="8ab0e5ea-456c-4593-9d4a-5ed8f53e6d3a" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/autohome-binder-bt/BluetoothBinder.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/autohome-binder-bt/autohome-binder.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/autohome-binder-bt/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/autohome-binder-http/HttpBinder.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/autohome-binder-http/autohome-binder.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/autohome-binder-http/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/autohome-binder-mqtt/MqttBinder.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/autohome-binder-mqtt/autohome-binder.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/autohome-binder-mqtt/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/autohome-binder/Binder.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/autohome-binder/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="autohome.iws" />
@@ -415,7 +382,7 @@
       <workItem from="1460897884999" duration="1748000" />
       <workItem from="1460902427107" duration="14820000" />
       <workItem from="1464946981320" duration="2784000" />
-      <workItem from="1464968702011" duration="7961000" />
+      <workItem from="1464968702011" duration="8021000" />
     </task>
     <task id="LOCAL-00001" summary="Made alot of changes">
       <created>1460372366116</created>
@@ -431,11 +398,18 @@
       <option name="project" value="LOCAL" />
       <updated>1460919337012</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Made alot of changes again">
+      <created>1465037530420</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1465037530420</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37745000" />
+    <option name="totallyTimeSpent" value="37805000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -459,7 +433,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31060606" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3109426" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
