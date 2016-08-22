@@ -13,12 +13,12 @@ let logger = loggerFactory.getLogger("app");
 
 let thingManager = new ThingManager(loggerFactory);
 let binderManager = new BinderManager(loggerFactory);
-let bindingManager = new BindingManager(loggerFactory);
+let bindingManager = new BindingManager(loggerFactory, thingManager, binderManager);
 
 thingManager.loadThings(() => {
-    binderManager.loadBinders((binder) => {
-                
-    })
+    binderManager.loadBinders(binder => {
+        bindingManager.validateBindings(binder);
+    });
 });
 
 //
@@ -63,7 +63,7 @@ app.get("/:page?", (req, res) => {
 
 // API routes
 app.get("/api/:thingId", (req, res) => {
-    let thing = thingManager.things[req.params.thingId];
+    let thing = thingManager.things.get(req.params.thingId);
 
     if (!thing) {
         res.status(404).end();
@@ -74,14 +74,14 @@ app.get("/api/:thingId", (req, res) => {
 });
 
 app.put("/api/:thingId/:value", (req, res) => {
-    let thing = thingManager.things[req.params.thingId];
+    let thing = thingManager.things.get(req.params.thingId);
 
     if (!thing) {
         res.status(404).end();
         return;
     }
 
-    thing.value = req.params.value;
+    thing.setValue(req.params.value);
     res.status(204).end();
 });
 
@@ -103,6 +103,6 @@ io.on("connection", (socket) => {
         let thing = thingManager.things[thingId];
 
         if (thing)
-            thing.value = value;
+            thing.setValue(value);
     });
 });

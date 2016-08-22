@@ -8,24 +8,18 @@ class ThingManager extends EventEmitter {
         super();
 
         this._logger = loggerFactory.getLogger("ThingManager");
-        this.things = [];
+        this.things = new Map();
     }
     
     loadThings(thingsLoaded) {
         glob("things/*.js", { realpath: true }, (err, files) => {
             files.forEach(file => this._loadThing(file));
 
-            this._logger.debug(`Loaded ${Object.keys(this.things).length} things.`, "ThingManager.ctor");
+            this._logger.debug(`Loaded ${this.things.size} things.`, "ThingManager.ctor");
             
             if (thingsLoaded)
                 thingsLoaded();
         });
-    }
-
-    getBindingsForBinder(binder) {
-        return Object.values(this.things)
-                     .map(thing => thing.bindings)
-                     .filter(binding => binding.type == binder.getType());
     }
     
     _loadThing(file) {
@@ -48,7 +42,7 @@ class ThingManager extends EventEmitter {
                 thing.valueChanged(oldValue, this.things);
         });
 
-        this.things[thing.id] = thing;
+        this.things.set(thing.id, thing);
     }
 }
 

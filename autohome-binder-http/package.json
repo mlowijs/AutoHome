@@ -5,6 +5,7 @@
   "license": "BSD-3-Clause",
   "main": "./HttpBinder.js",
   "dependencies": {
-    "autohome-binder": "*"
+    "autohome-binder": "0.0.7",
+    "request": "^2.74.0"
   }
 }

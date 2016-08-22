@@ -6,7 +6,7 @@ class BinderManager {
     constructor(loggerFactory) {
         this._logger = loggerFactory.getLogger("BinderManager");
 
-        this._binders = {};
+        this.binders = new Map();
     }
 
     loadBinders(binderLoaded) {
@@ -29,12 +29,12 @@ class BinderManager {
         let Binder = require(dir);
         let binder = new Binder(this._logger, config.binders);
 
-        if (this._binders[binder.getType()]) {
+        if (this.binders.has(binder.getType())) {
             this._logger.error(`A binder with type ${binder.getType()} already exists.`, "BinderManager._loadBinder");
             return;
         }
 
-        this._binders[binder.getType()] = binder;
+        this.binders.set(binder.getType(), binder);
 
         this._logger.debug(`Loaded '${binder.getType()}' binder.`, "BinderManager._loadBinder");
 

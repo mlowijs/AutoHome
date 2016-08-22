@@ -1,8 +1,6 @@
 class Binder {
     constructor(logger) {
         this._logger = logger;
-
-        this._bindings = [];
     }
 
     getType() {
@@ -10,15 +8,14 @@ class Binder {
     }
 
     validateBinding(binding) {
+        if (!binding.type)
+            return "type";
+
         return true;
     }
 
-    bind(thing, binding) {
-        throw new Error("Not implemented.");
-    }
+    processBinding(binding, thing) {
 
-    processBinding(binding, data) {
-        throw new Error("Not implemented.");
     }
 }
 
