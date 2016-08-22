@@ -17,7 +17,7 @@ class Thing extends EventEmitter {
         });
     }
 
-    updateValue(value) {
+    setValue(value) {
         let date = null;
         let number = null;
 
@@ -33,10 +33,10 @@ class Thing extends EventEmitter {
             this._value = value;
     }
 
-    setValue(value) {
+    pushValue(value) {
         let oldValue = this._value;
 
-        this.updateValue(value);
+        this.setValue(value);
 
         this.emit("valueSet", this, oldValue);
 

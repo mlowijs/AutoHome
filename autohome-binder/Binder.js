@@ -8,10 +8,12 @@ class Binder {
     }
 
     validateBinding(binding) {
-        if (!binding.type)
-            return "type";
+        let bindingValid = true;
 
-        return true;
+        if (!binding.type)
+            bindingValid = "type";
+
+        return bindingValid;
     }
 
     processBinding(binding, thing) {

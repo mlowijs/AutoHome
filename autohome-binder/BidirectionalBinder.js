@@ -4,13 +4,10 @@ class BidirectionalBinder extends Binder {
     validateBinding(binding) {
         let bindingValid = super.validateBinding(binding);
 
-        if (bindingValid !== true)
-            return bindingValid;
-
         if (!binding.direction || !["in", "out"].includes(binding.direction))
-            return "direction";
+            bindingValid = "direction";
 
-        return true;
+        return bindingValid;
     }
 }
 

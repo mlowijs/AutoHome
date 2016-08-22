@@ -81,7 +81,7 @@ app.put("/api/:thingId/:value", (req, res) => {
         return;
     }
 
-    thing.setValue(req.params.value);
+    thing.pushValue(req.params.value);
     res.status(204).end();
 });
 
@@ -103,6 +103,6 @@ io.on("connection", (socket) => {
         let thing = thingManager.things[thingId];
 
         if (thing)
-            thing.setValue(value);
+            thing.pushValue(value);
     });
 });

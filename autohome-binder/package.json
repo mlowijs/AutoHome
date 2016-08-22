@@ -1,7 +1,7 @@
 {
   "name": "autohome-binder",
   "description": "Base classes for AutoHome binders.",
-  "version": "0.0.7",
+  "version": "0.1.1",
   "license": "BSD-3-Clause",
   "main": "./main.js"
 }

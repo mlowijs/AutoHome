@@ -1,11 +1,11 @@
 {
   "name": "autohome-binder-http",
   "description": "HTTP binder for AutoHome.",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "license": "BSD-3-Clause",
   "main": "./HttpBinder.js",
   "dependencies": {
-    "autohome-binder": "0.0.7",
+    "autohome-binder": "^0.1.0",
     "request": "^2.74.0"
   }
 }

@@ -13,34 +13,33 @@ class HttpBinder extends BidirectionalBinder {
     validateBinding(binding) {
         let bindingValid = super.validateBinding(binding);
 
-        if (bindingValid !== true)
-            return bindingValid;
-
         if (binding.url === undefined || binding.url === "")
-            return "url";
+            bindingValid = "url";
 
         if (binding.direction == "in") {
             if (binding.interval === undefined || binding.interval <= 0)
-                return "interval";
+                bindingValid = "interval";
+        } else {
+            if (!binding.getOptions && !(binding.url && binding.method))
+                bindingValid = "getOptions or url and method";
         }
 
-        return true;
+        return bindingValid;
     }
 
-
     processBinding(binding, thing) {
-        request.post(binding.url);
+        let options = null;
 
-        // let req = http.request({
-        //     method: binding.method,
-        //     hostname: binding.url
-        // });
-        //
-        // req.on('error', (e) => {
-        //     console.log(`problem with request: ${e.message}`);
-        // });
-        //
-        // req.end();
+        if (binding.getOptions) {
+            options = binding.getOptions(thing);
+        } else {
+            options = {
+                method: binding.method,
+                url: binding.url
+            };
+        }
+
+        request(options);
     }
 
     // bind(thing, binding) {

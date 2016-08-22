@@ -13,7 +13,13 @@ module.exports = {
             type: "http",
             direction: "out",
             method: "POST",
-            url: "http://requestb.in/pajk2rpa?test=aap"
+            url: "http://requestb.in/pajk2rpa?test=aap",
+            getOptions(thing) {
+                return {
+                    method: "post",
+                    url: `http://requestb.in/pajk2rpa?value=${thing.value}`
+                }
+            }
         }
     ]
 };
