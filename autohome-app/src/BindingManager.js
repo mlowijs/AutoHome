@@ -10,9 +10,9 @@ class BindingManager {
     hookupBindings(binder) {
         for (const [id, thing] of this._thingManager.things) {
             for (const binding of thing.bindings.filter(binding => binding.type === binder.getType())) {
-                let bindingValid = binder.validateBinding(binding);
+                const validationResult = binder.validateBinding(binding);
 
-                if (bindingValid !== true) {
+                if (validationResult !== true) {
                     this._logger.error(`Binding has missing or invalid property/properties: '${bindingValid}'.`);
                     return;
                 }
@@ -30,7 +30,7 @@ class BindingManager {
             const binder = this._binderManager.binders.get(binding.type);
 
             if (binder === undefined || binding.direction === "in")
-                return;
+                continue;
 
             binder.processBinding(binding, thing);
         }

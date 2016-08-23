@@ -14,6 +14,17 @@ module.exports = {
             direction: "in",
             topic: "test/aap",
             broker: "testBroker1"
-        }
+        },
+        {
+            type: "http",
+            direction: "out",
+
+            getOptions(thing) {
+                return {
+                    method: "post",
+                    url: `http://requestb.in/1eh5aad1?value=${thing.value}`
+                };
+            }
+        },
     ]
 };

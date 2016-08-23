@@ -5,7 +5,7 @@
     "../autohome-binder-rfxcom"
   ],
   "log": {
-    "level": 1
+    "level": 0
   },
   "server": {
     "port": 3000

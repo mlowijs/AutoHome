@@ -43,7 +43,7 @@ class BinderManager {
         binder.configure(binderConfig, () => {
             this.binders.set(binderType, binder);
 
-            this._logger.debug(`Loaded '${binderType}' binder.`, "BinderManager._loadBinder");
+            this._logger.info(`Loaded '${binderType}' binder.`, "BinderManager._loadBinder");
 
             if (binderLoaded)
                 binderLoaded(binder);

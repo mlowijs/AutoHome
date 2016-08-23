@@ -7,7 +7,7 @@ class RfxcomDriver extends EventEmitter {
     constructor(loggerFactory, portName, portOpened) {
         super();
 
-        this._sequenceNr = 0;
+        this._sequenceNumber = 0;
         this._logger = loggerFactory.getLogger("RfxcomDriver");
 
         this._port = new SerialPort(portName, {
@@ -18,37 +18,51 @@ class RfxcomDriver extends EventEmitter {
                 return;
             }
 
-            this._port.on("data", (data) => this._receiveMessage(data));
+            let buffer = [];
+
+            this._port.on("data", (data) => {
+                buffer = buffer.concat(data);
+
+                if (data[0] === data.length - 1) {
+                    this._receiveMessage(data);
+                    buffer = [];
+                }
+            });
+
             portOpened();
         });
     }
 
     reset() {
-        this._logger.info("Resetting RFXCOM.");
+        this._logger.debug("Resetting RFXCOM.");
 
         this._write(MessageFactory.createResetMessage(), () => setTimeout(() =>
-            this._write(MessageFactory.createStatusMessage()), 200)
+            this._write(MessageFactory.createStatusMessage()), 500)
         );
     }
 
     sendMessage(binding, value) {
         const messageFactory = MessageFactory.getMessageFactory(binding.packetType);
-        const message = messageFactory.createMessage(this._sequenceNr++, binding, value);
+        const message = messageFactory.createMessage(this._sequenceNumber++, binding, value);
 
         this._write(message);
     }
 
     _receiveMessage(data) {
-        MessageParser.parseMessage(data, (message) => {
-            if (message.packetType === 0x01 && message.commandType === 0x02) {
-                this._logger.info("RFXCOM initialized.");
+        // this._logger.debug(`Received message: ${dataString}`);
 
-                this.emit("initialized");
-                return;
-            }
+        const message = MessageParser.parseMessage(data);
 
-            this.emit("message", message);
-        });
+        if (message && message.packetType === 0x01 && message.commandType === 0x02) {
+            this._logger.info("RFXCOM initialized.");
+
+            this._sequenceNumber = message.sequenceNumber;
+
+            this.emit("initialized");
+            return;
+        }
+
+        this.emit("message", message);
     }
 
     _write(data, dataWritten) {

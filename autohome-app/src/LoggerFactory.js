@@ -4,6 +4,5 @@ class LoggerFactory {
     getLogger(context) {
         return new Logger(context);
     }
-};
-
+}
 module.exports = LoggerFactory;

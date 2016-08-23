@@ -50,7 +50,9 @@ class MqttBinder extends Binder {
     }
 
     processBinding(binding, thing) {
-        this._brokers.get(binding.broker).publish(binding.topic, `${thing.value}`);
+        const client = this._brokers.get(binding.broker);
+
+        client.publish(binding.topic, `${thing.value}`);
     }
 
     addBinding(binding, thing) {

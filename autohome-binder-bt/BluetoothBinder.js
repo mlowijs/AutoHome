@@ -1,9 +1,9 @@
-let Binder = require("autohome-binder");
-let childProcess = require("child_process");
+const Binder = require("autohome-binder");
+const childProcess = require("child_process");
 
 class BluetoothBinder extends Binder {
-    constructor(logger) {
-        super(logger);
+    constructor(loggerFactory) {
+        super(loggerFactory.getLogger("BluetoothBinder"));
     }
     
     getType() {
@@ -11,18 +11,20 @@ class BluetoothBinder extends Binder {
     }
     
     validateBinding(binding) {
+        let validationResult = super.validateBinding(binding);
+
         if (binding.mac === undefined || binding.mac === "")
-            return "mac";
+            validationResult = "mac";
 
         if (binding.intervalPresent === undefined || binding.intervalPresent <= 0)
-            return "intervalPresent";
+            validationResult = "intervalPresent";
 
         if (binding.intervalAbsent === undefined || binding.intervalAbsent <= 0)
-            return "intervalAbsent";
+            validationResult = "intervalAbsent";
 
-        return true;
+        return validationResult;
     }
-    
+
     _scan(thing, binding) {
         clearInterval(binding._interval);
 
