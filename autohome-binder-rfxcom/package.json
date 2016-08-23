@@ -1,0 +1,11 @@
+{
+  "name": "autohome-binder-rfxcom",
+  "description": "RFXCOM binder for AutoHome.",
+  "version": "0.1.0",
+  "license": "BSD-3-Clause",
+  "main": "./RfxcomBinder.js",
+  "dependencies": {
+    "autohome-binder": "^0.1.4",
+    "serialport": "^4.0.1"
+  }
+}

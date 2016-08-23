@@ -2,9 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ab0e5ea-456c-4593-9d4a-5ed8f53e6d3a" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/autohome-app/config/mqtt.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/autohome-app/config/rfxcom.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/autohome-app/things/thing3.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/autohome-binder-rfxcom/MessageFactory.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/autohome-binder-rfxcom/RfxcomBinder.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/autohome-binder-rfxcom/RfxcomDriver.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/autohome-binder-rfxcom/autohome-binder.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/autohome-binder-rfxcom/package.json" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/autohome-binder/BidirectionalBinder.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/autohome-binder/main.js" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/autohome-app/config.json" afterPath="$PROJECT_DIR$/autohome-app/config/main.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/autohome-app/app.js" afterPath="$PROJECT_DIR$/autohome-app/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/autohome-app/package.json" afterPath="$PROJECT_DIR$/autohome-app/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/autohome-app/src/BinderManager.js" afterPath="$PROJECT_DIR$/autohome-app/src/BinderManager.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/autohome-app/src/BindingManager.js" afterPath="$PROJECT_DIR$/autohome-app/src/BindingManager.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/autohome-app/src/Logger.js" afterPath="$PROJECT_DIR$/autohome-app/src/Logger.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/autohome-app/things/thing1.js" afterPath="$PROJECT_DIR$/autohome-app/things/thing1.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/autohome-app/things/thing2.js" afterPath="$PROJECT_DIR$/autohome-app/things/thing2.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/autohome-app/webapp/views/index.jade" afterPath="$PROJECT_DIR$/autohome-app/webapp/views/index.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/autohome-binder-http/HttpBinder.js" afterPath="$PROJECT_DIR$/autohome-binder-http/HttpBinder.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/autohome-binder-mqtt/MqttBinder.js" afterPath="$PROJECT_DIR$/autohome-binder-mqtt/MqttBinder.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/autohome-binder-mqtt/package.json" afterPath="$PROJECT_DIR$/autohome-binder-mqtt/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/autohome-binder/Binder.js" afterPath="$PROJECT_DIR$/autohome-binder/Binder.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/autohome-binder/package.json" afterPath="$PROJECT_DIR$/autohome-binder/package.json" />
     </list>
     <ignored path="autohome.iws" />
@@ -24,114 +46,12 @@
     <favorites_list name="autohome" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BinderManager.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/autohome-app/src/BinderManager.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="30" column="53" selection-start-line="30" selection-start-column="53" selection-end-line="30" selection-end-column="53" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/autohome-app/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="8" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BindingManager.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/autohome-app/src/BindingManager.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="thing2.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/autohome-app/things/thing2.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/autohome-app/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Binder.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/autohome-binder/Binder.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HttpBinder.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/autohome-binder-http/HttpBinder.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="22" column="54" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/autohome-binder/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="thing1.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/autohome-app/things/thing1.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BidirectionalBinder.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/autohome-binder/BidirectionalBinder.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="AMD JavaScript File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -142,9 +62,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/webapp/views/layout.jade" />
-        <option value="$PROJECT_DIR$/webapp/css/autohome.less" />
-        <option value="$PROJECT_DIR$/node_modules/less/lib/less-node/lessc-helper.js" />
         <option value="$PROJECT_DIR$/node_modules/autohome-binder-bt/BluetoothBinder.js" />
         <option value="$PROJECT_DIR$/src/Thing.js" />
         <option value="$PROJECT_DIR$/node_modules/autohome-binder-http/HttpBinder.js" />
@@ -163,24 +80,39 @@
         <option value="$PROJECT_DIR$/src/BindingManager.js" />
         <option value="$PROJECT_DIR$/src/LoggerFactory.js" />
         <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/autohome-app/things/thing1.js" />
         <option value="$PROJECT_DIR$/autohome-app/src/LoggerFactory.js" />
-        <option value="$PROJECT_DIR$/autohome-app/config.json" />
         <option value="$PROJECT_DIR$/autohome-app/src/ThingManager.js" />
         <option value="$PROJECT_DIR$/autohome-binder/main.ks.js" />
         <option value="$PROJECT_DIR$/autohome-binder/main.js" />
         <option value="$PROJECT_DIR$/autohome-binder-http/package.json" />
         <option value="$PROJECT_DIR$/autohome-app/src/Logger.js" />
         <option value="$PROJECT_DIR$/autohome-app/src/Thing.js" />
-        <option value="$PROJECT_DIR$/autohome-app/app.js" />
-        <option value="$PROJECT_DIR$/autohome-binder/BidirectionalBinder.js" />
-        <option value="$PROJECT_DIR$/autohome-binder/Binder.js" />
-        <option value="$PROJECT_DIR$/autohome-app/package.json" />
-        <option value="$PROJECT_DIR$/autohome-app/src/BindingManager.js" />
+        <option value="$PROJECT_DIR$/autohome-binder-mqtt/package.json" />
+        <option value="$PROJECT_DIR$/autohome-binder-rfxcom/autohome-binder.json" />
+        <option value="$PROJECT_DIR$/autohome-app/config.json" />
+        <option value="$PROJECT_DIR$/autohome-app/config/test.js" />
+        <option value="$PROJECT_DIR$/autohome-app/config/mqtt.json.js" />
+        <option value="$PROJECT_DIR$/autohome-app/config/mqtt.json" />
+        <option value="$PROJECT_DIR$/autohome-binder-rfxcom/package.json" />
+        <option value="$PROJECT_DIR$/autohome-app/config/main.json" />
+        <option value="$PROJECT_DIR$/autohome-binder-rfxcom/MessageFactory.js" />
         <option value="$PROJECT_DIR$/autohome-app/src/BinderManager.js" />
-        <option value="$PROJECT_DIR$/autohome-binder/package.json" />
+        <option value="$PROJECT_DIR$/autohome-app/config/rfxcom.json" />
+        <option value="$PROJECT_DIR$/autohome-binder-rfxcom/RfxcomDriver.js" />
+        <option value="$PROJECT_DIR$/autohome-app/package.json" />
+        <option value="$PROJECT_DIR$/autohome-app/node_modules/less/lib/less-node/lessc-helper.js" />
+        <option value="$PROJECT_DIR$/autohome-app/webapp/views/index.jade" />
+        <option value="$PROJECT_DIR$/autohome-app/app.js" />
+        <option value="$PROJECT_DIR$/autohome-app/things/thing1.js" />
         <option value="$PROJECT_DIR$/autohome-app/things/thing2.js" />
+        <option value="$PROJECT_DIR$/autohome-app/things/thing3.js" />
+        <option value="$PROJECT_DIR$/autohome-binder/BidirectionalBinder.js" />
+        <option value="$PROJECT_DIR$/autohome-binder/package.json" />
+        <option value="$PROJECT_DIR$/autohome-app/src/BindingManager.js" />
+        <option value="$PROJECT_DIR$/autohome-binder/Binder.js" />
         <option value="$PROJECT_DIR$/autohome-binder-http/HttpBinder.js" />
+        <option value="$PROJECT_DIR$/autohome-binder-mqtt/MqttBinder.js" />
+        <option value="$PROJECT_DIR$/autohome-binder-rfxcom/RfxcomBinder.js" />
       </list>
     </option>
   </component>
@@ -194,10 +126,12 @@
     <handled-path value="$PROJECT_DIR$/autohome-app/node_modules" />
     <handled-path value="$PROJECT_DIR$/autohome-binder-bt/node_modules" />
     <handled-path value="$PROJECT_DIR$/autohome-binder-http/node_modules" />
+    <handled-path value="$PROJECT_DIR$/autohome-binder-mqtt/node_modules" />
+    <handled-path value="$PROJECT_DIR$/autohome-binder-rfxcom/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1066" />
-    <option name="y" value="-1088" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -245,86 +179,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="autohome" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="autohome" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="autohome" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="autohome" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="autohome" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="autohome-binder-http" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="autohome" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="autohome" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="autohome-binder" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="autohome" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="autohome" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="autohome-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="autohome" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="autohome" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="autohome-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="Scratches" />
       <pane id="Scope">
         <subPane subId="Project Files">
@@ -336,6 +190,16 @@
             <PATH_ELEMENT USER_OBJECT="autohome">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="autohome" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -356,8 +220,13 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\git\autohome\autohome-app\config" />
       <recent name="C:\Users\mlowi\WebstormProjects\autohome\autohome-app" />
       <recent name="C:\Users\mlowi\WebstormProjects\autohome" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\git\autohome\autohome-app\config" />
+      <recent name="C:\git\autohome\autohome-binder-rfxcom" />
     </key>
   </component>
   <component name="RunManager" selected="Node.js.app.js">
@@ -449,7 +318,9 @@
       <workItem from="1464968702011" duration="8021000" />
       <workItem from="1471640249486" duration="43000" />
       <workItem from="1471640563535" duration="374000" />
-      <workItem from="1471727235261" duration="22306000" />
+      <workItem from="1471727235261" duration="24039000" />
+      <workItem from="1471960835336" duration="3371000" />
+      <workItem from="1471968716203" duration="8860000" />
     </task>
     <task id="LOCAL-00001" summary="Made alot of changes">
       <created>1460372366116</created>
@@ -493,11 +364,18 @@
       <option name="project" value="LOCAL" />
       <updated>1471942594663</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Made HTTP binding more flexible">
+      <created>1471943006935</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1471943006935</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60528000" />
+    <option name="totallyTimeSpent" value="74492000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -509,14 +387,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1066" y="-1088" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1849315" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1849315" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -524,10 +400,12 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31852654" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -551,27 +429,16 @@
     <MESSAGE value="Made alot of changes again!" />
     <MESSAGE value="Updated some methods and binder base classes" />
     <MESSAGE value="Made HTTP binder bidirectional, fixed logging in HTTP binder" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made HTTP binder bidirectional, fixed logging in HTTP binder" />
+    <MESSAGE value="Made HTTP binding more flexible" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made HTTP binding more flexible" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="37" />
+      <option name="time" value="53" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/node_modules/autohome-binder-mqtt/MqttBinder.js" />
-    <entry file="file://$PROJECT_DIR$/node_modules/autohome-binder-mqtt/package.json" />
-    <entry file="file://$PROJECT_DIR$/node_modules/autohome-binder-http/package.json" />
-    <entry file="file://$PROJECT_DIR$/node_modules/autohome-binder-bt/package.json" />
-    <entry file="file://$PROJECT_DIR$/node_modules/autohome-binder-mqtt/mqtt.json" />
-    <entry file="file://$PROJECT_DIR$/node_modules/autohome-binder-http/HttpBinder.js" />
-    <entry file="file://$PROJECT_DIR$/webapp/css/autohome.css" />
-    <entry file="file://$PROJECT_DIR$/autohome-app/node_modules/less/lib/less-node/lessc-helper.js" />
-    <entry file="file://$PROJECT_DIR$/node_modules/autohome-binder-mqtt/mqtt.json" />
-    <entry file="file://$PROJECT_DIR$/node_modules/autohome-binder-mqtt/package.json" />
-    <entry file="file://$PROJECT_DIR$/node_modules/autohome-binder-bt/package.json" />
-    <entry file="file://$PROJECT_DIR$/node_modules/autohome-binder-http/package.json" />
     <entry file="file://$PROJECT_DIR$/node_modules/autohome-binder-http/HttpBinder.js" />
     <entry file="file://$PROJECT_DIR$/node_modules/autohome-binder-mqtt/MqttBinder.js" />
     <entry file="file://$PROJECT_DIR$/node_modules/autohome-binder-bt/BluetoothBinder.js" />
@@ -634,13 +501,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/autohome-app/webapp/views/index.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/autohome-app/webapp/views/layout.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -655,43 +515,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/autohome-app/config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/autohome-binder-mqtt/MqttBinder.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/autohome-binder-bt/BluetoothBinder.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="295">
           <caret line="31" column="14" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/autohome-binder/main.ks.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/autohome-binder/main.ks.js" />
     <entry file="file://$PROJECT_DIR$/autohome-binder-http/node_modules/autohome-binder/BidirectionalBinder.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -699,7 +534,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -725,7 +559,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -737,14 +570,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/autohome-app/src/Thing.js">
+    <entry file="file://$PROJECT_DIR$/autohome-binder-mqtt/autohome-binder.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="32" column="32" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/autohome-app/config/test.js" />
     <entry file="file://$PROJECT_DIR$/autohome-binder/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -753,84 +586,200 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/autohome-binder/BidirectionalBinder.js">
+    <entry file="file://$PROJECT_DIR$/autohome-binder-mqtt/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+        <state relative-caret-position="51">
+          <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/autohome-binder/Binder.js">
+    <entry file="file://$PROJECT_DIR$/autohome-app/config/main.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+        <state relative-caret-position="68">
+          <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/autohome-app/src/BinderManager.js">
+    <entry file="file://$PROJECT_DIR$/autohome-binder-rfxcom/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="30" column="53" selection-start-line="30" selection-start-column="53" selection-end-line="30" selection-end-column="53" />
+        <state relative-caret-position="187">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/autohome-binder-rfxcom/autohome-binder.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/autohome-app/config/rfxcom.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/autohome-binder-rfxcom/MessageFactory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="3" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
+          <folding>
+            <marker date="1471970917810" expanded="true" signature="515:636" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/autohome-app/package.json">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/autohome-app/webapp/views/index.jade">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="8" selection-end-column="4" />
+          <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/autohome-binder/package.json">
+    <entry file="file://$PROJECT_DIR$/autohome-app/node_modules/less/lib/less-node/lessc-helper.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/autohome-app/things/thing1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/autohome-app/things/thing2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/autohome-binder-http/HttpBinder.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="22" column="54" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
+        <state relative-caret-position="200">
+          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/autohome-app/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state relative-caret-position="414">
+          <caret line="102" column="52" selection-start-line="102" selection-start-column="52" selection-end-line="102" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/autohome-app/things/thing2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="12" selection-start-line="3" selection-start-column="11" selection-end-line="21" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/autohome-app/config/mqtt.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="45" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/autohome-app/src/BinderManager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="397">
+          <caret line="49" column="24" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/autohome-app/things/thing1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="21" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/autohome-app/things/thing3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/autohome-app/src/Thing.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="21" column="7" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/autohome-binder/BidirectionalBinder.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/autohome-binder-rfxcom/RfxcomDriver.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="26" column="35" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/autohome-app/src/BindingManager.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+        <state relative-caret-position="51">
+          <caret line="6" column="89" selection-start-line="6" selection-start-column="89" selection-end-line="6" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/autohome-binder/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/autohome-binder/Binder.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/autohome-binder-http/HttpBinder.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-36">
+          <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+          <folding>
+            <element signature="n#!!block;n#getType#0;n#HttpBinder#0" expanded="false" />
+            <element signature="n#!!block;n#_doRequest#0;n#HttpBinder#0" expanded="false" />
+            <element signature="n#!!block;n#_getBindingOptions#0;n#HttpBinder#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/autohome-binder-mqtt/MqttBinder.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="55" column="14" selection-start-line="55" selection-start-column="14" selection-end-line="55" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/autohome-binder-rfxcom/RfxcomBinder.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
           <folding />
         </state>
       </provider>

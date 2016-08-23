@@ -1,11 +1,11 @@
 {
   "name": "autohome-binder-mqtt",
   "description": "MQTT binder for AutoHome.",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "license": "BSD-3-Clause",
   "main": "./MqttBinder.js",
   "dependencies": {
-    "autohome-binder": "*",
-    "mqtt": "*"
+    "autohome-binder": "^0.1.4",
+    "mqtt": "^1.14.0"
   }
 }

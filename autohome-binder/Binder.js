@@ -7,20 +7,26 @@ class Binder {
         throw new Error("Not implemented.");
     }
 
+    configure(configuration, configurationCompleted) {
+        configurationCompleted();
+    }
+
     validateBinding(binding) {
-        let bindingValid = true;
+        let validationResult = true;
 
-        if (!binding.type)
-            bindingValid = "type";
+        if (binding.type === undefined)
+            validationResult = "type";
 
-        return bindingValid;
+        if (binding.direction === undefined || !["in", "out"].includes(binding.direction))
+            validationResult = "direction";
+
+        return validationResult;
     }
 
     processBinding(binding, thing) {
     }
 
     addBinding(binding, thing) {
-        return true;
     }
 
     removeBinding(binding, thing) {

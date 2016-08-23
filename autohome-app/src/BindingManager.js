@@ -4,7 +4,7 @@ class BindingManager {
         this._thingManager = thingManager;
         this._binderManager = binderManager;
 
-        this._thingManager.on("valueSet", (thing, oldValue) => this._handleValueSet(thing, oldValue));
+        this._thingManager.on("valueSet", (thing, oldValue) => this._handleValueSet(thing));
     }
 
     hookupBindings(binder) {
@@ -13,22 +13,23 @@ class BindingManager {
                 let bindingValid = binder.validateBinding(binding);
 
                 if (bindingValid !== true) {
-                    this._logger.error(`Binding has missing or invalid property '${bindingValid}'`);
+                    this._logger.error(`Binding has missing or invalid property/properties: '${bindingValid}'.`);
                     return;
                 }
 
-                if (!binder.addBinding(binding, thing)) {
-                    this._logger.debug(`Did not add binding for '${thing.id}'`);
-                }
+                if (binding.direction === "out")
+                    return;
+
+                binder.addBinding(binding, thing);
             }
         }
     }
 
-    _handleValueSet(thing, oldValue) {
+    _handleValueSet(thing) {
         for (const binding of thing.bindings) {
             const binder = this._binderManager.binders.get(binding.type);
 
-            if (binder === undefined)
+            if (binder === undefined || binding.direction === "in")
                 return;
 
             binder.processBinding(binding, thing);

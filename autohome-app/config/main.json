@@ -1,0 +1,13 @@
+{
+  "binderFolders": [
+    "../autohome-binder-http",
+    "../autohome-binder-mqtt",
+    "../autohome-binder-rfxcom"
+  ],
+  "log": {
+    "level": 0
+  },
+  "server": {
+    "port": 3000
+  }
+}

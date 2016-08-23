@@ -1,6 +1,6 @@
-const config = require("../config.json");
 const glob = require("glob");
 const path = require("path");
+const config = require("../config/main.json");
 
 class BinderManager {
     constructor(loggerFactory) {
@@ -25,22 +25,31 @@ class BinderManager {
     }
 
     _loadBinder(jsonPath, binderLoaded) {
-        const dir = path.dirname(jsonPath);
+        const Binder = require(path.dirname(jsonPath));
+        const binder = new Binder(this._loggerFactory);
+        const binderType = binder.getType();
 
-        const Binder = require(dir);
-        const binder = new Binder(this._loggerFactory, config.binders);
-
-        if (this.binders.has(binder.getType())) {
-            this._logger.error(`A binder with type ${binder.getType()} already exists.`, "BinderManager._loadBinder");
+        if (this.binders.has(binderType)) {
+            this._logger.error(`A binder with type ${binderType} already exists.`, "BinderManager._loadBinder");
             return;
         }
 
-        this.binders.set(binder.getType(), binder);
+        let binderConfig = null;
 
-        this._logger.debug(`Loaded '${binder.getType()}' binder.`, "BinderManager._loadBinder");
+        try {
+            binderConfig = require(`../config/${binderType}.json`);
+        } catch (ex) {
+            this._logger.debug(`No configuration found for '${binderType}' binder.`);
+        }
 
-        if (binderLoaded)
-            binderLoaded(binder);
+        binder.configure(binderConfig, () => {
+            this.binders.set(binder.getType(), binder);
+
+            this._logger.debug(`Loaded '${binderType}' binder.`, "BinderManager._loadBinder");
+
+            if (binderLoaded)
+                binderLoaded(binder);
+        });
     }
 }
 

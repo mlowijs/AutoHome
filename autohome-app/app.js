@@ -1,7 +1,7 @@
 //
 // AutoHome
 //
-const config = require("./config.json");
+const config = require("./config/main.json");
 
 const BinderManager = require("./src/BinderManager");
 const BindingManager = require("./src/BindingManager");
@@ -100,7 +100,7 @@ io.on("connection", (socket) => {
     socket.on("setValue", (thingId, value) => {
         logger.debug(`Received setValue event for '${thingId}' with value '${value}'`, "socketio.socket.setValue");
 
-        let thing = thingManager.things[thingId];
+        let thing = thingManager.things.get(thingId);
 
         if (thing)
             thing.pushValue(value);

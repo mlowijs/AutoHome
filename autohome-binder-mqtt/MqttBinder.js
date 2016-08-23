@@ -1,17 +1,31 @@
-let Binder = require("autohome-binder");
-let mqtt = require("mqtt");
+const Binder = require("autohome-binder");
+const mqtt = require("mqtt");
 
 class MqttBinder extends Binder {
-    constructor(logger, config) {
-        super(logger);
-        
-        this._config = config.mqtt;
+    constructor(loggerFactory) {
+        super(loggerFactory.getLogger("MqttBinder"));
 
-        this._brokers = {};
+        this._brokers = new Map();
+    }
 
-        for (let broker in this._config.brokers) {
-            this._brokers[broker] = mqtt.connect(this._config.brokers[broker]);
-        }
+    configure(configuration, configurationCompleted) {
+        const promises = Object.keys(configuration.brokers).map(brokerName => new Promise((resolve, reject) => {
+            const client = mqtt.connect(configuration.brokers[brokerName]);
+
+            client.on("connect", () => {
+                this._logger.debug(`Connected to broker '${brokerName}'.`);
+
+                this._brokers.set(brokerName, client);
+                resolve();
+            });
+
+            client.on("error", () => {
+                this._logger.error(`Failed to connect to broker ${brokerName}`);
+                reject();
+            });
+        }));
+
+        Promise.all(promises).then(() => configurationCompleted());
     }
 
     getType() {
@@ -19,11 +33,35 @@ class MqttBinder extends Binder {
     }
 
     validateBinding(binding) {
-        return true;
+        let validationResult = super.validateBinding(binding);
+
+        if (!binding.broker || binding.broker === "")
+            validationResult = "broker";
+
+        if (!binding.topic || binding.topic === "")
+            validationResult = "topic";
+
+        return validationResult;
     }
 
-    bind(thing, binding) {
-        return false;
+    processBinding(binding, thing) {
+        this._brokers.get(binding.broker).publish(binding.topic, `${thing.value}`);
+    }
+
+    addBinding(binding, thing) {
+        const client = this._brokers.get(binding.broker);
+
+        client.subscribe(binding.topic);
+
+        client.on("message", (topic, message) => {
+            if (topic !== binding.topic)
+                return;
+
+            const messageString = message.toString();
+
+            this._logger.debug(`Received message '${messageString}' from topic '${topic}'.`);
+            thing.pushValue(messageString);
+        });
     }
 }
 

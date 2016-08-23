@@ -1,4 +1,4 @@
-const config = require("../config.json");
+const config = require("../config/main.json");
 const moment = require("moment");
 
 class Logger {
