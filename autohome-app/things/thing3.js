@@ -4,8 +4,8 @@ module.exports = {
         {
             type: "rfxcom",
             direction: "out",
-            protocol: "lighting2",
-            subtype: "ac",
+            packetType: "lighting2",
+            subType: "ac",
             id: 0x1068426,
             unit: 1,
         },

@@ -30,7 +30,7 @@ class BinderManager {
         const binderType = binder.getType();
 
         if (this.binders.has(binderType)) {
-            this._logger.error(`A binder with type ${binderType} already exists.`, "BinderManager._loadBinder");
+            this._logger.error(`A binder with type '${binderType}' already exists.`, "BinderManager._loadBinder");
             return;
         }
 
@@ -38,12 +38,10 @@ class BinderManager {
 
         try {
             binderConfig = require(`../config/${binderType}.json`);
-        } catch (ex) {
-            this._logger.debug(`No configuration found for '${binderType}' binder.`);
-        }
+        } catch (ex) { }
 
         binder.configure(binderConfig, () => {
-            this.binders.set(binder.getType(), binder);
+            this.binders.set(binderType, binder);
 
             this._logger.debug(`Loaded '${binderType}' binder.`, "BinderManager._loadBinder");
 

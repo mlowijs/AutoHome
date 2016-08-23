@@ -9,6 +9,11 @@ class MqttBinder extends Binder {
     }
 
     configure(configuration, configurationCompleted) {
+        if (!configuration) {
+            this._logger.error(`Configuration file 'mqtt.json' not found!`);
+            return;
+        }
+
         const promises = Object.keys(configuration.brokers).map(brokerName => new Promise((resolve, reject) => {
             const client = mqtt.connect(configuration.brokers[brokerName]);
 
@@ -20,7 +25,7 @@ class MqttBinder extends Binder {
             });
 
             client.on("error", () => {
-                this._logger.error(`Failed to connect to broker ${brokerName}`);
+                this._logger.error(`Failed to connect to broker '${brokerName}'.`);
                 reject();
             });
         }));

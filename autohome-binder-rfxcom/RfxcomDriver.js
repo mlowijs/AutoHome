@@ -10,28 +10,34 @@ class RfxcomDriver {
             baudRate: 38400
         }, (error) => {
             if (error) {
-                this._logger.error(`Error while opening serial port: ${error}`);
+                this._logger.error(`Error while opening serial port '${portName}': ${error}`);
                 return;
             }
 
-            this.reset(() => portOpened());
+            portOpened();
         });
     }
 
     reset(deviceReset) {
-        this._logger.debug("Resetting RFXCOM.");
+        this._logger.info("Resetting RFXCOM.");
         this._write(MessageFactory.createResetMessage(), () => deviceReset());
     }
 
-    test(binding, value) {
-        this._write(MessageFactory.createLighting2AcMessage(this._sequenceNr++, binding.id, binding.unit, value, false), () => {});
+    sendValue(binding, value) {
+        const messageFactory = MessageFactory.getMessageFactory(binding.packetType);
+        const message = messageFactory.createMessage(this._sequenceNr++, binding, value);
+
+        this._write(message);
     }
 
     _write(data, dataWritten) {
         this._logger.debug(`Writing ${data.length} bytes to RFXCOM.`);
 
         this._port.write(data, () => {
-            this._port.drain(() => dataWritten())
+            this._port.drain(() => {
+                if (dataWritten)
+                    dataWritten();
+            });
         });
     }
 }

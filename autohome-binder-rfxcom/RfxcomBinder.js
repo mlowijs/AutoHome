@@ -13,11 +13,18 @@ class RfxcomBinder extends Binder {
     }
 
     configure(configuration, configurationCompleted) {
-        this._driver = new RfxcomDriver(this._loggerFactory, configuration.serialPort, () => configurationCompleted());
+        if (!configuration) {
+            this._logger.error(`Configuration file 'rfxcom.json' not found!`);
+            return;
+        }
+
+        this._driver = new RfxcomDriver(this._loggerFactory, configuration.serialPort, () => {
+            this._driver.reset(() => configurationCompleted());
+        });
     }
 
     processBinding(binding, thing) {
-        this._driver.test(binding, thing.value);
+        this._driver.sendValue(binding, thing.value);
     }
 }
 
