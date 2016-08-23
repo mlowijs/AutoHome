@@ -4,13 +4,14 @@ const path = require("path");
 
 class BinderManager {
     constructor(loggerFactory) {
+        this._loggerFactory = loggerFactory;
         this._logger = loggerFactory.getLogger("BinderManager");
 
         this.binders = new Map();
     }
 
     loadBinders(binderLoaded) {
-        let binderFolders = config.binderFolders;
+        const binderFolders = config.binderFolders;
         binderFolders.push("node_modules");
 
         binderFolders.forEach(bf => {
@@ -24,10 +25,10 @@ class BinderManager {
     }
 
     _loadBinder(jsonPath, binderLoaded) {
-        let dir = path.dirname(jsonPath);
+        const dir = path.dirname(jsonPath);
 
-        let Binder = require(dir);
-        let binder = new Binder(this._logger, config.binders);
+        const Binder = require(dir);
+        const binder = new Binder(this._loggerFactory, config.binders);
 
         if (this.binders.has(binder.getType())) {
             this._logger.error(`A binder with type ${binder.getType()} already exists.`, "BinderManager._loadBinder");

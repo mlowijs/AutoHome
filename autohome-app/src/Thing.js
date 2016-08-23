@@ -34,7 +34,7 @@ class Thing extends EventEmitter {
     }
 
     pushValue(value) {
-        let oldValue = this._value;
+        const oldValue = this._value;
 
         this.setValue(value);
 

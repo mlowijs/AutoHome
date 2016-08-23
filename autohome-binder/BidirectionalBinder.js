@@ -9,6 +9,14 @@ class BidirectionalBinder extends Binder {
 
         return bindingValid;
     }
+
+
+    addBinding(binding, thing) {
+        if (!super.addBinding(binding, thing) || binding.direction === "out")
+            return false;
+
+        return true;
+    }
 }
 
 module.exports = BidirectionalBinder;

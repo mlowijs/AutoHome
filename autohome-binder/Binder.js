@@ -17,7 +17,13 @@ class Binder {
     }
 
     processBinding(binding, thing) {
+    }
 
+    addBinding(binding, thing) {
+        return true;
+    }
+
+    removeBinding(binding, thing) {
     }
 }
 

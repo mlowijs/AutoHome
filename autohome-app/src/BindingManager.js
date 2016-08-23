@@ -7,44 +7,32 @@ class BindingManager {
         this._thingManager.on("valueSet", (thing, oldValue) => this._handleValueSet(thing, oldValue));
     }
 
-    validateBindings(binder) {
-        let bindings = this._getBindingsForBinder(binder);
+    hookupBindings(binder) {
+        for (const [id, thing] of this._thingManager.things) {
+            for (const binding of thing.bindings.filter(binding => binding.type === binder.getType())) {
+                let bindingValid = binder.validateBinding(binding);
 
-        bindings.forEach(binding => {
-            let validationResult = binder.validateBinding(binding);
+                if (bindingValid !== true) {
+                    this._logger.error(`Binding has missing or invalid property '${bindingValid}'`);
+                    return;
+                }
 
-            if (validationResult !== true)
-                this._logger.error(`Binding has missing or invalid property '${validationResult}'`);
-        })
+                if (!binder.addBinding(binding, thing)) {
+                    this._logger.debug(`Did not add binding for '${thing.id}'`);
+                }
+            }
+        }
     }
 
     _handleValueSet(thing, oldValue) {
-        for (let binding of thing.bindings) {
-            let binder = this._binderManager.binders.get(binding.type);
+        for (const binding of thing.bindings) {
+            const binder = this._binderManager.binders.get(binding.type);
 
             if (binder === undefined)
                 return;
 
             binder.processBinding(binding, thing);
         }
-    }
-
-    _getBindingsForBinder(binder) {
-        // let bindingsMap = new Map();
-
-        return Array.from(this._thingManager.things.values())
-                    .map(thing => thing.bindings)
-                    .reduce((x, y) => x.concat(y))
-                    .filter(binding => binding.type === binder.getType());
-
-        // for (let [id, thing] of this._thingManager.things) {
-        //     let bindings = thing.bindings.filter(binding => binding.type == binder.getType());
-        //
-        //     if (bindings.length > 0)
-        //         bindingsMap.set(id, bindings);
-        // }
-        //
-        // return bindingsMap;
     }
 }
 

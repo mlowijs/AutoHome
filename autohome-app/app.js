@@ -1,23 +1,23 @@
 //
 // AutoHome
 //
-let config = require("./config.json");
+const config = require("./config.json");
 
-let BinderManager = require("./src/BinderManager");
-let BindingManager = require("./src/BindingManager");
-let LoggerFactory = require("./src/LoggerFactory");
-let ThingManager = require("./src/ThingManager");
+const BinderManager = require("./src/BinderManager");
+const BindingManager = require("./src/BindingManager");
+const LoggerFactory = require("./src/LoggerFactory");
+const ThingManager = require("./src/ThingManager");
 
-let loggerFactory = new LoggerFactory();
-let logger = loggerFactory.getLogger("app");
+const loggerFactory = new LoggerFactory();
+const logger = loggerFactory.getLogger("app");
 
-let thingManager = new ThingManager(loggerFactory);
-let binderManager = new BinderManager(loggerFactory);
-let bindingManager = new BindingManager(loggerFactory, thingManager, binderManager);
+const thingManager = new ThingManager(loggerFactory);
+const binderManager = new BinderManager(loggerFactory);
+const bindingManager = new BindingManager(loggerFactory, thingManager, binderManager);
 
 thingManager.loadThings(() => {
     binderManager.loadBinders(binder => {
-        bindingManager.validateBindings(binder);
+        bindingManager.hookupBindings(binder);
     });
 });
 
