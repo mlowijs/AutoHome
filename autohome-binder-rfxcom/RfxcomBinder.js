@@ -21,10 +21,12 @@ class RfxcomBinder extends Binder {
         this._driver = new RfxcomDriver(this._loggerFactory, configuration.serialPort, () => {
             this._driver.reset(() => configurationCompleted());
         });
+
+        this._driver.on("initialized", () => configurationCompleted());
     }
 
     processBinding(binding, thing) {
-        this._driver.sendValue(binding, thing.value);
+        this._driver.sendMessage(binding, thing.value);
     }
 }
 

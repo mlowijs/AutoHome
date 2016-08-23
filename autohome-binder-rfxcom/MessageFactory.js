@@ -5,6 +5,10 @@ class MessageFactory {
         return [0x0d, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     }
 
+    static createStatusMessage() {
+        return [0x0d, 0, 0, 0x01, 0x02, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    }
+
     static getMessageFactory(packetType) {
         switch (packetType) {
             case "lighting2":

@@ -18,7 +18,7 @@ class MqttBinder extends Binder {
             const client = mqtt.connect(configuration.brokers[brokerName]);
 
             client.on("connect", () => {
-                this._logger.debug(`Connected to broker '${brokerName}'.`);
+                this._logger.info(`Connected to broker '${brokerName}'.`);
 
                 this._brokers.set(brokerName, client);
                 resolve();
