@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-    <file url="file://$PROJECT_DIR$/autohome-app" libraries="{autohome/autohome-app/node_modules}" />
+    <file url="file://$PROJECT_DIR$/autohome" libraries="{autohome/autohome-app/node_modules}" />
     <file url="file://$PROJECT_DIR$/autohome-binder-bt" libraries="{autohome/autohome-binder-bt/node_modules}" />
     <file url="file://$PROJECT_DIR$/autohome-binder-http" libraries="{autohome/autohome-binder-http/node_modules}" />
     <file url="file://$PROJECT_DIR$/autohome-binder-mqtt" libraries="{autohome/autohome-binder-mqtt/node_modules}" />

@@ -2,9 +2,4 @@
 .vs
 bin
 obj
-
 node_modules
-things/
-webapp/views/
-config/
-!config/main.json
