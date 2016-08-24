@@ -12,14 +12,14 @@ function setupLessMinify(app, express) {
 
 function setupJadeViewEngine(app) {
     app.set("view engine", "jade");
-    app.set("views", `${__dirname}/webapp/views`);
+    app.set("views", `${__dirname}/../webapp/views`);
 }
 
 function setupStaticRoutes(app, express) {
-    app.use("/css", express.static(`${__dirname}/webapp/css`));
-    app.use("/fonts", express.static(`${__dirname}/webapp/fonts`));
-    app.use("/images", express.static(`${__dirname}/webapp/images`));
-    app.use("/js", express.static(`${__dirname}/webapp/js`));
+    app.use("/css", express.static(`${__dirname}/../webapp/css`));
+    app.use("/fonts", express.static(`${__dirname}/../webapp/fonts`));
+    app.use("/images", express.static(`${__dirname}/../webapp/images`));
+    app.use("/js", express.static(`${__dirname}/../webapp/js`));
 }
 
 function setupWebAppRoutes(logger, app) {
