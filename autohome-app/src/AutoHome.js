@@ -25,20 +25,20 @@ function setupStaticRoutes(app, express) {
 function setupWebAppRoutes(logger, app) {
     app.get("/favicon.ico", (req, res) => {
         res.set("Content-Type", "image/png");
-        res.sendFile(`${__dirname}/webapp/images/favicon.png`);
+        res.sendFile(`${__dirname}/../webapp/images/favicon.png`);
     });
 
     app.get("/:page?", (req, res) => {
         logger.debug(`HTTP GET ${req.path}`, "app.get.page");
 
-        let page = req.params.page || "index";
+        const page = req.params.page || "index";
         res.render(page);
     });
 }
 
 function setupApiRoutes(app, thingManager) {
     app.get("/api/:thingId", (req, res) => {
-        let thing = thingManager.things.get(req.params.thingId);
+        const thing = thingManager.things.get(req.params.thingId);
 
         if (!thing) {
             res.status(404).end();
@@ -72,7 +72,7 @@ function setupSocketIo(logger, server, thingManager) {
         socket.on("setValue", (thingId, value) => {
             logger.debug(`Received setValue event for '${thingId}' with value '${value}'`, "socketio.socket.setValue");
 
-            let thing = thingManager.things.get(thingId);
+            const thing = thingManager.things.get(thingId);
 
             if (thing)
                 thing.pushValue(value);
