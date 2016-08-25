@@ -5,6 +5,9 @@ obj
 
 node_modules
 things/
-webapp/views/
-config/
+
+webapp/views/*
+!webapp/views/layout.jade
+
+config/*
 !config/main.json
