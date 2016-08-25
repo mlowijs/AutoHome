@@ -4,7 +4,9 @@ bin
 obj
 
 node_modules
-things/
+
+things/*
+!things/README
 
 webapp/views/*
 !webapp/views/layout.jade
