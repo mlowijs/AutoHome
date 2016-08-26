@@ -9,8 +9,5 @@
   },
   "server": {
     "port": 3000
-  },
-  "users": {
-    "michiel": "test123"
   }
 }

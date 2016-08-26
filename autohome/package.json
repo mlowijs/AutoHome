@@ -14,6 +14,8 @@
     "jade": "^1.11.0",
     "less": "git+https://github.com/less/less.js.git",
     "moment": "^2.14.1",
+    "passport": "^0.3.2",
+    "passport-http": "^0.3.0",
     "socket.io": "^1.4.8"
   }
 }

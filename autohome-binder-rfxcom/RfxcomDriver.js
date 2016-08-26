@@ -42,7 +42,7 @@ class RfxcomDriver extends EventEmitter {
 
         this._write(MessageFactory.createResetMessage(), () => setTimeout(() => {
             this._write(MessageFactory.createStatusMessage())
-        }, 500));
+        }, 250));
     }
 
     sendMessage(binding, value) {
