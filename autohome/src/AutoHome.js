@@ -110,7 +110,7 @@ function setupSocketIo(logger, server, thingManager) {
     });
 }
 
-module.exports = function createServer(loggerFactory, thingManager) {
+module.exports = (loggerFactory, thingManager) => {
     const logger = loggerFactory.getLogger("app.server");
 
     const express = require("express");
