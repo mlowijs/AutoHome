@@ -11,16 +11,11 @@ class BinderManager {
     }
 
     loadBinders(binderLoaded) {
-        const binderFolders = config.binderFolders;
-        binderFolders.push("node_modules");
+        glob("node_modules/**/autohome-binder.json", { realpath: true }, (err, files) => {
+            if (files.length === 0)
+                return;
 
-        binderFolders.forEach(bf => {
-           glob("**/autohome-binder.json", { cwd: bf, realpath: true }, (err, files) => {
-               if (files.length === 0)
-                   return;
-
-               files.forEach(f => this._loadBinder(f, binderLoaded));
-           });
+            files.forEach(f => this._loadBinder(f, binderLoaded));
         });
     }
 
