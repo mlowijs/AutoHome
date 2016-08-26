@@ -6,5 +6,5 @@ autohome/things/*
 autohome/webapp/views/*
 !autohome/webapp/views/layout.jade
 
-config/*
+autohome/config/*
 !autohome/config/main.json
