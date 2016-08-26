@@ -1,1 +1,10 @@
 node_modules
+
+autohome/things/*
+!autohome/things/README
+
+autohome/webapp/views/*
+!autohome/webapp/views/layout.jade
+
+config/*
+!autohome/config/main.json

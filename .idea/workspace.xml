@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ab0e5ea-456c-4593-9d4a-5ed8f53e6d3a" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/autohome-binder-rfxcom/Message.js" afterPath="$PROJECT_DIR$/autohome-binder-rfxcom/messages/Message.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/autohome-binder-rfxcom/RfxcomBinder.js" afterPath="$PROJECT_DIR$/autohome-binder-rfxcom/RfxcomBinder.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/autohome-binder-rfxcom/RfxcomDriver.js" afterPath="$PROJECT_DIR$/autohome-binder-rfxcom/RfxcomDriver.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/autohome-binder-rfxcom/messages/InterfaceMessage.js" afterPath="$PROJECT_DIR$/autohome-binder-rfxcom/messages/InterfaceMessage.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/autohome-binder-rfxcom/messages/Lighting2Message.js" afterPath="$PROJECT_DIR$/autohome-binder-rfxcom/messages/Lighting2Message.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/autohome-binder-rfxcom/package.json" afterPath="$PROJECT_DIR$/autohome-binder-rfxcom/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/autohome/package.json" afterPath="$PROJECT_DIR$/autohome/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/autohome/things/thing3.js" afterPath="$PROJECT_DIR$/autohome/things/thing3.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
     </list>
     <ignored path="autohome.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,31 +32,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Lighting2MessageFactory.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/autohome-binder-rfxcom/messageFactories/Lighting2MessageFactory.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="45" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Lighting2Message.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/autohome-binder-rfxcom/messages/Lighting2Message.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
               <caret line="17" column="16" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MqttBinder.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/autohome-binder-mqtt/MqttBinder.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -110,11 +82,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/autohome/package.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
               <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="6" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".npmignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/autohome/.npmignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="14" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -146,7 +138,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/autohome-app/config/test.js" />
         <option value="$PROJECT_DIR$/autohome-app/config/mqtt.json.js" />
         <option value="$PROJECT_DIR$/autohome-app/config/mqtt.json" />
         <option value="$PROJECT_DIR$/autohome-app/config/rfxcom.json" />
@@ -197,6 +188,7 @@
         <option value="$PROJECT_DIR$/autohome-binder-rfxcom/RfxcomBinder.js" />
         <option value="$PROJECT_DIR$/autohome-binder-rfxcom/package.json" />
         <option value="$PROJECT_DIR$/autohome/package.json" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -489,7 +481,7 @@
       <workItem from="1472026249080" duration="4606000" />
       <workItem from="1472037800915" duration="4866000" />
       <workItem from="1472202195105" duration="1218000" />
-      <workItem from="1472212338152" duration="9676000" />
+      <workItem from="1472212338152" duration="11036000" />
     </task>
     <task id="LOCAL-00001" summary="Made alot of changes">
       <created>1460372366116</created>
@@ -680,11 +672,18 @@
       <option name="project" value="LOCAL" />
       <updated>1472230775810</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="fixed rfxcom receive">
+      <created>1472234546887</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1472234546887</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109094000" />
+    <option name="totallyTimeSpent" value="110454000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -705,7 +704,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32719395" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32719395" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31852654" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -737,7 +736,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/node_modules" />
     </ignored-roots>
-    <MESSAGE value="Made alot of changes again" />
     <MESSAGE value="Made alot of changes again!" />
     <MESSAGE value="Updated some methods and binder base classes" />
     <MESSAGE value="Made HTTP binder bidirectional, fixed logging in HTTP binder" />
@@ -762,7 +760,8 @@
     <MESSAGE value="Small refactor" />
     <MESSAGE value="Small refactor again" />
     <MESSAGE value="I discovered npm link :-D" />
-    <option name="LAST_COMMIT_MESSAGE" value="I discovered npm link :-D" />
+    <MESSAGE value="fixed rfxcom receive" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed rfxcom receive" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -852,13 +851,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/autohome-binder/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -897,13 +889,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="87" selection-start-line="0" selection-start-column="87" selection-end-line="0" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/autohome/.npmignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -1136,6 +1121,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/autohome/.npmignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="14" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="6" selection-end-column="34" />
           <folding />
         </state>
       </provider>
