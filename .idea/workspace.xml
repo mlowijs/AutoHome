@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ab0e5ea-456c-4593-9d4a-5ed8f53e6d3a" name="Default" comment="">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/autohome-binder-rfxcom/Message.js" afterPath="$PROJECT_DIR$/autohome-binder-rfxcom/messages/Message.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/autohome/config/main.json" afterPath="$PROJECT_DIR$/autohome/config/main.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/autohome/src/BinderManager.js" afterPath="$PROJECT_DIR$/autohome/src/BinderManager.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/autohome-binder-rfxcom/RfxcomBinder.js" afterPath="$PROJECT_DIR$/autohome-binder-rfxcom/RfxcomBinder.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/autohome-binder-rfxcom/RfxcomDriver.js" afterPath="$PROJECT_DIR$/autohome-binder-rfxcom/RfxcomDriver.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/autohome-binder-rfxcom/messages/InterfaceMessage.js" afterPath="$PROJECT_DIR$/autohome-binder-rfxcom/messages/InterfaceMessage.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/autohome-binder-rfxcom/messages/Lighting2Message.js" afterPath="$PROJECT_DIR$/autohome-binder-rfxcom/messages/Lighting2Message.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/autohome-binder-rfxcom/package.json" afterPath="$PROJECT_DIR$/autohome-binder-rfxcom/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/autohome/package.json" afterPath="$PROJECT_DIR$/autohome/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/autohome/things/thing3.js" afterPath="$PROJECT_DIR$/autohome/things/thing3.js" />
     </list>
     <ignored path="autohome.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,6 +30,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="thing3.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/autohome/things/thing3.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Lighting2MessageFactory.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/autohome-binder-rfxcom/messageFactories/Lighting2MessageFactory.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -34,31 +50,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/autohome/config/main.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="1" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BinderManager.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/autohome/src/BinderManager.js">
+      <file leaf-file-name="Lighting2Message.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/autohome-binder-rfxcom/messages/Lighting2Message.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
-              <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+              <caret line="17" column="16" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HttpBinder.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/autohome-binder-http/HttpBinder.js">
+      <file leaf-file-name="MqttBinder.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/autohome-binder-mqtt/MqttBinder.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="53" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="53" />
+            <state relative-caret-position="0">
+              <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InterfaceMessage.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/autohome-binder-rfxcom/messages/InterfaceMessage.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="27" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -67,46 +83,34 @@
       <file leaf-file-name="RfxcomDriver.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/autohome-binder-rfxcom/RfxcomDriver.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="44" column="14" selection-start-line="44" selection-start-column="14" selection-end-line="44" selection-end-column="14" />
+            <state relative-caret-position="251">
+              <caret line="66" column="7" selection-start-line="66" selection-start-column="7" selection-end-line="66" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AutoHome.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/autohome/src/AutoHome.js">
+      <file leaf-file-name="RfxcomBinder.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/autohome-binder-rfxcom/RfxcomBinder.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="482">
-              <caret line="131" column="7" selection-start-line="131" selection-start-column="7" selection-end-line="131" selection-end-column="7" />
-              <folding>
-                <element signature="n#!!block;n#optionalAuthMiddleware#0" expanded="false" />
-                <element signature="e#125#323#0" expanded="false" />
-                <element signature="e#153#280#0" expanded="false" />
-                <element signature="e#286#317#0" expanded="false" />
-                <element signature="n#!!block;n#setupPassport#0" expanded="false" />
-                <element signature="n#!!block;n#setupLessMinify#0" expanded="false" />
-                <element signature="e#908#945#0" expanded="false" />
-                <element signature="n#!!block;n#setupJadeViewEngine#0" expanded="false" />
-                <element signature="n#!!block;n#setupStaticRoutes#0" expanded="false" />
-                <element signature="n#!!block;n#setupWebAppRoutes#0" expanded="false" />
-                <element signature="e#1520#1640#0" expanded="false" />
-                <element signature="e#1715#1872#0" expanded="false" />
-                <element signature="n#!!block;n#setupApiRoutes#0" expanded="false" />
-                <element signature="e#2010#2216#0" expanded="false" />
-                <element signature="e#2100#2166#0" expanded="false" />
-                <element signature="e#2304#2539#0" expanded="false" />
-                <element signature="e#2392#2458#0" expanded="false" />
-                <element signature="n#!!block;n#setupSocketIo#0" expanded="false" />
-                <element signature="e#2682#3120#0" expanded="false" />
-                <element signature="e#2731#2802#0" expanded="false" />
-                <element signature="e#2856#3112#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="363">
+              <caret line="34" column="37" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/autohome-binder-rfxcom/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/autohome/package.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
@@ -116,31 +120,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/autohome/server.js">
+      <file leaf-file-name="Message.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/autohome-binder-rfxcom/messages/Message.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="request.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/autohome/node_modules/passport/lib/http/request.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="45" column="33" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="authenticate.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/autohome/node_modules/passport/lib/middleware/authenticate.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="234" column="12" selection-start-line="234" selection-start-column="12" selection-end-line="234" selection-end-column="12" />
+            <state relative-caret-position="204">
+              <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -162,7 +146,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/autohome-app/config.json" />
         <option value="$PROJECT_DIR$/autohome-app/config/test.js" />
         <option value="$PROJECT_DIR$/autohome-app/config/mqtt.json.js" />
         <option value="$PROJECT_DIR$/autohome-app/config/mqtt.json" />
@@ -182,12 +165,9 @@
         <option value="$PROJECT_DIR$/autohome-app/src/BindingManager.js" />
         <option value="$PROJECT_DIR$/autohome-app/things/thing3.js" />
         <option value="$PROJECT_DIR$/autohome-app/src/BinderManager.js" />
-        <option value="$PROJECT_DIR$/autohome-binder-rfxcom/RfxcomBinder.js" />
         <option value="$PROJECT_DIR$/autohome-binder-rfxcom/messageParsers/Lighting2MessageParser.js" />
         <option value="$PROJECT_DIR$/autohome-binder-rfxcom/MessageParserManager.js" />
         <option value="$PROJECT_DIR$/autohome-binder-rfxcom/messageParsers/MessageParser.js" />
-        <option value="$PROJECT_DIR$/autohome-binder-rfxcom/Message.js" />
-        <option value="$PROJECT_DIR$/autohome-binder-rfxcom/messages/Lighting2Message.js" />
         <option value="$PROJECT_DIR$/autohome-binder-rfxcom/MessageParser.js" />
         <option value="$PROJECT_DIR$/autohome-app/config/main.json" />
         <option value="$PROJECT_DIR$/autohome-app/src/AutoHome.js" />
@@ -196,23 +176,27 @@
         <option value="$PROJECT_DIR$/autohome-binder/package.json" />
         <option value="$PROJECT_DIR$/autohome-binder-http/package.json" />
         <option value="$PROJECT_DIR$/autohome-binder-mqtt/package.json" />
-        <option value="$PROJECT_DIR$/autohome-binder-rfxcom/package.json" />
         <option value="$PROJECT_DIR$/.npmignore" />
         <option value="$PROJECT_DIR$/autohome/start.bat" />
         <option value="$PROJECT_DIR$/autohome/things/README" />
         <option value="$PROJECT_DIR$/autohome/.npmignore" />
-        <option value="$PROJECT_DIR$/autohome/things/thing3.js" />
         <option value="$PROJECT_DIR$/autohome/src/ThingManager.js" />
         <option value="$PROJECT_DIR$/autohome-binder-rfxcom/messageFactories/Lighting2MessageFactory.js" />
         <option value="$PROJECT_DIR$/autohome-binder-rfxcom/MessageFactory.js" />
-        <option value="$PROJECT_DIR$/autohome-binder-rfxcom/messages/InterfaceMessage.js" />
-        <option value="$PROJECT_DIR$/autohome-binder-rfxcom/RfxcomDriver.js" />
         <option value="$PROJECT_DIR$/autohome/server.js" />
         <option value="$PROJECT_DIR$/autohome/src/AutoHome.js" />
-        <option value="$PROJECT_DIR$/autohome/package.json" />
         <option value="$PROJECT_DIR$/autohome/config/main.json" />
         <option value="$PROJECT_DIR$/autohome/src/BinderManager.js" />
         <option value="$PROJECT_DIR$/autohome-binder-http/HttpBinder.js" />
+        <option value="$PROJECT_DIR$/autohome-binder-rfxcom/RfxcomDriver.js" />
+        <option value="$PROJECT_DIR$/autohome-binder-rfxcom/Message.js" />
+        <option value="$PROJECT_DIR$/autohome-binder-rfxcom/messages/InterfaceMessage.js" />
+        <option value="$PROJECT_DIR$/autohome/things/thing3.js" />
+        <option value="$PROJECT_DIR$/autohome-binder-rfxcom/messages/Lighting2Message.js" />
+        <option value="$PROJECT_DIR$/autohome-binder-rfxcom/messages/Message.js" />
+        <option value="$PROJECT_DIR$/autohome-binder-rfxcom/RfxcomBinder.js" />
+        <option value="$PROJECT_DIR$/autohome-binder-rfxcom/package.json" />
+        <option value="$PROJECT_DIR$/autohome/package.json" />
       </list>
     </option>
   </component>
@@ -307,7 +291,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="autohome-binder-http" />
+              <option name="myItemId" value="autohome-binder-rfxcom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="autohome" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="autohome" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="autohome-binder-rfxcom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="messages" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -339,43 +341,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="autohome" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="autohome" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="autohome" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="autohome" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="autohome" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="autohome" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
+              <option name="myItemId" value="things" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -411,16 +377,17 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../autohome-binders" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\git\autohome\autohome-app\src" />
-      <recent name="C:\git\autohome\autohome-app\config" />
-      <recent name="C:\Users\mlowi\WebstormProjects\autohome\autohome-app" />
-      <recent name="C:\Users\mlowi\WebstormProjects\autohome" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\git\autohome" />
       <recent name="C:\git\autohome\autohome-app\config" />
       <recent name="C:\git\autohome\autohome-binder-rfxcom" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\git\autohome\autohome-binder-rfxcom\messages" />
+      <recent name="C:\git\autohome\autohome-app\src" />
+      <recent name="C:\git\autohome\autohome-app\config" />
+      <recent name="C:\Users\mlowi\WebstormProjects\autohome\autohome-app" />
+      <recent name="C:\Users\mlowi\WebstormProjects\autohome" />
     </key>
   </component>
   <component name="RunManager" selected="Node.js.server.js">
@@ -522,7 +489,7 @@
       <workItem from="1472026249080" duration="4606000" />
       <workItem from="1472037800915" duration="4866000" />
       <workItem from="1472202195105" duration="1218000" />
-      <workItem from="1472212338152" duration="6968000" />
+      <workItem from="1472212338152" duration="9676000" />
     </task>
     <task id="LOCAL-00001" summary="Made alot of changes">
       <created>1460372366116</created>
@@ -706,11 +673,18 @@
       <option name="project" value="LOCAL" />
       <updated>1472223504189</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="I discovered npm link :-D">
+      <created>1472230775810</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1472230775810</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106386000" />
+    <option name="totallyTimeSpent" value="109094000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -725,15 +699,15 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1849315" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1849315" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32719395" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32719395" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31852654" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31852654" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -763,7 +737,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/node_modules" />
     </ignored-roots>
-    <MESSAGE value="Made alot of changes" />
     <MESSAGE value="Made alot of changes again" />
     <MESSAGE value="Made alot of changes again!" />
     <MESSAGE value="Updated some methods and binder base classes" />
@@ -788,16 +761,16 @@
     <MESSAGE value="Fixed optional auth" />
     <MESSAGE value="Small refactor" />
     <MESSAGE value="Small refactor again" />
-    <option name="LAST_COMMIT_MESSAGE" value="Small refactor again" />
+    <MESSAGE value="I discovered npm link :-D" />
+    <option name="LAST_COMMIT_MESSAGE" value="I discovered npm link :-D" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="73" />
+      <option name="time" value="84" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/autohome-app/things/thing1.js" />
     <entry file="file://$PROJECT_DIR$/autohome-app/things/thing2.js" />
     <entry file="file://$PROJECT_DIR$/autohome/webapp/views/index.jade">
       <provider selected="true" editor-type-id="text-editor">
@@ -851,13 +824,6 @@
     <entry file="file://$PROJECT_DIR$/autohome-binder-rfxcom/messageParsers/MessageParser.js" />
     <entry file="file://$PROJECT_DIR$/autohome-binder-rfxcom/messageParsers/Lighting2MessageParser.js" />
     <entry file="file://$PROJECT_DIR$/autohome-binder-rfxcom/messageParsers/InterfaceMessageParser.js" />
-    <entry file="file://$PROJECT_DIR$/autohome-binder-rfxcom/Message.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="38" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/autohome-binder-rfxcom/autohome-binder.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -917,14 +883,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/autohome-binder-rfxcom/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="3" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/autohome/webapp/views/layout.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -949,26 +907,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/autohome-binder-mqtt/MqttBinder.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1173">
-          <caret line="69" column="27" selection-start-line="69" selection-start-column="18" selection-end-line="69" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/autohome-binder/Binder.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/autohome/things/thing3.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -1013,14 +955,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/autohome-binder-rfxcom/messages/Lighting2Message.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/autohome-binder-rfxcom/MessageFactory.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -1033,38 +967,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/autohome-binder-rfxcom/RfxcomBinder.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/autohome-binder-rfxcom/messages/InterfaceMessage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="30" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/autohome-binder-rfxcom/messageFactories/Lighting2MessageFactory.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="45" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/autohome-binder-rfxcom/RfxcomDriver.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="44" column="14" selection-start-line="44" selection-start-column="14" selection-end-line="44" selection-end-column="14" />
           <folding />
         </state>
       </provider>
@@ -1123,14 +1025,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/autohome/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/autohome-binder-http/HttpBinder.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1151,6 +1045,97 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+          <folding>
+            <marker date="1472230362967" expanded="true" signature="128:1397" ph="{...}" />
+            <marker date="1472230362967" expanded="true" signature="345:583" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/autohome-binder-mqtt/MqttBinder.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/autohome-binder-rfxcom/messageFactories/Lighting2MessageFactory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="45" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/autohome/things/thing3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/autohome-binder-rfxcom/messages/Message.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/autohome-binder-rfxcom/messages/InterfaceMessage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="27" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/autohome-binder-rfxcom/messages/Lighting2Message.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="17" column="16" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/autohome-binder-rfxcom/RfxcomDriver.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="66" column="7" selection-start-line="66" selection-start-column="7" selection-end-line="66" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/autohome-binder-rfxcom/RfxcomBinder.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="34" column="37" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/autohome-binder-rfxcom/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/autohome/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
           <folding />
         </state>
       </provider>

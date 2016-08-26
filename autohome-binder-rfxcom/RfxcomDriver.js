@@ -20,15 +20,9 @@ class RfxcomDriver extends EventEmitter {
                 return;
             }
 
-            let buffer = [];
-
             this._port.on("data", (data) => {
-                buffer = buffer.concat(data);
-
-                if (data[0] === data.length - 1) {
-                    this._receiveMessage(buffer);
-                    buffer = [];
-                }
+                if (data[0] === data.length - 1)
+                    this._receiveMessage(data);
             });
 
             portOpened();
@@ -42,7 +36,7 @@ class RfxcomDriver extends EventEmitter {
 
         this._write(MessageFactory.createResetMessage(), () => setTimeout(() => {
             this._write(MessageFactory.createStatusMessage())
-        }, 250));
+        }, 500));
     }
 
     sendMessage(binding, value) {

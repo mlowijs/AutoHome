@@ -1,4 +1,4 @@
-const Message = require("../Message");
+const Message = require("./Message");
 
 class InterfaceMessage extends Message {
     constructor(data) {

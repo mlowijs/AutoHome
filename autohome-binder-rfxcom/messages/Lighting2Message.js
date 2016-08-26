@@ -1,4 +1,4 @@
-const Message = require("../Message");
+const Message = require("./Message");
 
 class Lighting2Message extends Message {
     constructor(data) {
@@ -9,6 +9,24 @@ class Lighting2Message extends Message {
         this.isGroup = data[9] === 0x03 || data[9] === 0x04;
         this.onOff = data[10] === 0x0f;
         this.signalLevel = data[11];
+    }
+
+    getType() {
+        return "lighting2";
+    }
+
+    matchBinding(binding) {
+        if (binding.packetType !== this.getType())
+            return false;
+
+        if (binding.isGroup)
+            return false;
+
+        return binding.unit === this.unit && binding.id === this.id;
+    }
+
+    getValue() {
+        return this.onOff;
     }
 }
 

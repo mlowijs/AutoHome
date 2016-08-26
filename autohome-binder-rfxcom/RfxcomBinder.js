@@ -28,6 +28,16 @@ class RfxcomBinder extends Binder {
     processBinding(binding, thing) {
         this._driver.sendMessage(binding, thing.value);
     }
+
+
+    addBinding(binding, thing) {
+        this._driver.on("message", (message) => {
+            if (!message.matchBinding(binding))
+                return;
+
+            thing.pushValue(message.getValue());
+        });
+    }
 }
 
 module.exports = RfxcomBinder;

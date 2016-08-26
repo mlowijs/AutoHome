@@ -3,11 +3,11 @@ module.exports = {
     bindings: [
         {
             type: "rfxcom",
-            direction: "out",
+            direction: "in",
             packetType: "lighting2",
             subType: "ac",
-            id: 0x1068426,
-            unit: 1,
+            id: 17204262,
+            unit: 5,
         },
         {
             type: "mqtt",
@@ -22,7 +22,7 @@ module.exports = {
             getOptions(thing) {
                 return {
                     method: "post",
-                    url: `http://requestb.in/ttdufntt?value=${thing.value}`
+                    url: `http://requestb.in/1gapntx1?value=${thing.value}`
                 };
             }
         },
