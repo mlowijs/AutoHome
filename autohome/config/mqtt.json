@@ -1,5 +1,0 @@
-{
-  "brokers": {
-    "testBroker1": "tcp://test.mosquitto.org"
-  }
-}
