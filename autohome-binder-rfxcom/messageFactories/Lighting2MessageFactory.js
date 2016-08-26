@@ -1,6 +1,6 @@
 class Lighting2MessageFactory {
     createMessage(sequenceNr, binding, value) {
-        switch (binding.subType) {
+        switch (binding.subType.toLowerCase()) {
             case "ac":
                 return this._createAcMessage(sequenceNr, binding.id, binding.unit, value, false);
         }

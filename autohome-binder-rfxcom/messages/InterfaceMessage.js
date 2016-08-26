@@ -11,4 +11,6 @@ class InterfaceMessage extends Message {
 
 InterfaceMessage.packetType = 0x01;
 
+InterfaceMessage.statusCommand = 0x02;
+
 module.exports = InterfaceMessage;

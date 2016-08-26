@@ -1,4 +1,5 @@
 const EventEmitter = require("events");
+const InterfaceMessage = require("./messages/InterfaceMessage");
 const MessageFactory = require("./MessageFactory");
 const MessageParser = require("./MessageParser");
 const SerialPort = require("serialport");
@@ -39,9 +40,9 @@ class RfxcomDriver extends EventEmitter {
 
         this._initialized = false;
 
-        this._write(MessageFactory.createResetMessage(), () => setTimeout(() =>
-            this._write(MessageFactory.createStatusMessage()), 500)
-        );
+        this._write(MessageFactory.createResetMessage(), () => setTimeout(() => {
+            this._write(MessageFactory.createStatusMessage())
+        }, 500));
     }
 
     sendMessage(binding, value) {
@@ -57,7 +58,7 @@ class RfxcomDriver extends EventEmitter {
     _receiveMessage(data) {
         const message = MessageParser.parseMessage(data);
 
-        if (message && message.packetType === 0x01 && message.commandType === 0x02) {
+        if (message && message.packetType === InterfaceMessage.packetType && message.commandType === InterfaceMessage.statusCommand) {
             this._logger.info("RFXCOM initialized.");
 
             this._sequenceNumber = message.sequenceNumber;

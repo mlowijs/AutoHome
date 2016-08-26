@@ -10,7 +10,7 @@ class MessageFactory {
     }
 
     static getMessageFactory(packetType) {
-        switch (packetType) {
+        switch (packetType.toLowerCase()) {
             case "lighting2":
                 return new Lighting2MessageFactory();
         }
