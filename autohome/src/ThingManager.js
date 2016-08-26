@@ -12,10 +12,10 @@ class ThingManager extends EventEmitter {
     }
     
     loadThings(thingsLoaded) {
-        glob("things/*.js", { realpath: true }, (err, files) => {
+        glob("things/*.js", { realpath: true }, (error, files) => {
             files.forEach(file => this._loadThing(file));
 
-            this._logger.debug(`Loaded ${this.things.size} things.`, "ThingManager.ctor");
+            this._logger.debug(`Loaded ${this.things.size} thing(s).`, "ThingManager.ctor");
             
             if (thingsLoaded)
                 thingsLoaded();
@@ -30,16 +30,16 @@ class ThingManager extends EventEmitter {
             this._logger.info(`Value for '${thing.id}' was set to '${thing.value}' (${typeof thing.value}).`, "ThingManager.thing.valueSet");
 
             if (thing.valueSet !== undefined)
-                thing.valueSet(oldValue, this.things);
+                thing.valueSet(this.things);
 
-            this.emit("valueSet", thing);
+            this.emit("valueSet", thing, oldValue);
         });
 
         thing.on("valueChanged", (thing, oldValue) => {
             this._logger.info(`Value for '${thing.id}' was changed to '${thing.value}' (${typeof thing.value}).`, "ThingManager.thing.valueChanged");
 
             if (thing.valueChanged !== undefined)
-                thing.valueChanged(oldValue, this.things);
+                thing.valueChanged(this.things, oldValue);
         });
 
         this.things.set(thing.id, thing);
