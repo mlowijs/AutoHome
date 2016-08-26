@@ -26,7 +26,7 @@ class RfxcomDriver extends EventEmitter {
                 buffer = buffer.concat(data);
 
                 if (data[0] === data.length - 1) {
-                    this._receiveMessage(data);
+                    this._receiveMessage(buffer);
                     buffer = [];
                 }
             });
@@ -46,8 +46,10 @@ class RfxcomDriver extends EventEmitter {
     }
 
     sendMessage(binding, value) {
-        if (!this._initialized)
+        if (!this._initialized) {
+            this._logger.debug("Did not send message, RFXCOM not initialized.");
             return;
+        }
 
         const messageFactory = MessageFactory.getMessageFactory(binding.packetType);
         const message = messageFactory.createMessage(this._sequenceNumber++, binding, value);

@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8ab0e5ea-456c-4593-9d4a-5ed8f53e6d3a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/autohome-binder-rfxcom/MessageFactory.js" afterPath="$PROJECT_DIR$/autohome-binder-rfxcom/MessageFactory.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/autohome-binder-rfxcom/RfxcomDriver.js" afterPath="$PROJECT_DIR$/autohome-binder-rfxcom/RfxcomDriver.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/autohome-binder-rfxcom/messageFactories/Lighting2MessageFactory.js" afterPath="$PROJECT_DIR$/autohome-binder-rfxcom/messageFactories/Lighting2MessageFactory.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/autohome-binder-rfxcom/messages/InterfaceMessage.js" afterPath="$PROJECT_DIR$/autohome-binder-rfxcom/messages/InterfaceMessage.js" />
     </list>
     <ignored path="autohome.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,7 +33,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Lighting2MessageFactory.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Lighting2MessageFactory.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/autohome-binder-rfxcom/messageFactories/Lighting2MessageFactory.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
@@ -96,11 +93,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RfxcomDriver.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="RfxcomDriver.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/autohome-binder-rfxcom/RfxcomDriver.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="867">
-              <caret line="60" column="131" selection-start-line="60" selection-start-column="131" selection-end-line="60" selection-end-column="131" />
+            <state relative-caret-position="170">
+              <caret line="28" column="47" selection-start-line="28" selection-start-column="47" selection-end-line="28" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -470,7 +467,7 @@
       <workItem from="1472026249080" duration="4606000" />
       <workItem from="1472037800915" duration="4866000" />
       <workItem from="1472202195105" duration="1218000" />
-      <workItem from="1472212338152" duration="1175000" />
+      <workItem from="1472212338152" duration="1543000" />
     </task>
     <task id="LOCAL-00001" summary="Made alot of changes">
       <created>1460372366116</created>
@@ -619,11 +616,18 @@
       <option name="project" value="LOCAL" />
       <updated>1472212447774</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Adding some props">
+      <created>1472217503839</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1472217503839</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100593000" />
+    <option name="totallyTimeSpent" value="100961000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -696,7 +700,8 @@
     <MESSAGE value="Added init to rfxcom driver" />
     <MESSAGE value="Some small changes" />
     <MESSAGE value="Added users" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added users" />
+    <MESSAGE value="Adding some props" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding some props" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1007,18 +1012,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/autohome-binder-rfxcom/RfxcomDriver.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="60" column="131" selection-start-line="60" selection-start-column="131" selection-end-line="60" selection-end-column="131" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/autohome-binder-rfxcom/messageFactories/Lighting2MessageFactory.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="45" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/autohome-binder-rfxcom/RfxcomDriver.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="28" column="47" selection-start-line="28" selection-start-column="47" selection-end-line="28" selection-end-column="47" />
           <folding />
         </state>
       </provider>
