@@ -7,9 +7,6 @@
     "type": "git",
     "url": "https://github.com/mlowijs/AutoHome.git"
   },
-  "scripts": {
-    "start": "node app.js"
-  },
   "dependencies": {
     "express": "^4.14.0",
     "express-minify": "^0.2.0",
