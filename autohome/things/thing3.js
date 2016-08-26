@@ -22,7 +22,7 @@ module.exports = {
             getOptions(thing) {
                 return {
                     method: "post",
-                    url: `http://requestb.in/1eh5aad1?value=${thing.value}`
+                    url: `http://requestb.in/ttdufntt?value=${thing.value}`
                 };
             }
         },

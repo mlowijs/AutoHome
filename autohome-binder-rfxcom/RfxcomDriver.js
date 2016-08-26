@@ -7,6 +7,7 @@ class RfxcomDriver extends EventEmitter {
     constructor(loggerFactory, portName, portOpened) {
         super();
 
+        this._initialized = false;
         this._sequenceNumber = 0;
         this._logger = loggerFactory.getLogger("RfxcomDriver");
 
@@ -36,12 +37,17 @@ class RfxcomDriver extends EventEmitter {
     reset() {
         this._logger.debug("Resetting RFXCOM.");
 
+        this._initialized = false;
+
         this._write(MessageFactory.createResetMessage(), () => setTimeout(() =>
             this._write(MessageFactory.createStatusMessage()), 500)
         );
     }
 
     sendMessage(binding, value) {
+        if (!this._initialized)
+            return;
+
         const messageFactory = MessageFactory.getMessageFactory(binding.packetType);
         const message = messageFactory.createMessage(this._sequenceNumber++, binding, value);
 
@@ -49,14 +55,13 @@ class RfxcomDriver extends EventEmitter {
     }
 
     _receiveMessage(data) {
-        // this._logger.debug(`Received message: ${dataString}`);
-
         const message = MessageParser.parseMessage(data);
 
         if (message && message.packetType === 0x01 && message.commandType === 0x02) {
             this._logger.info("RFXCOM initialized.");
 
             this._sequenceNumber = message.sequenceNumber;
+            this._initialized = true;
 
             this.emit("initialized");
             return;
