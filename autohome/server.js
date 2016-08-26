@@ -17,4 +17,5 @@ thingManager.loadThings(() => {
 });
 
 // Start webserver
-const autoHome = require("./src/AutoHome")(loggerFactory, thingManager);
+const autoHome = require("./src/AutoHome");
+autoHome(loggerFactory, thingManager);

@@ -130,6 +130,4 @@ module.exports = (loggerFactory, thingManager) => {
     server.listen(config.server.port, () => {
         logger.info(`AutoHome webserver is listening on port ${config.server.port}.`);
     });
-
-    return server;
 };
