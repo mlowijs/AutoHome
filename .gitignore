@@ -9,4 +9,4 @@ autohome/webapp/views/*
 autohome/config/*
 !autohome/config/main.json
 
-autohome/repack.sh
+autohome/upload.sh

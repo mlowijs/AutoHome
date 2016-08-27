@@ -1,7 +1,7 @@
 {
   "name": "autohome",
   "description": "Fully configurable home automation system.",
-  "version": "0.2.6",
+  "version": "0.2.8",
   "license": "BSD-3-Clause",
   "repository": {
     "type": "git",
@@ -17,5 +17,8 @@
     "passport": "^0.3.2",
     "passport-http": "^0.3.0",
     "socket.io": "^1.4.8"
+  },
+  "scripts": {
+    "postpublish": "bash upload.sh"
   }
 }
