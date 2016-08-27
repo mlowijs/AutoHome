@@ -12,7 +12,7 @@ class ThingManager extends EventEmitter {
     }
     
     loadThings(thingsLoaded) {
-        glob("things/*.js", { realpath: true }, (error, files) => {
+        glob("things/**/*.js", { realpath: true }, (error, files) => {
             files.forEach(file => this._loadThing(file));
 
             this._logger.debug(`Loaded ${this.things.size} thing(s).`, "ThingManager.ctor");
