@@ -4,6 +4,7 @@ bin
 obj
 
 node_modules
+repack.sh
 
 things/*
 !things/README
