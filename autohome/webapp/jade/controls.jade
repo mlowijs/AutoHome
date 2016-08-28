@@ -3,7 +3,7 @@ mixin buttons(label, thingId, buttons)
         .col-xs-8= label
         .col-xs-4
             .btn-group(data-thing=thingId)
-                if buttons !== undefined
+                if buttons
                     each value, label in buttons
                         button(data-value=value.toString()).btn.btn-default= label
                 else

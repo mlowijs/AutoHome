@@ -4,11 +4,14 @@ class BindingManager {
         this._thingManager = thingManager;
         this._binderManager = binderManager;
 
-        this._thingManager.on("valueSet", (thing, oldValue) => this._handleValueSet(thing));
+        this._thingManager.on("valuePushed", (thing) => this._handleValuePushed(thing));
     }
 
     hookupBindings(binder) {
         for (const [id, thing] of this._thingManager.things) {
+            if (!thing.bindings)
+                continue;
+
             for (const binding of thing.bindings.filter(binding => binding.type === binder.getType())) {
                 const validationResult = binder.validateBinding(binding);
 
@@ -25,7 +28,7 @@ class BindingManager {
         }
     }
 
-    _handleValueSet(thing) {
+    _handleValuePushed(thing) {
         for (const binding of thing.bindings) {
             const binder = this._binderManager.binders.get(binding.type);
 

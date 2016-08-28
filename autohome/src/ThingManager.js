@@ -27,19 +27,21 @@ class ThingManager extends EventEmitter {
         Object.setPrototypeOf(thing, new Thing(path.parse(file).name));
 
         thing.on("valueSet", (thing, oldValue) => {
-            this._logger.info(`Value for '${thing.id}' was set to '${thing.value}' (${typeof thing.value}).`, "ThingManager.thing.valueSet");
+            this._logger.info(`Set value of '${thing.id}' to '${thing.value}' (${typeof thing.value}).`, "ThingManager.thing.valueSet");
 
             if (thing.valueSet !== undefined)
-                thing.valueSet(this.things);
+                thing.valueSet();
 
-            this.emit("valueSet", thing, oldValue);
+            this.emit("valueSet", thing);
         });
 
-        thing.on("valueChanged", (thing, oldValue) => {
-            this._logger.info(`Value for '${thing.id}' was changed to '${thing.value}' (${typeof thing.value}).`, "ThingManager.thing.valueChanged");
+        thing.on("valuePushed", (thing, oldValue) => {
+            this._logger.info(`Pushed '${thing.value}' (${typeof thing.value}) to '${thing.id}'.`, "ThingManager.thing.valueChanged");
 
-            if (thing.valueChanged !== undefined)
-                thing.valueChanged(this.things, oldValue);
+            if (thing.valuePushed !== undefined)
+                thing.valuePushed();
+
+            this.emit("valuePushed", thing);
         });
 
         this.things.set(thing.id, thing);
