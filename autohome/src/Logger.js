@@ -8,35 +8,36 @@ class Logger {
 
     debug(message, tag) {
         if (this._level <= Logger.DEBUG)
-            this._log("DEBUG", message, tag);
+            this._log("DEBUG", message);
     }
 
     info(message, tag) {
         if (this._level <= Logger.INFO)
-            this._log("INFO", message, tag);
+            this._log("INFO", message);
     }
 
     warn(message, tag) {
         if (this._level <= Logger.WARN)
-            this._log("WARN", message, tag);
+            this._log("WARN", message, "33");
     }
 
     error(message, tag) {
         if (this._level <= Logger.ERROR)
-            this._log("ERROR", message, tag);
+            this._log("ERROR", message, "31");
     }
 
     fatal(message, tag) {
         if (this._level <= Logger.FATAL)
-            this._log("FATAL", message, tag);
+            this._log("FATAL", message, "31");
     }
 
-    _log(level, message, tag) {
+    _log(level, message, color) {
+        color = color || "0";
+        level = (level + " ").substr(0, 5); // Pad right
+
         const now = moment().format("YYYY-MM-DD HH:mm:ss");
 
-        level = (level + " ").substr(0, 5);
-
-        const logMessage = `${now} - ${level} [${this._context}] ${message}`;
+        const logMessage = `${now} - \x1b[${color}m${level} [${this._context}] ${message}\x1b[0m`;
         console.log(logMessage);
     }
 }

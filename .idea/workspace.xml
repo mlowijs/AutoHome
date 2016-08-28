@@ -56,8 +56,8 @@
       <file leaf-file-name="Logger.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/autohome/src/Logger.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="487">
-              <caret line="38" column="46" selection-start-line="38" selection-start-column="46" selection-end-line="38" selection-end-column="46" />
+            <state relative-caret-position="306">
+              <caret line="30" column="43" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -528,7 +528,7 @@
       <workItem from="1472202195105" duration="1218000" />
       <workItem from="1472212338152" duration="11264000" />
       <workItem from="1472295303439" duration="3115000" />
-      <workItem from="1472302314412" duration="14076000" />
+      <workItem from="1472302314412" duration="14959000" />
     </task>
     <task id="LOCAL-00001" summary="Made alot of changes">
       <created>1460372366116</created>
@@ -796,11 +796,18 @@
       <option name="project" value="LOCAL" />
       <updated>1472402081475</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Revised logging">
+      <created>1472410230566</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1472410230566</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127873000" />
+    <option name="totallyTimeSpent" value="128756000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -825,7 +832,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32719395" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31852654" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31852654" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -853,7 +860,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/node_modules" />
     </ignored-roots>
-    <MESSAGE value="renamed folder" />
     <MESSAGE value="Added npmignore" />
     <MESSAGE value="Fixed npmignore" />
     <MESSAGE value="Fixed npmignore and package" />
@@ -878,7 +884,8 @@
     <MESSAGE value="Updated logging, version bump to 0.2.9" />
     <MESSAGE value="Small refactorings" />
     <MESSAGE value="Enforce unique thing IDs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Enforce unique thing IDs" />
+    <MESSAGE value="Revised logging" />
+    <option name="LAST_COMMIT_MESSAGE" value="Revised logging" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1257,8 +1264,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/autohome/src/Logger.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
-          <caret line="38" column="46" selection-start-line="38" selection-start-column="46" selection-end-line="38" selection-end-column="46" />
+        <state relative-caret-position="306">
+          <caret line="30" column="43" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
           <folding />
         </state>
       </provider>
