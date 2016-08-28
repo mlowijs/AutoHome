@@ -1,4 +1,4 @@
-const config = require("./../config/main.json");
+const config = require("../config/main.json");
 
 function optionalAuthMiddleware(passport) {
     return (req, res, next) => {

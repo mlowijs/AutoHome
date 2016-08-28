@@ -23,8 +23,15 @@ class ThingManager extends EventEmitter {
     }
     
     _loadThing(file) {
+        const id = path.parse(file).name;
+
+        if (this.things.has(id)) {
+            this.logger.error(`A thing with id '${id}' already exists. Make sure to give yout things unique ids.`);
+            return;
+        }
+
         const thing = require(file);
-        Object.setPrototypeOf(thing, new Thing(path.parse(file).name));
+        Object.setPrototypeOf(thing, new Thing(id));
 
         thing.on("valueSet", () => {
             this._logger.info(`Set value of '${thing.id}' to '${thing.value}' (${typeof thing.value}).`, "ThingManager.thing.valueSet");

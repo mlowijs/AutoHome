@@ -1,35 +1,33 @@
-const config = require("../config/main.json");
 const moment = require("moment");
 
 class Logger {
-    constructor(context) {
+    constructor(context, level) {
         this._context = context;
-        
-        this.level = config.log.level;
+        this._level = level;
     }
 
     debug(message, tag) {
-        if (this.level <= Logger.DEBUG)
+        if (this._level <= Logger.DEBUG)
             this._log("DEBUG", message, tag);
     }
 
     info(message, tag) {
-        if (this.level <= Logger.INFO)
+        if (this._level <= Logger.INFO)
             this._log("INFO", message, tag);
     }
 
     warn(message, tag) {
-        if (this.level <= Logger.WARN)
+        if (this._level <= Logger.WARN)
             this._log("WARN", message, tag);
     }
 
     error(message, tag) {
-        if (this.level <= Logger.ERROR)
+        if (this._level <= Logger.ERROR)
             this._log("ERROR", message, tag);
     }
 
     fatal(message, tag) {
-        if (this.level <= Logger.FATAL)
+        if (this._level <= Logger.FATAL)
             this._log("FATAL", message, tag);
     }
 

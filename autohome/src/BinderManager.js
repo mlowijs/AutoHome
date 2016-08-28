@@ -1,6 +1,5 @@
 const glob = require("glob");
 const path = require("path");
-const config = require("../config/main.json");
 
 class BinderManager {
     constructor(loggerFactory) {
