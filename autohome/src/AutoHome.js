@@ -79,7 +79,7 @@ function setupApiRoutes(app, passport, thingManager) {
     });
 
     app.put("/api/:thingId/:value", optionalAuthMiddleware(passport), (req, res) => {
-        let thing = thingManager.things.get(req.params.thingId);
+        const thing = thingManager.things.get(req.params.thingId);
 
         if (!thing) {
             res.status(404).end();

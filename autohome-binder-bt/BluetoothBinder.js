@@ -33,7 +33,7 @@ class BluetoothBinder extends Binder {
         childProcess.exec(`l2ping -c 3 ${binding.mac}`, { "stdio": "ignore" }, (error) => {
             thing = error === null;
 
-            let interval = thing.value ? binding.intervalPresent : binding.intervalAbsent;
+            const interval = thing.value ? binding.intervalPresent : binding.intervalAbsent;
             binding._interval = setInterval(() => this.scan(thing, binding), interval * 1000);
         });
     }

@@ -23,7 +23,7 @@ class ThingManager extends EventEmitter {
     }
     
     _loadThing(file) {
-        let thing = require(file);
+        const thing = require(file);
         Object.setPrototypeOf(thing, new Thing(path.parse(file).name));
 
         thing.on("valueSet", () => {

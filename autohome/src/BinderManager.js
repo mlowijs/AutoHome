@@ -25,17 +25,13 @@ class BinderManager {
         const binderType = binder.getType();
 
         if (this.binders.has(binderType)) {
-            this._logger.error(`A binder with type '${binderType}' already exists.`, "BinderManager._loadBinder");
+            this._logger.error(`A binder of type '${binderType}' already exists.`, "BinderManager._loadBinder");
             return;
         }
 
-        let binderConfig = null;
+        const config = this._loadConfiguration(binderType);
 
-        try {
-            binderConfig = require(`../config/${binderType}.json`);
-        } catch (ex) { }
-
-        binder.configure(binderConfig, () => {
+        binder.configure(config, () => {
             this.binders.set(binderType, binder);
 
             this._logger.info(`Loaded '${binderType}' binder.`, "BinderManager._loadBinder");
@@ -43,6 +39,16 @@ class BinderManager {
             if (binderLoaded)
                 binderLoaded(binder);
         });
+    }
+
+    _loadConfiguration(binderType) {
+        let binderConfig = null;
+
+        try {
+            binderConfig = require(`../config/${binderType}.json`);
+        } catch (ex) { }
+
+        return binderConfig;
     }
 }
 
