@@ -34,7 +34,9 @@ class Logger {
     _log(level, message, tag) {
         const now = moment().format("YYYY-MM-DD HH:mm:ss");
 
-        const logMessage = `${now} - ${level}\t\t[${this._context}] ${message}`;
+        level = (level + " ").substr(0, 5);
+
+        const logMessage = `${now} - ${level} [${this._context}] ${message}`;
         console.log(logMessage);
     }
 }
