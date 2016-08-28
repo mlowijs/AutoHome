@@ -114,7 +114,7 @@ function setupSocketIo(logger, server, thingManager) {
 }
 
 module.exports = (loggerFactory, thingManager) => {
-    const logger = loggerFactory.getLogger("app.server");
+    const logger = loggerFactory.getLogger("AutoHome");
 
     const express = require("express");
     const http = require("http");
@@ -131,6 +131,6 @@ module.exports = (loggerFactory, thingManager) => {
     setupSocketIo(logger, server, thingManager);
 
     server.listen(config.server.port, () => {
-        logger.info(`AutoHome webserver is listening on port ${config.server.port}.`);
+        logger.info(`Web server is listening on port ${config.server.port}.`);
     });
 };
