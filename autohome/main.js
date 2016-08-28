@@ -10,7 +10,7 @@ const bindingManager = new BindingManager(loggerFactory, thingManager, binderMan
 
 const logger = loggerFactory.getLogger("main");
 const packageJson = require("./package.json");
-logger.info(`Autohome v${packageJson.version} starting up...`);
+logger.info(`AutoHome v${packageJson.version} starting up...`);
 
 // Load things, binders, bindings
 thingManager.loadThings(() => {
