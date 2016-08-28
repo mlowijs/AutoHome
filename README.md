@@ -29,3 +29,8 @@ It is possible to install AutoHome from NPM. Just run `npm install autohome` and
 
 ### GitHub
 Finally, you can clone this repository. That will give you the latest and greatest, but possibly buggy version of AutoHome. When done, run `npm install` from the `autohome` directory.
+
+## Running AutoHome
+AutoHome comes with a default `main.json` configuration file. This sets up defaults for the port the web server will be listening on, and the log level.
+
+To start AutoHome, run `npm start` from the AutoHome directory. You can also run `node main.js` directly.
