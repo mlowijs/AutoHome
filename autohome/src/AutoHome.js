@@ -95,9 +95,12 @@ function setupSocketIo(logger, server, thingManager) {
     const io = require("socket.io")(server);
 
     io.on("connection", (socket) => {
-        thingManager.on("valueSet", (thing) => {
-            socket.emit("valueSet", thing.id, thing.value);
-        });
+        function emitValueEvent(thing) {
+            socket.emit("value", thing.id, thing.value);
+        }
+
+        thingManager.on("valueSet", emitValueEvent);
+        thingManager.on("valuePushed", emitValueEvent);
 
         socket.on("setValue", (thingId, value) => {
             logger.debug(`Received setValue event for '${thingId}' with value '${value}'`, "socketio.socket.setValue");

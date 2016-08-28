@@ -2,9 +2,9 @@ $(function() {
    var socket = io();
 
     //
-    // Receive valueSet events
+    // Receive value events
     //
-    socket.on("valueSet", function(thingId, value) {
+    socket.on("value", function(thingId, value) {
         var controls = $("[data-thing='" + thingId + "']");
 
         controls.each(function() {

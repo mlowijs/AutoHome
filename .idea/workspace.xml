@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8ab0e5ea-456c-4593-9d4a-5ed8f53e6d3a" name="Default" comment="">
+    <list default="true" id="8ab0e5ea-456c-4593-9d4a-5ed8f53e6d3a" name="Default" comment="Added simple grouping with childs">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/autohome/server.js" afterPath="$PROJECT_DIR$/autohome/server.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/autohome/src/AutoHome.js" afterPath="$PROJECT_DIR$/autohome/src/AutoHome.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/autohome/src/BindingManager.js" afterPath="$PROJECT_DIR$/autohome/src/BindingManager.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/autohome/src/Thing.js" afterPath="$PROJECT_DIR$/autohome/src/Thing.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/autohome/src/ThingManager.js" afterPath="$PROJECT_DIR$/autohome/src/ThingManager.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/autohome/webapp/jade/controls.jade" afterPath="$PROJECT_DIR$/autohome/webapp/jade/controls.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/autohome/webapp/js/controls.js" afterPath="$PROJECT_DIR$/autohome/webapp/js/controls.js" />
     </list>
     <ignored path="autohome.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,14 +30,24 @@
       <file leaf-file-name="ThingManager.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/autohome/src/ThingManager.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+            <state relative-caret-position="435">
+              <caret line="42" column="33" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Binder.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BindingManager.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/autohome/src/BindingManager.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="84" selection-start-line="18" selection-start-column="84" selection-end-line="18" selection-end-column="84" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Binder.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/autohome-binder/Binder.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
@@ -47,11 +57,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="controls.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/autohome/webapp/js/controls.js">
+      <file leaf-file-name="Thing.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/autohome/src/Thing.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
+            <state relative-caret-position="142">
+              <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -60,8 +70,8 @@
       <file leaf-file-name="AutoHome.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/autohome/src/AutoHome.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="97" column="25" selection-start-line="97" selection-start-column="25" selection-end-line="97" selection-end-column="25" />
+            <state relative-caret-position="339">
+              <caret line="83" column="20" selection-start-line="83" selection-start-column="20" selection-end-line="83" selection-end-column="20" />
               <folding>
                 <element signature="n#!!block;n#optionalAuthMiddleware#0" expanded="false" />
                 <element signature="e#125#323#0" expanded="false" />
@@ -75,32 +85,19 @@
                 <element signature="n#!!block;n#setupWebAppRoutes#0" expanded="false" />
                 <element signature="e#1520#1640#0" expanded="false" />
                 <element signature="e#1715#1872#0" expanded="false" />
-                <element signature="n#!!block;n#setupApiRoutes#0" expanded="false" />
                 <element signature="e#2010#2216#0" expanded="false" />
                 <element signature="e#2100#2166#0" expanded="false" />
-                <element signature="e#2304#2539#0" expanded="false" />
-                <element signature="e#2392#2458#0" expanded="false" />
-                <element signature="e#2856#3112#0" expanded="false" />
+                <element signature="n#!!block;n#setupSocketIo#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/autohome/server.js">
+      <file leaf-file-name="controls.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/autohome/webapp/js/controls.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
-              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.jade" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/autohome/webapp/views/index.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
+              <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -119,28 +116,28 @@
       <file leaf-file-name="thingGroup.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/autohome/things/thingGroup.js">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="thing2.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/autohome/things/thing2.js">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
-              <caret line="1" column="28" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
+              <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="autohome.less" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/autohome/webapp/css/autohome.less">
+      <file leaf-file-name="thing1.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/autohome/things/thing1.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BindingManager.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/autohome/src/BindingManager.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+            <state relative-caret-position="17">
+              <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -163,7 +160,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/autohome-app/app.js" />
         <option value="$PROJECT_DIR$/autohome-binder-bt/package.json" />
         <option value="$PROJECT_DIR$/autohome-binder-bt/BluetoothBinder.js" />
         <option value="$PROJECT_DIR$/autohome-binder-rfxcom/messageParsers/InterfaceMessageParser.js" />
@@ -187,7 +183,6 @@
         <option value="$PROJECT_DIR$/autohome/things/README" />
         <option value="$PROJECT_DIR$/autohome-binder-rfxcom/messageFactories/Lighting2MessageFactory.js" />
         <option value="$PROJECT_DIR$/autohome-binder-rfxcom/MessageFactory.js" />
-        <option value="$PROJECT_DIR$/autohome/src/AutoHome.js" />
         <option value="$PROJECT_DIR$/autohome/config/main.json" />
         <option value="$PROJECT_DIR$/autohome/src/BinderManager.js" />
         <option value="$PROJECT_DIR$/autohome-binder-http/HttpBinder.js" />
@@ -205,15 +200,17 @@
         <option value="$PROJECT_DIR$/autohome/package.json" />
         <option value="$PROJECT_DIR$/autohome/.npmignore" />
         <option value="$PROJECT_DIR$/autohome/upload.sh" />
-        <option value="$PROJECT_DIR$/autohome/things/thing1.js" />
         <option value="$PROJECT_DIR$/autohome/things/thing2.js" />
         <option value="$PROJECT_DIR$/autohome/things/things.js" />
-        <option value="$PROJECT_DIR$/autohome/src/Thing.js" />
-        <option value="$PROJECT_DIR$/autohome/src/BindingManager.js" />
-        <option value="$PROJECT_DIR$/autohome/src/ThingManager.js" />
         <option value="$PROJECT_DIR$/autohome/server.js" />
         <option value="$PROJECT_DIR$/autohome/webapp/jade/controls.jade" />
+        <option value="$PROJECT_DIR$/autohome/webapp/js/controls.js" />
+        <option value="$PROJECT_DIR$/autohome/src/AutoHome.js" />
+        <option value="$PROJECT_DIR$/autohome/things/thing1.js" />
+        <option value="$PROJECT_DIR$/autohome/src/Thing.js" />
         <option value="$PROJECT_DIR$/autohome/things/thingGroup.js" />
+        <option value="$PROJECT_DIR$/autohome/src/ThingManager.js" />
+        <option value="$PROJECT_DIR$/autohome/src/BindingManager.js" />
       </list>
     </option>
   </component>
@@ -501,7 +498,7 @@
       <workItem from="1472202195105" duration="1218000" />
       <workItem from="1472212338152" duration="11264000" />
       <workItem from="1472295303439" duration="3115000" />
-      <workItem from="1472302314412" duration="5933000" />
+      <workItem from="1472302314412" duration="8315000" />
     </task>
     <task id="LOCAL-00001" summary="Made alot of changes">
       <created>1460372366116</created>
@@ -734,11 +731,18 @@
       <option name="project" value="LOCAL" />
       <updated>1472315858433</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Changed thing events">
+      <created>1472379142453</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1472379142453</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119730000" />
+    <option name="totallyTimeSpent" value="122112000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -755,6 +759,7 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1849315" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875264" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -762,9 +767,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32719395" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31852654" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31852654" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -791,8 +795,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/node_modules" />
     </ignored-roots>
-    <MESSAGE value="Lighting2.AC binding nicefied" />
-    <MESSAGE value="Refactored app.js&#10;" />
     <MESSAGE value="Some refactoring" />
     <MESSAGE value="Fixed web app routes" />
     <MESSAGE value="Updated package versions" />
@@ -816,7 +818,9 @@
     <MESSAGE value="Adding repack script for installer" />
     <MESSAGE value="Added my special upload script" />
     <MESSAGE value="ignore upload.sh" />
-    <option name="LAST_COMMIT_MESSAGE" value="ignore upload.sh" />
+    <MESSAGE value="Changed thing events" />
+    <MESSAGE value="Added simple grouping with childs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added simple grouping with childs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -981,6 +985,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="27" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -988,6 +993,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="16" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1055,22 +1061,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/autohome/things/thing1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="2" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/autohome/things/thing2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/autohome/.npmignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -1083,57 +1073,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/autohome/src/Thing.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/autohome/src/AutoHome.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="97" column="25" selection-start-line="97" selection-start-column="25" selection-end-line="97" selection-end-column="25" />
-          <folding>
-            <element signature="n#!!block;n#optionalAuthMiddleware#0" expanded="false" />
-            <element signature="e#125#323#0" expanded="false" />
-            <element signature="e#153#280#0" expanded="false" />
-            <element signature="e#286#317#0" expanded="false" />
-            <element signature="n#!!block;n#setupPassport#0" expanded="false" />
-            <element signature="n#!!block;n#setupLessMinify#0" expanded="false" />
-            <element signature="e#908#945#0" expanded="false" />
-            <element signature="n#!!block;n#setupJadeViewEngine#0" expanded="false" />
-            <element signature="n#!!block;n#setupStaticRoutes#0" expanded="false" />
-            <element signature="n#!!block;n#setupWebAppRoutes#0" expanded="false" />
-            <element signature="e#1520#1640#0" expanded="false" />
-            <element signature="e#1715#1872#0" expanded="false" />
-            <element signature="n#!!block;n#setupApiRoutes#0" expanded="false" />
-            <element signature="e#2010#2216#0" expanded="false" />
-            <element signature="e#2100#2166#0" expanded="false" />
-            <element signature="e#2304#2539#0" expanded="false" />
-            <element signature="e#2392#2458#0" expanded="false" />
-            <element signature="e#2856#3112#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/autohome/webapp/js/controls.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/autohome/src/BindingManager.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
           <folding />
         </state>
       </provider>
@@ -1170,26 +1109,90 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/autohome/things/thingGroup.js">
+    <entry file="file://$PROJECT_DIR$/autohome-binder/Binder.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/autohome/webapp/js/controls.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/autohome/things/thing2.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="1" column="28" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
+          <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/autohome/things/thing1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/autohome/src/AutoHome.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="83" column="20" selection-start-line="83" selection-start-column="20" selection-end-line="83" selection-end-column="20" />
+          <folding>
+            <element signature="n#!!block;n#optionalAuthMiddleware#0" expanded="false" />
+            <element signature="e#125#323#0" expanded="false" />
+            <element signature="e#153#280#0" expanded="false" />
+            <element signature="e#286#317#0" expanded="false" />
+            <element signature="n#!!block;n#setupPassport#0" expanded="false" />
+            <element signature="n#!!block;n#setupLessMinify#0" expanded="false" />
+            <element signature="e#908#945#0" expanded="false" />
+            <element signature="n#!!block;n#setupJadeViewEngine#0" expanded="false" />
+            <element signature="n#!!block;n#setupStaticRoutes#0" expanded="false" />
+            <element signature="n#!!block;n#setupWebAppRoutes#0" expanded="false" />
+            <element signature="e#1520#1640#0" expanded="false" />
+            <element signature="e#1715#1872#0" expanded="false" />
+            <element signature="e#2010#2216#0" expanded="false" />
+            <element signature="e#2100#2166#0" expanded="false" />
+            <element signature="n#!!block;n#setupSocketIo#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/autohome/src/Thing.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/autohome/things/thingGroup.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/autohome/src/ThingManager.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+        <state relative-caret-position="435">
+          <caret line="42" column="33" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/autohome-binder/Binder.js">
+    <entry file="file://$PROJECT_DIR$/autohome/src/BindingManager.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+        <state relative-caret-position="306">
+          <caret line="18" column="84" selection-start-line="18" selection-start-column="84" selection-end-line="18" selection-end-column="84" />
           <folding />
         </state>
       </provider>

@@ -26,22 +26,32 @@ class ThingManager extends EventEmitter {
         let thing = require(file);
         Object.setPrototypeOf(thing, new Thing(path.parse(file).name));
 
-        thing.on("valueSet", (thing, oldValue) => {
+        thing.on("valueSet", () => {
             this._logger.info(`Set value of '${thing.id}' to '${thing.value}' (${typeof thing.value}).`, "ThingManager.thing.valueSet");
 
             if (thing.valueSet !== undefined)
                 thing.valueSet();
 
             this.emit("valueSet", thing);
+
+            if (!thing.children)
+                return;
+
+            thing.children.map(id => this.things.get(id)).forEach(child => child.setValue(thing.value));
         });
 
-        thing.on("valuePushed", (thing, oldValue) => {
+        thing.on("valuePushed", () => {
             this._logger.info(`Pushed '${thing.value}' (${typeof thing.value}) to '${thing.id}'.`, "ThingManager.thing.valueChanged");
 
             if (thing.valuePushed !== undefined)
                 thing.valuePushed();
 
             this.emit("valuePushed", thing);
+
+            if (!thing.children)
+                return;
+
+            thing.children.map(id => this.things.get(id)).forEach(child => child.pushValue(thing.value));
         });
 
         this.things.set(thing.id, thing);

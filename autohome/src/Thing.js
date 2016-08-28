@@ -18,12 +18,13 @@ class Thing extends EventEmitter {
     }
 
     setValue(value) {
-        this._setValue(value);
+        const oldValue = this._setValue(value);
+        this.emit("valueSet", oldValue);
     }
 
     pushValue(value) {
         const oldValue = this._setValue(value);
-        this.emit("valuePushed", thing, oldValue);
+        this.emit("valuePushed", oldValue);
     }
 
     _setValue(value) {
@@ -43,7 +44,6 @@ class Thing extends EventEmitter {
         else
             this._value = value;
 
-        this.emit("valueSet", thing, oldValue);
         return oldValue;
     }
 }

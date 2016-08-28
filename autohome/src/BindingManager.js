@@ -16,7 +16,7 @@ class BindingManager {
                 const validationResult = binder.validateBinding(binding);
 
                 if (validationResult !== true) {
-                    this._logger.error(`Binding has missing or invalid property/properties: '${bindingValid}'.`);
+                    this._logger.error(`Binding of type '${binding.type}' on '${id}' has one or more missing or invalid properties: '${validationResult}'.`);
                     return;
                 }
 
@@ -29,6 +29,9 @@ class BindingManager {
     }
 
     _handleValuePushed(thing) {
+        if (!thing.bindings)
+            return;
+
         for (const binding of thing.bindings) {
             const binder = this._binderManager.binders.get(binding.type);
 
