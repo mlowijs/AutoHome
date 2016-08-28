@@ -2,28 +2,53 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ab0e5ea-456c-4593-9d4a-5ed8f53e6d3a" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/autohome-binder-bt/BluetoothBinder.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/autohome-binder-bt/autohome-binder.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/autohome-binder-bt/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/autohome-binder-http/HttpBinder.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/autohome-binder-http/autohome-binder.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/autohome-binder-http/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/autohome-binder-mqtt/MqttBinder.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/autohome-binder-mqtt/autohome-binder.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/autohome-binder-mqtt/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/autohome-binder-rfxcom/MessageFactory.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/autohome-binder-rfxcom/MessageParser.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/autohome-binder-rfxcom/RfxcomBinder.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/autohome-binder-rfxcom/RfxcomDriver.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/autohome-binder-rfxcom/autohome-binder.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/autohome-binder-rfxcom/messageFactories/Lighting2MessageFactory.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/autohome-binder-rfxcom/messages/InterfaceMessage.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/autohome-binder-rfxcom/messages/Lighting2Message.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/autohome-binder-rfxcom/messages/Message.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/autohome-binder-rfxcom/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/autohome-binder/Binder.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/autohome-binder/package.json" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/mqtt.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/rfxcom.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/things/thing1.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/things/thing2.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/things/thingGroup.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/upload.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webapp/views/index.jade" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/autohome/.npmignore" afterPath="$PROJECT_DIR$/.npmignore" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/autohome/config/main.json" afterPath="$PROJECT_DIR$/config/main.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/autohome/main.js" afterPath="$PROJECT_DIR$/main.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/autohome/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/autohome/src/AutoHome.js" afterPath="$PROJECT_DIR$/src/AutoHome.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/autohome/src/BinderManager.js" afterPath="$PROJECT_DIR$/src/BinderManager.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/autohome/src/BindingManager.js" afterPath="$PROJECT_DIR$/src/BindingManager.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/autohome/src/Logger.js" afterPath="$PROJECT_DIR$/src/Logger.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/autohome/src/LoggerFactory.js" afterPath="$PROJECT_DIR$/src/LoggerFactory.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/autohome/src/Thing.js" afterPath="$PROJECT_DIR$/src/Thing.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/autohome/src/ThingManager.js" afterPath="$PROJECT_DIR$/src/ThingManager.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/autohome/things/README" afterPath="$PROJECT_DIR$/things/README" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/autohome/webapp/css/autohome.less" afterPath="$PROJECT_DIR$/webapp/css/autohome.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/autohome/webapp/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/webapp/css/bootstrap.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/autohome/webapp/css/font-awesome.min.css" afterPath="$PROJECT_DIR$/webapp/css/font-awesome.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/autohome/webapp/css/iec-power.min.css" afterPath="$PROJECT_DIR$/webapp/css/iec-power.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/autohome/webapp/fonts/FontAwesome.otf" afterPath="$PROJECT_DIR$/webapp/fonts/FontAwesome.otf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/autohome/webapp/fonts/Unicode_IEC_symbol.eot" afterPath="$PROJECT_DIR$/webapp/fonts/Unicode_IEC_symbol.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/autohome/webapp/fonts/Unicode_IEC_symbol.svg" afterPath="$PROJECT_DIR$/webapp/fonts/Unicode_IEC_symbol.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/autohome/webapp/fonts/Unicode_IEC_symbol.ttf" afterPath="$PROJECT_DIR$/webapp/fonts/Unicode_IEC_symbol.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/autohome/webapp/fonts/Unicode_IEC_symbol.woff" afterPath="$PROJECT_DIR$/webapp/fonts/Unicode_IEC_symbol.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/autohome/webapp/fonts/Unicode_IEC_symbol.woff2" afterPath="$PROJECT_DIR$/webapp/fonts/Unicode_IEC_symbol.woff2" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/autohome/webapp/fonts/fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/webapp/fonts/fontawesome-webfont.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/autohome/webapp/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/webapp/fonts/fontawesome-webfont.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/autohome/webapp/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/webapp/fonts/fontawesome-webfont.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/autohome/webapp/fonts/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/webapp/fonts/fontawesome-webfont.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/autohome/webapp/fonts/fontawesome-webfont.woff2" afterPath="$PROJECT_DIR$/webapp/fonts/fontawesome-webfont.woff2" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/autohome/webapp/fonts/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/webapp/fonts/glyphicons-halflings-regular.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/autohome/webapp/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/webapp/fonts/glyphicons-halflings-regular.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/autohome/webapp/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/webapp/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/autohome/webapp/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/webapp/fonts/glyphicons-halflings-regular.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/autohome/webapp/fonts/glyphicons-halflings-regular.woff2" afterPath="$PROJECT_DIR$/webapp/fonts/glyphicons-halflings-regular.woff2" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/autohome/webapp/images/favicon.png" afterPath="$PROJECT_DIR$/webapp/images/favicon.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/autohome/webapp/images/light.png" afterPath="$PROJECT_DIR$/webapp/images/light.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/autohome/webapp/jade/controls.jade" afterPath="$PROJECT_DIR$/webapp/jade/controls.jade" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/autohome/webapp/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/webapp/js/bootstrap.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/autohome/webapp/js/controls.js" afterPath="$PROJECT_DIR$/webapp/js/controls.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/autohome/webapp/js/jquery.min.js" afterPath="$PROJECT_DIR$/webapp/js/jquery.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/autohome/webapp/views/layout.jade" afterPath="$PROJECT_DIR$/webapp/views/layout.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="autohome.iws" />
@@ -45,7 +70,7 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="BindingManager.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/autohome/src/BindingManager.js">
+        <entry file="file://$PROJECT_DIR$/src/BindingManager.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="578">
               <caret line="34" column="33" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
@@ -55,7 +80,7 @@
         </entry>
       </file>
       <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/autohome/main.js">
+        <entry file="file://$PROJECT_DIR$/main.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
               <caret line="12" column="57" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
@@ -64,8 +89,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".npmignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/autohome/.npmignore">
+      <file leaf-file-name=".npmignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.npmignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
               <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
@@ -74,18 +99,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
-              <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="rfxcom.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/autohome/config/rfxcom.json">
+        <entry file="file://$PROJECT_DIR$/config/rfxcom.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -95,7 +120,7 @@
         </entry>
       </file>
       <file leaf-file-name="Thing.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/autohome/src/Thing.js">
+        <entry file="file://$PROJECT_DIR$/src/Thing.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
               <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
@@ -105,7 +130,7 @@
         </entry>
       </file>
       <file leaf-file-name="thing1.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/autohome/things/thing1.js">
+        <entry file="file://$PROJECT_DIR$/things/thing1.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
               <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
@@ -160,7 +185,6 @@
         <option value="$PROJECT_DIR$/autohome-binder-rfxcom/RfxcomBinder.js" />
         <option value="$PROJECT_DIR$/autohome/webapp/views/index.jade" />
         <option value="$PROJECT_DIR$/autohome/config/mqtt.js" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/autohome/.npmignore" />
         <option value="$PROJECT_DIR$/autohome/things/thing2.js" />
         <option value="$PROJECT_DIR$/autohome/things/things.js" />
@@ -182,6 +206,7 @@
         <option value="$PROJECT_DIR$/autohome/src/BindingManager.js" />
         <option value="$PROJECT_DIR$/autohome/things/thing1.js" />
         <option value="$PROJECT_DIR$/autohome/main.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -192,7 +217,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="NodeModulesDirectoryManager">
-    <handled-path value="$PROJECT_DIR$/autohome/node_modules" />
+    <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
@@ -277,20 +302,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="autohome" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="autohome" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="autohome" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -308,21 +319,21 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../autohome-binders" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\git\autohome" />
+      <recent name="C:\git\autohome\autohome-binder-rfxcom\messages" />
+      <recent name="C:\git\autohome\autohome-app\src" />
+      <recent name="C:\git\autohome\autohome-app\config" />
+      <recent name="C:\Users\mlowi\WebstormProjects\autohome\autohome-app" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\git\autohome" />
       <recent name="C:\git\autohome\autohome-app\config" />
       <recent name="C:\git\autohome\autohome-binder-rfxcom" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\git\autohome\autohome-binder-rfxcom\messages" />
-      <recent name="C:\git\autohome\autohome-app\src" />
-      <recent name="C:\git\autohome\autohome-app\config" />
-      <recent name="C:\Users\mlowi\WebstormProjects\autohome\autohome-app" />
-      <recent name="C:\Users\mlowi\WebstormProjects\autohome" />
-    </key>
   </component>
   <component name="RunManager" selected="Node.js.main">
-    <configuration default="false" name="main" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="main.js" node-parameters="--use_strict --expose_debug_as=v8debug" working-dir="$PROJECT_DIR$/autohome">
+    <configuration default="false" name="main" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="$PROJECT_DIR$/main.js" node-parameters="--use_strict --expose_debug_as=v8debug" working-dir="$PROJECT_DIR$/autohome">
       <profiling v8-profiler-path="" />
       <EXTENSION ID="com.jetbrains.nodejs.run.NodeJSProfilingRunConfigurationExtension">
         <profiling v8-profiler-path="" />
@@ -435,7 +446,7 @@
       <workItem from="1472295303439" duration="3115000" />
       <workItem from="1472302314412" duration="17286000" />
       <workItem from="1472417470727" duration="82000" />
-      <workItem from="1472418070198" duration="210000" />
+      <workItem from="1472418070198" duration="275000" />
     </task>
     <task id="LOCAL-00001" summary="Made alot of changes">
       <created>1460372366116</created>
@@ -724,11 +735,18 @@
       <option name="project" value="LOCAL" />
       <updated>1472417529468</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Moved binders to own repo">
+      <created>1472418289197</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1472418289197</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="131375000" />
+    <option name="totallyTimeSpent" value="131440000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -781,7 +799,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/node_modules" />
     </ignored-roots>
-    <MESSAGE value="Fixed npmignore and package" />
     <MESSAGE value="Renamed app.js" />
     <MESSAGE value="Added init to rfxcom driver" />
     <MESSAGE value="Some small changes" />
@@ -806,7 +823,8 @@
     <MESSAGE value="Revised logging" />
     <MESSAGE value="Added some colors to warn/error/fatal" />
     <MESSAGE value="Small changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Small changes" />
+    <MESSAGE value="Moved binders to own repo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Moved binders to own repo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -822,21 +840,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/autohome/node_modules/express/lib/application.js">
+    <entry file="file://$PROJECT_DIR$/node_modules/express/lib/application.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="251">
           <caret line="578" column="16" selection-start-line="578" selection-start-column="16" selection-end-line="578" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/autohome/node_modules/less/dist/less.js">
+    <entry file="file://$PROJECT_DIR$/node_modules/less/dist/less.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="4076" column="62" selection-start-line="4076" selection-start-column="61" selection-end-line="4076" selection-end-column="62" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/autohome/node_modules/less/lib/less-node/lessc-helper.js">
+    <entry file="file://$PROJECT_DIR$/node_modules/less/lib/less-node/lessc-helper.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="183">
           <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
@@ -864,7 +882,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/autohome/webapp/views/layout.jade">
+    <entry file="file://$PROJECT_DIR$/webapp/views/layout.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
@@ -874,21 +892,21 @@
     <entry file="file://$PROJECT_DIR$/autohome/start.sh" />
     <entry file="file://$PROJECT_DIR$/autohome/start.bat" />
     <entry file="file://$PROJECT_DIR$/.npmignore" />
-    <entry file="file://$PROJECT_DIR$/autohome/things/README">
+    <entry file="file://$PROJECT_DIR$/things/README">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="87" selection-start-line="0" selection-start-column="87" selection-end-line="0" selection-end-column="87" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/autohome/node_modules/passport/lib/http/request.js">
+    <entry file="file://$PROJECT_DIR$/node_modules/passport/lib/http/request.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="45" column="33" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/autohome/node_modules/passport/lib/middleware/authenticate.js">
+    <entry file="file://$PROJECT_DIR$/node_modules/passport/lib/middleware/authenticate.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="234" column="12" selection-start-line="234" selection-start-column="12" selection-end-line="234" selection-end-column="12" />
@@ -910,7 +928,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/autohome/things/thing3.js" />
-    <entry file="file://$PROJECT_DIR$/autohome/config/mqtt.json">
+    <entry file="file://$PROJECT_DIR$/config/mqtt.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
@@ -924,35 +942,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/autohome/webapp/views/index.jade">
+    <entry file="file://$PROJECT_DIR$/webapp/views/index.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/autohome/webapp/css/autohome.less">
+    <entry file="file://$PROJECT_DIR$/webapp/css/autohome.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/autohome/webapp/jade/controls.jade">
+    <entry file="file://$PROJECT_DIR$/webapp/jade/controls.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/autohome/webapp/js/controls.js">
+    <entry file="file://$PROJECT_DIR$/webapp/js/controls.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/autohome/things/thing2.js">
+    <entry file="file://$PROJECT_DIR$/things/thing2.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
@@ -973,35 +991,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/autohome/src/BinderManager.js">
+    <entry file="file://$PROJECT_DIR$/src/BinderManager.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/autohome/src/AutoHome.js">
+    <entry file="file://$PROJECT_DIR$/src/AutoHome.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-456">
           <caret line="0" column="10" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/autohome/upload.sh">
+    <entry file="file://$PROJECT_DIR$/upload.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/autohome/src/ThingManager.js">
+    <entry file="file://$PROJECT_DIR$/src/ThingManager.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="402">
           <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/autohome/config/main.json">
+    <entry file="file://$PROJECT_DIR$/config/main.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="1" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
@@ -1029,14 +1048,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/autohome/src/LoggerFactory.js">
+    <entry file="file://$PROJECT_DIR$/src/LoggerFactory.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/autohome/package.json">
+    <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
@@ -1044,7 +1063,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/autohome/src/Logger.js">
+    <entry file="file://$PROJECT_DIR$/src/Logger.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="113">
           <caret line="25" column="46" selection-start-line="25" selection-start-column="46" selection-end-line="25" selection-end-column="46" />
@@ -1058,10 +1077,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/autohome/things/thingGroup.js">
+    <entry file="file://$PROJECT_DIR$/things/thingGroup.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1073,7 +1093,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/autohome/config/rfxcom.json">
+    <entry file="file://$PROJECT_DIR$/config/rfxcom.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1081,7 +1101,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/autohome/src/Thing.js">
+    <entry file="file://$PROJECT_DIR$/src/Thing.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
@@ -1121,7 +1141,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/autohome/things/thing1.js">
+    <entry file="file://$PROJECT_DIR$/things/thing1.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
@@ -1129,7 +1149,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/autohome/src/BindingManager.js">
+    <entry file="file://$PROJECT_DIR$/src/BindingManager.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
           <caret line="34" column="33" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
@@ -1137,15 +1157,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/autohome/main.js">
+    <entry file="file://$PROJECT_DIR$/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="57" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
@@ -1153,10 +1165,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/autohome/.npmignore">
+    <entry file="file://$PROJECT_DIR$/.npmignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>

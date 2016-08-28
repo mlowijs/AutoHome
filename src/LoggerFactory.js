@@ -1,4 +1,4 @@
-const config = require("../config/main.json");
+const config = require("./main.json");
 const Logger = require("./Logger");
 
 class LoggerFactory {

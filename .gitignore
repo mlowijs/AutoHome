@@ -1,12 +1,12 @@
 node_modules
 
-autohome/things/*
-!autohome/things/README
+things/*
+!things/README
 
-autohome/webapp/views/*
-!autohome/webapp/views/layout.jade
+webapp/views/*
+!webapp/views/layout.jade
 
-autohome/config/*
-!autohome/config/main.json
+config/*
+!config/main.json
 
-autohome/upload.sh
+upload.sh
