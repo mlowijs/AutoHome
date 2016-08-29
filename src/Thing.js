@@ -46,6 +46,9 @@ class Thing extends EventEmitter {
         else
             this._value = value;
 
+        if (this._value !== oldValue)
+            this.emit("valueChanged", oldValue);
+
         return oldValue;
     }
 }
