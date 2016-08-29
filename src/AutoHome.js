@@ -1,4 +1,5 @@
 const config = require("../config/main.json");
+const fs = require("fs");
 const path = require("path");
 
 function optionalAuthMiddleware(passport) {
@@ -55,8 +56,16 @@ function setupStaticRoutes(app, express) {
 
 function setupWebAppRoutes(logger, app, passport) {
     app.get("/favicon.ico", (req, res) => {
-        res.set("Content-Type", "image/png");
-        res.sendFile(path.resolve("../webapp/images/favicon.png"));
+        try {
+            const iconPath = path.resolve("../webapp/images/favicon.png");
+            fs.accessSync(iconPath);
+
+            res.set("Content-Type", "image/png");
+            res.sendFile();
+        } catch (ex) {
+            logger.debug("No favicon found.");
+            res.status(404).end();
+        }
     });
 
     app.get("/:page?", optionalAuthMiddleware(passport), (req, res) => {
