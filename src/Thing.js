@@ -33,7 +33,9 @@ class Thing extends EventEmitter {
         let date = null;
         let number = null;
 
-        if (typeof value === "boolean" || typeof value === "number" || value instanceof Date)
+        if (value === "$toggle")
+            this._value = !this._value;
+        else if (typeof value === "boolean" || typeof value === "number" || value instanceof Date)
             this._value = value;
         else if (value === "true" || value === "false")
             this._value = value === "true";
