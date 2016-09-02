@@ -59,6 +59,8 @@ class Thing extends EventEmitter {
             this._value++;
         else if (value === "$dec")
             this._value--;
+        else
+            this._value = value;
     }
 }
 
