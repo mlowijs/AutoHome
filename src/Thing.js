@@ -33,8 +33,8 @@ class Thing extends EventEmitter {
         let date = null;
         let number = null;
 
-        if (value === "$toggle")
-            this._value = !this._value;
+        if (value.startsWith("$"))
+            this._setSpecialValue(value);
         else if (typeof value === "boolean" || typeof value === "number" || value instanceof Date)
             this._value = value;
         else if (value === "true" || value === "false")
@@ -50,6 +50,15 @@ class Thing extends EventEmitter {
             this.emit("valueChanged", oldValue);
 
         return oldValue;
+    }
+
+    _setSpecialValue(value) {
+        if (value === "$toggle")
+            this._value = !this._value;
+        else if (value === "$inc")
+            this._value++;
+        else if (value === "$dec")
+            this._value--;
     }
 }
 
