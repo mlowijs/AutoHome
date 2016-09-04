@@ -33,7 +33,7 @@ class Thing extends EventEmitter {
         let date = null;
         let number = null;
 
-        if (value.startsWith("$"))
+        if (typeof value === "string" && value.startsWith("$"))
             this._setSpecialValue(value);
         else if (typeof value === "boolean" || typeof value === "number" || value instanceof Date)
             this._value = value;

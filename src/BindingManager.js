@@ -17,11 +17,11 @@ class BindingManager {
 
                 if (validationResult !== true) {
                     this._logger.error(`Binding of type '${binding.type}' on '${id}' has one or more missing or invalid properties: '${validationResult}'.`);
-                    return;
+                    continue;
                 }
 
                 if (binding.direction === "out")
-                    return;
+                    continue;
 
                 binder.addBinding(binding, thing);
             }
