@@ -15,7 +15,7 @@ class ThingManager extends EventEmitter {
         glob("things/**/*.js", { realpath: true }, (error, files) => {
             files.forEach(file => this._loadThing(file));
 
-            this._logger.debug(`Loaded ${this.things.size} thing(s).`, "ThingManager.ctor");
+            this._logger.info(`Loaded ${this.things.size} thing(s).`, "ThingManager.ctor");
             
             if (thingsLoaded)
                 thingsLoaded();
@@ -34,7 +34,7 @@ class ThingManager extends EventEmitter {
         Object.setPrototypeOf(thing, new Thing(id));
 
         thing.on("valueSet", () => {
-            this._logger.info(`Set value of '${thing.id}' to '${thing.value}' (${typeof thing.value}).`, "ThingManager.thing.valueSet");
+            this._logger.debug(`Set value of '${thing.id}' to '${thing.value}' (${typeof thing.value}).`, "ThingManager.thing.valueSet");
 
             if (thing.valueSet !== undefined)
                 thing.valueSet();
@@ -48,7 +48,7 @@ class ThingManager extends EventEmitter {
         });
 
         thing.on("valuePushed", () => {
-            this._logger.info(`Pushed '${thing.value}' (${typeof thing.value}) to '${thing.id}'.`, "ThingManager.thing.valueChanged");
+            this._logger.debug(`Pushed '${thing.value}' (${typeof thing.value}) to '${thing.id}'.`, "ThingManager.thing.valueChanged");
 
             if (thing.valuePushed !== undefined)
                 thing.valuePushed();
