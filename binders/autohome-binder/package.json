@@ -1,0 +1,11 @@
+{
+  "name": "autohome-binder",
+  "description": "Base classes for AutoHome binders.",
+  "version": "0.2.0",
+  "license": "BSD-3-Clause",
+  "main": "./Binder.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mlowijs/AutoHome.git"
+  }
+}

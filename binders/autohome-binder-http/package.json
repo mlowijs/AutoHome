@@ -1,0 +1,15 @@
+{
+  "name": "autohome-binder-http",
+  "description": "HTTP binder for AutoHome.",
+  "version": "0.2.0",
+  "license": "BSD-3-Clause",
+  "main": "./HttpBinder.js",
+  "dependencies": {
+    "autohome-binder": "^0.2.0",
+    "request": "^2.74.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mlowijs/AutoHome.git"
+  }
+}
