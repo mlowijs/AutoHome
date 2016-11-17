@@ -23,7 +23,7 @@ function setupPassport(app) {
     passport.use(new BasicStrategy((userName, password, done) => {
         const savedPassword = config.users[userName];
 
-        if (!savedPassword || password !== savedPassword)
+        if (!savedPassword || savedPassword !== password)
             return done(null, false);
 
         return done(null, true);
